@@ -1,156 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Aplikacja Nauczyciela</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-      color: #2f3334;
-      line-height: 1.7;
-    }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 18px; margin-top: 36px; margin-bottom: 8px; color: #1a6fa8; }
-    p, li { font-size: 15px; }
-    ul { padding-left: 20px; }
-    .lang-switch { display: flex; gap: 12px; margin-bottom: 32px; }
-    .lang-switch a {
-      font-size: 14px; font-weight: 600; color: #1a6fa8;
-      text-decoration: none; padding: 4px 12px;
-      border: 1px solid #1a6fa8; border-radius: 20px;
-    }
-    .lang-switch a.active { background: #1a6fa8; color: #fff; }
-    .section { display: none; }
-    .section.active { display: block; }
-    footer { margin-top: 48px; font-size: 13px; color: #888; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regulamin — Aplikacja Nauczyciela</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 24px 16px 64px;
+        color: #2f3334;
+        line-height: 1.7;
+      }
+      h1 { font-size: 28px; margin-bottom: 4px; }
+      h2 { font-size: 18px; margin-top: 36px; margin-bottom: 8px; color: #1a6fa8; }
+      p, li { font-size: 15px; }
+      ul { padding-left: 20px; }
+      .lang-switch { display: flex; gap: 12px; margin-bottom: 32px; }
+      .lang-switch a {
+        font-size: 14px; font-weight: 600; color: #1a6fa8;
+        text-decoration: none; padding: 4px 12px;
+        border: 1px solid #1a6fa8; border-radius: 20px;
+      }
+      .lang-switch a.active { background: #1a6fa8; color: #fff; }
+      .section { display: none; }
+      .section.active { display: block; }
+      footer { margin-top: 48px; font-size: 13px; color: #5b6061; }
+      a.back { color: #1a6fa8; }
+    </style>
+  </head>
+  <body>
+    <div class="lang-switch">
+      <a href="#pl" class="active" data-lang="pl">PL</a>
+      <a href="#en" data-lang="en">EN</a>
+    </div>
 
-<div class="lang-switch">
-  <a href="#" class="active" onclick="showLang('pl', this); return false;">🇵🇱 Polski</a>
-  <a href="#" onclick="showLang('en', this); return false;">🇬🇧 English</a>
-</div>
+    <!-- ── Polish ────────────────────────────────────────────────── -->
+    <section id="pl" class="section active">
+      <h1>Regulamin</h1>
+      <p><strong>Aplikacja Nauczyciela</strong> · ostatnia aktualizacja: 5 maja 2026</p>
 
-<!-- ===================== POLISH ===================== -->
-<div id="lang-pl" class="section active">
-  <h1>Polityka Prywatności</h1>
-  <p><strong>Aplikacja:</strong> Aplikacja Nauczyciela<br>
-  <strong>Deweloper:</strong> Maciej Bernacki<br>
-  <strong>Data aktualizacji:</strong> 7 kwietnia 2026</p>
+      <h2>1. Postanowienia ogólne</h2>
+      <p>
+        Niniejszy regulamin określa zasady korzystania z aplikacji mobilnej
+        „Aplikacja Nauczyciela” (dalej: „Aplikacja”) udostępnianej w sklepie
+        Google Play. Korzystając z Aplikacji, akceptujesz niniejszy regulamin.
+      </p>
 
-  <h2>1. Informacje ogólne</h2>
-  <p>Niniejsza Polityka Prywatności opisuje, w jaki sposób aplikacja <em>Aplikacja Nauczyciela</em> gromadzi, przetwarza i chroni dane użytkowników. Korzystając z aplikacji, akceptujesz zasady opisane w tym dokumencie.</p>
+      <h2>2. Funkcje aplikacji</h2>
+      <p>
+        Aplikacja wspiera nauczycieli w planowaniu zajęć z wykorzystaniem
+        sztucznej inteligencji. Wersja podstawowa jest bezpłatna i finansowana
+        z reklam. Wersja Premium (subskrypcja) usuwa reklamy oraz odblokowuje
+        nielimitowane generowanie planów.
+      </p>
 
-  <h2>2. Dane przechowywane lokalnie na urządzeniu</h2>
-  <p>Następujące dane są przechowywane <strong>wyłącznie na Twoim urządzeniu</strong> w lokalnej bazie danych (SQLite) i nigdy nie są przesyłane na żadne zewnętrzne serwery:</p>
-  <ul>
-    <li>Profile uczniów (w tym opisy potrzeb edukacyjnych)</li>
-    <li>Klasy i grupy uczniów</li>
-    <li>Wygenerowane plany lekcji</li>
-    <li>Ustawienia aplikacji i preferencje językowe</li>
-  </ul>
+      <h2>3. Subskrypcja Premium</h2>
+      <ul>
+        <li>
+          Subskrypcja jest dostępna w dwóch wariantach: miesięcznym i rocznym.
+          Aktualne ceny prezentowane są w aplikacji w walucie i formacie
+          Twojego konta Google Play.
+        </li>
+        <li>
+          Płatność jest pobierana z Twojego konta Google Play w momencie
+          potwierdzenia zakupu oraz przy każdym automatycznym odnowieniu.
+        </li>
+        <li>
+          Subskrypcja odnawia się automatycznie na kolejny okres
+          rozliczeniowy, chyba że anulujesz ją co najmniej 24 godziny przed
+          końcem bieżącego okresu.
+        </li>
+        <li>
+          Subskrypcję można anulować w dowolnym momencie w ustawieniach
+          subskrypcji w Sklepie Google Play. Anulowanie wstrzymuje kolejne
+          odnowienie — dostęp do funkcji Premium pozostaje aktywny do końca
+          opłaconego okresu.
+        </li>
+        <li>
+          Brak okresu próbnego oraz brak ofert wprowadzających w wersji
+          obecnej.
+        </li>
+      </ul>
 
-  <h2>3. Dane przesyłane do zewnętrznych usług</h2>
+      <h2>4. Zwroty</h2>
+      <p>
+        Zwroty rozpatrywane są zgodnie z polityką Google Play. Aby złożyć
+        wniosek o zwrot, skorzystaj z opcji dostępnych w Sklepie Google Play
+        lub skontaktuj się bezpośrednio z Google.
+      </p>
 
-  <h3>3a. Google Gemini AI</h3>
-  <p>Aby wygenerować plan lekcji, aplikacja wysyła zapytanie do API Google Gemini. Przed wysłaniem wszystkie dane osobowe uczniów są <strong>anonimizowane na urządzeniu</strong> — zamiast imion i opisów używane są ogólne etykiety (np. „Uczeń A"). Do serwera Google trafia wyłącznie zanonimizowane zapytanie. Szczegółowe informacje: <a href="https://policies.google.com/privacy">Polityka prywatności Google</a>.</p>
+      <h2>5. Treści generowane przez AI</h2>
+      <p>
+        Plany lekcji oraz inne treści generowane są przez modele językowe.
+        Mogą one zawierać błędy lub nieścisłości — to Ty, jako nauczyciel,
+        decydujesz, czy i w jakiej formie wykorzystać proponowane materiały.
+        Aplikacja nie ponosi odpowiedzialności za treści wygenerowane przez
+        AI.
+      </p>
 
-  <h3>3b. Google AdMob (reklamy)</h3>
-  <p>Aplikacja wyświetla reklamy za pośrednictwem Google AdMob. W tym celu AdMob może zbierać:</p>
-  <ul>
-    <li>Identyfikator reklamowy urządzenia (Advertising ID)</li>
-    <li>Dane o interakcjach z reklamami</li>
-    <li>Przybliżoną lokalizację (kraj/region)</li>
-  </ul>
-  <p>Przed pierwszym użyciem aplikacja wyświetla baner zgody RODO. Możesz wybrać reklamy spersonalizowane lub niespersonalizowane. Szczegóły: <a href="https://policies.google.com/technologies/ads">Polityka reklamowa Google</a>.</p>
+      <h2>6. Dane osobowe</h2>
+      <p>
+        Zasady przetwarzania danych opisuje
+        <a href="privacy-policy.html">Polityka prywatności</a>. Dane osobowe
+        dzieci są filtrowane lokalnie na urządzeniu i nie są wysyłane do
+        chmury.
+      </p>
 
-  <h2>4. Prawa użytkownika (RODO)</h2>
-  <p>Jako użytkownik masz prawo do:</p>
-  <ul>
-    <li><strong>Dostępu</strong> do swoich danych</li>
-    <li><strong>Usunięcia</strong> danych — odinstalowanie aplikacji usuwa wszystkie dane lokalne</li>
-    <li><strong>Wycofania zgody</strong> na reklamy personalizowane w dowolnym momencie (Ustawienia systemu Android → Prywatność → Reklamy)</li>
-  </ul>
+      <h2>7. Zmiany regulaminu</h2>
+      <p>
+        Regulamin może być aktualizowany. O istotnych zmianach poinformujemy
+        w aplikacji. Dalsze korzystanie z Aplikacji po aktualizacji oznacza
+        akceptację nowych warunków.
+      </p>
 
-  <h2>5. Dane dzieci</h2>
-  <p>Aplikacja jest przeznaczona dla nauczycieli (dorosłych użytkowników), a nie dla dzieci. Aplikacja nie gromadzi świadomie danych osobowych od osób poniżej 13. roku życia. Profile uczniów mogą zawierać opisy potrzeb edukacyjnych, lecz są one przechowywane wyłącznie lokalnie i nigdy nie są wysyłane do zewnętrznych usług w postaci danych osobowych.</p>
+      <h2>8. Kontakt</h2>
+      <p>
+        W sprawach dotyczących regulaminu pisz na adres podany w karcie
+        aplikacji w sklepie Google Play.
+      </p>
 
-  <h2>6. Bezpieczeństwo</h2>
-  <p>Dane lokalne są chronione mechanizmami bezpieczeństwa systemu Android. Nie przesyłamy żadnych danych osobowych poza urządzeniem.</p>
+      <p style="margin-top:32px"><a class="back" href="privacy-policy.html">← Polityka prywatności</a></p>
+    </section>
 
-  <h2>7. Kontakt</h2>
-  <p>W przypadku pytań dotyczących prywatności prosimy o kontakt:<br>
-  📧 <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a></p>
-</div>
+    <!-- ── English ───────────────────────────────────────────────── -->
+    <section id="en" class="section">
+      <h1>Terms of Service</h1>
+      <p><strong>Teacher's App</strong> · last updated: May 5, 2026</p>
 
-<!-- ===================== ENGLISH ===================== -->
-<div id="lang-en" class="section">
-  <h1>Privacy Policy</h1>
-  <p><strong>App:</strong> Aplikacja Nauczyciela (Teacher's App)<br>
-  <strong>Developer:</strong> Maciej Bernacki<br>
-  <strong>Last updated:</strong> April 7, 2026</p>
+      <h2>1. General</h2>
+      <p>
+        These terms govern your use of the “Teacher's App” mobile application
+        (the “App”) distributed via Google Play. By using the App you accept
+        these terms.
+      </p>
 
-  <h2>1. Overview</h2>
-  <p>This Privacy Policy explains how <em>Aplikacja Nauczyciela</em> collects, processes, and protects user data. By using the app, you agree to the practices described in this document.</p>
+      <h2>2. Features</h2>
+      <p>
+        The App supports teachers in lesson planning with AI assistance. The
+        basic version is free and ad-supported. A Premium subscription
+        removes ads and unlocks unlimited plan generation.
+      </p>
 
-  <h2>2. Data stored locally on your device</h2>
-  <p>The following data is stored <strong>exclusively on your device</strong> in a local SQLite database and is never transmitted to any external servers:</p>
-  <ul>
-    <li>Student profiles (including educational needs descriptions)</li>
-    <li>Classes and student groups</li>
-    <li>Generated lesson plans</li>
-    <li>App settings and language preferences</li>
-  </ul>
+      <h2>3. Premium subscription</h2>
+      <ul>
+        <li>
+          Two billing options: monthly and yearly. Current prices are shown
+          in-app in the currency and format of your Google Play account.
+        </li>
+        <li>
+          Payment is charged to your Google Play account on purchase and on
+          each automatic renewal.
+        </li>
+        <li>
+          The subscription renews automatically for the next billing period
+          unless cancelled at least 24 hours before the end of the current
+          period.
+        </li>
+        <li>
+          You may cancel anytime in your Google Play subscription settings.
+          Cancellation stops further renewals; Premium access remains active
+          until the end of the paid period.
+        </li>
+        <li>No free trial and no introductory offers in the current version.</li>
+      </ul>
 
-  <h2>3. Data sent to external services</h2>
+      <h2>4. Refunds</h2>
+      <p>
+        Refunds are handled according to Google Play's refund policy. Submit
+        refund requests through Google Play or contact Google directly.
+      </p>
 
-  <h3>3a. Google Gemini AI</h3>
-  <p>To generate a lesson plan, the app sends a request to the Google Gemini API. Before transmission, all student personal data is <strong>anonymized on-device</strong> — real names and descriptions are replaced with generic labels (e.g. "Student A"). Only the anonymized request is sent to Google's servers. See: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+      <h2>5. AI-generated content</h2>
+      <p>
+        Lesson plans and other AI outputs may contain errors. You, as the
+        teacher, decide whether and how to use the suggested materials. The
+        App is not responsible for AI-generated content.
+      </p>
 
-  <h3>3b. Google AdMob (advertising)</h3>
-  <p>The app displays advertisements via Google AdMob. AdMob may collect:</p>
-  <ul>
-    <li>Device advertising identifier (Advertising ID)</li>
-    <li>Ad interaction data</li>
-    <li>Approximate location (country/region)</li>
-  </ul>
-  <p>On first launch, the app displays a GDPR consent banner. You can choose between personalized or non-personalized ads. See: <a href="https://policies.google.com/technologies/ads">Google Advertising Policy</a>.</p>
+      <h2>6. Personal data</h2>
+      <p>
+        See the <a href="privacy-policy.html">Privacy Policy</a> for details.
+        Children's personal data is filtered locally on-device and is not sent
+        to the cloud.
+      </p>
 
-  <h2>4. Your rights (GDPR)</h2>
-  <p>As a user you have the right to:</p>
-  <ul>
-    <li><strong>Access</strong> your data</li>
-    <li><strong>Delete</strong> your data — uninstalling the app removes all local data</li>
-    <li><strong>Withdraw consent</strong> for personalized ads at any time (Android Settings → Privacy → Ads)</li>
-  </ul>
+      <h2>7. Changes</h2>
+      <p>
+        These terms may be updated. We will notify you of material changes in
+        the App. Continued use after an update constitutes acceptance.
+      </p>
 
-  <h2>5. Children's data</h2>
-  <p>The app is intended for teachers (adult users), not children. The app does not knowingly collect personal data from children under 13. Student profiles may contain educational needs descriptions, but these are stored locally only and are never transmitted to external services as personal data.</p>
+      <h2>8. Contact</h2>
+      <p>
+        For questions about these terms, use the contact address listed on
+        the app's Google Play store page.
+      </p>
 
-  <h2>6. Security</h2>
-  <p>Local data is protected by Android's built-in security mechanisms. We do not transmit any personal data outside of your device.</p>
+      <p style="margin-top:32px"><a class="back" href="privacy-policy.html">← Privacy policy</a></p>
+    </section>
 
-  <h2>7. Contact</h2>
-  <p>For privacy-related inquiries, please contact:<br>
-  📧 <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a></p>
-</div>
+    <footer>© 2026 Aplikacja Nauczyciela</footer>
 
-<footer>
-  &copy; 2026 Maciej Bernacki · Aplikacja Nauczyciela
-</footer>
-
-<script>
-  function showLang(lang, el) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    el.classList.add('active');
-  }
-</script>
-</body>
+    <script>
+      const links = document.querySelectorAll('.lang-switch a');
+      const sections = document.querySelectorAll('.section');
+      function setLang(lang) {
+        links.forEach((l) => l.classList.toggle('active', l.dataset.lang === lang));
+        sections.forEach((s) => s.classList.toggle('active', s.id === lang));
+      }
+      links.forEach((l) =>
+        l.addEventListener('click', (e) => {
+          e.preventDefault();
+          setLang(l.dataset.lang);
+        }),
+      );
+      const initial = (location.hash || '#pl').slice(1);
+      if (initial === 'en' || initial === 'pl') setLang(initial);
+    </script>
+  </body>
 </html>

@@ -128,7 +128,7 @@
         <strong>Développeur et responsable du traitement :</strong> Maciej Bernacki<br />
         <strong>Contact :</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Dernière mise à jour :</strong> 4 août 2026
+        <strong>Dernière mise à jour :</strong> 18 août 2026
       </p>
 
       <div class="prevails-note">Ce document est une traduction fournie par souci de commodité. En cas de divergence entre cette traduction et la <a href="privacy-policy.html">version anglaise</a>, la version anglaise prévaut.</div>
@@ -152,7 +152,10 @@
         dates, les notes et tout autre détail permettant une identification
         sont supprimés ou remplacés par des étiquettes neutres sur l'appareil
         lui-même avant qu'une quelconque requête ne soit envoyée à un
-        quelconque service.
+        quelconque service. Les paroles de chanson que vous écrivez ou
+        modifiez dans l'application constituent une exception
+        délibérée : elles sont envoyées telles que vous
+        les avez écrites (§3.9).
       </p>
 
       <h2 id="on-device">2. Données qui restent sur votre appareil</h2>
@@ -161,8 +164,9 @@
         appareil</strong>, dans la base de données locale et le stockage privé
         de l'application. Elles ne sont jamais téléversées automatiquement.
         Elles ne peuvent quitter l'appareil que par des actions que vous
-        effectuez vous-même : l'exportation ou le partage d'un fichier, ou
-        l'envoi d'un signalement de contenu (§3.8).
+        effectuez vous-même : l'exportation ou le partage d'un fichier,
+        l'envoi d'un signalement de contenu (§3.8) ou la création d'une
+        chanson à partir de paroles que vous avez écrites vous-même (§3.9).
       </p>
       <ul>
         <li>
@@ -171,11 +175,15 @@
         </li>
         <li>Classes et groupes</li>
         <li>
-          Plans de journée et contes générés (après la génération,
-          l'application réinsère localement les vrais noms — les versions
+          Plans de journée, contes et chansons générés (lorsque le
+          contenu est personnalisé avec les vrais noms, l'application les
+          réinsère localement après la génération — les versions
           contenant les vrais noms n'existent que sur votre appareil)
         </li>
-        <li>Narrations audio de contes téléchargées et vidéos de contes exportées</li>
+        <li>
+          Narrations audio de contes téléchargées, audio de chansons
+          composées et vidéos de contes ou de chansons exportées
+        </li>
         <li>
           Photos que vous choisissez comme arrière-plan vidéo — sélectionnées
           via le sélecteur de photos du système Android (l'application n'a pas
@@ -316,6 +324,28 @@
         contenus générés par l'IA.
       </p>
 
+      <h3>3.9. Création de chansons</h3>
+      <p>
+        Lorsque vous créez une chanson, ses paroles sont d'abord préparées
+        sous forme de texte. Vous pouvez laisser l'IA les écrire à partir de
+        votre thème et de vos choix — elles sont alors traitées comme au
+        §3.1, avec des descriptions de besoins anonymisées sur l'appareil —
+        ou bien écrire ou modifier les paroles vous-même. <strong>Les paroles que
+        vous écrivez ou modifiez vous-même ne sont, délibérément, pas
+        anonymisées</strong> : il s'agit de votre
+        propre texte, envoyé exactement tel que vous l'avez écrit — au
+        service d'IA qui l'organise en structure de chanson et, si vous
+        demandez une pochette, au service d'images (qui reçoit le titre et
+        les paroles de la chanson). L'éditeur vous le rappelle à l'endroit
+        même où vous écrivez ; n'y incluez pas de données personnelles que
+        vous ne souhaitez pas voir traitées. Les paroles finales sont
+        ensuite envoyées à ElevenLabs (États-Unis, §4) pour composer
+        l'audio, qui est téléchargé sur votre appareil et conservé
+        uniquement là — le serveur ne conserve ni vos paroles ni l'audio
+        composé. Les pochettes sont stockées comme les illustrations des
+        contes (§3.3).
+      </p>
+
       <h2 id="processors">4. Prestataires de services</h2>
 <p>L'application fait appel aux sous-traitants suivants :</p>
       <table>
@@ -331,13 +361,18 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>Génération de texte et d'images par IA</td>
-            <td>Invites anonymisées, exemptes de noms (§3.1)</td>
-            <td>Via notre proxy dans l'UE</td>
+            <td>Invites anonymisées, exemptes de noms (§3.1) ; les paroles
+            de chanson que vous écrivez vous-même, telles quelles
+            (§3.9)</td>
+            <td>Google — via notre proxy dans l'UE ; peut être traité en
+            dehors de l'EEE</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Narration des contes (synthèse vocale)</td>
-            <td>Texte du conte exempt de noms et choix de la voix (§3.2)</td>
+            <td>Narration des contes (synthèse vocale) et composition de
+            chansons (musique)</td>
+            <td>Texte du conte exempt de noms et choix de la voix (§3.2) ;
+            paroles de la chanson et réglages de style (§3.9)</td>
             <td>États-Unis</td>
           </tr>
           <tr>
@@ -367,10 +402,16 @@
         </tbody>
       </table>
       <p>
-        Les requêtes de narration sont le seul flux traité <strong>hors de
-        l'EEE</strong> : ElevenLabs traite le texte du conte exempt de noms
+        Deux flux peuvent être traités <strong>hors de
+        l'EEE</strong> : ElevenLabs traite les requêtes de narration et de
+        composition de chansons — le texte du conte ou les paroles de la
+        chanson —
         aux États-Unis dans le cadre de ses conditions de traitement des
-        données, qui intègrent les clauses contractuelles types de l'UE. Voir
+        données, qui intègrent les clauses contractuelles types de
+        l'UE ; et les requêtes adressées à Google Gemini transitent par
+        notre proxy dans l'UE vers l'API Gemini de Google, où Google peut
+        les traiter en dehors de l'EEE dans le cadre de ses conditions de
+        traitement des données. Voir
         aussi :
         <a href="https://policies.google.com/privacy">Politique de
         confidentialité de Google</a>.
@@ -386,7 +427,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Contenu des requêtes d'IA (invites, descriptions)</td>
+            <td>Contenu des requêtes d'IA (invites, descriptions, paroles)</td>
             <td>Non stocké — traité uniquement en transit</td>
           </tr>
           <tr>
@@ -417,7 +458,7 @@
             </td>
           </tr>
           <tr>
-            <td>Illustrations des contes (copie dans le cloud)</td>
+            <td>Illustrations des contes et pochettes des chansons (copie dans le cloud)</td>
             <td>Jusqu'à leur remplacement par une version régénérée, ou sur demande</td>
           </tr>
           <tr>
@@ -457,7 +498,10 @@
         professionnel : elles sont stockées uniquement sur l'appareil de
         l'enseignant et, comme décrit aux §2 et §3, elles ne sont jamais
         transmises où que ce soit sous une forme permettant d'identifier un
-        enfant. Les achats sont liés au compte Google Play de l'enseignant
+        enfant. Si vous écrivez vous-même les paroles d'une chanson, elles
+        sont envoyées telles que vous les avez écrites (§3.9) — évitez d'y
+        inclure des données personnelles d'enfants. Les achats sont liés au
+        compte Google Play de l'enseignant
         adulte.
       </p>
 
@@ -499,7 +543,8 @@
         des requêtes. Aucune mesure de sécurité n'est absolue, mais
         l'architecture est conçue pour que les données les plus sensibles —
         tout ce qui nomme un enfant — ne parviennent tout simplement jamais à
-        un serveur.
+        un serveur (l'exception délibérée étant les paroles que vous
+        écrivez vous-même, §3.9).
       </p>
 
       <h2 id="changes">10. Modifications de la présente politique</h2>

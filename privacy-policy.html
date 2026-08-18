@@ -128,7 +128,7 @@
         <strong>Developer &amp; data controller:</strong> Maciej Bernacki<br />
         <strong>Contact:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Last updated:</strong> August 4, 2026
+        <strong>Last updated:</strong> August 18, 2026
       </p>
 
 
@@ -146,7 +146,9 @@
         rule is that <strong>children's personal data never leaves your
         device</strong>: pupils' names, dates, notes, and any other
         identifying details are removed or replaced with neutral labels on
-        the device itself before any request is sent to any service.
+        the device itself before any request is sent to any service. Song
+        lyrics you write or edit in the app are a deliberate exception: they
+        are sent as written (§3.9).
       </p>
 
       <h2 id="on-device">2. Data that stays on your device</h2>
@@ -154,8 +156,9 @@
         The following data is stored <strong>only on your device</strong>, in
         the app's local database and private storage. It is never uploaded
         automatically. The only ways any of it can leave the device are the
-        actions you take yourself: exporting or sharing a file, or submitting
-        a content report (§3.8).
+        actions you take yourself: exporting or sharing a file, submitting
+        a content report (§3.8), or creating a song from lyrics you wrote
+        yourself (§3.9).
       </p>
       <ul>
         <li>
@@ -164,11 +167,15 @@
         </li>
         <li>Classes and groups</li>
         <li>
-          Generated day plans and stories (after generation, the app
-          re-inserts real names locally — the versions containing real names
-          exist only on your device)
+          Generated day plans, stories and songs (where content is
+          personalised with real names, the app re-inserts them locally
+          after generation — the versions containing real names exist only
+          on your device)
         </li>
-        <li>Downloaded story narration audio and exported story videos</li>
+        <li>
+          Downloaded story narration audio, composed song audio, and
+          exported story or song videos
+        </li>
         <li>
           Photos you pick as a video background — chosen through the Android
           system photo picker (the app has no permission to browse your
@@ -290,6 +297,25 @@
         required by Google Play's AI-generated content policy.
       </p>
 
+      <h3>3.9. Song creation</h3>
+      <p>
+        When you create a song, its lyrics are prepared as text first. You
+        can have the AI write them from your topic and choices — treated
+        like §3.1, with needs-descriptions anonymised on-device — or you can
+        write or edit the lyrics yourself. <strong>Lyrics you write or edit
+        yourself are deliberately not
+        anonymised</strong>: they are your own text and are sent exactly as
+        you wrote them — to the AI service that arranges them into a song
+        structure, and, if you request cover art, to the image service
+        (which receives the song's title and lyrics). The editor reminds you
+        of this where you type; please do not include personal details you
+        would not want processed. The finished lyrics are then sent to
+        ElevenLabs (United States, §4) to compose the audio, which is
+        downloaded to your device and kept only there — the server stores
+        neither your lyrics nor the composed audio. Cover images are stored
+        like story illustrations (§3.3).
+      </p>
+
       <h2 id="processors">4. Service providers</h2>
 <p>The app relies on the following processors:</p>
       <table>
@@ -305,13 +331,17 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>AI text and image generation</td>
-            <td>Anonymized, name-free prompts (§3.1)</td>
-            <td>Via our EU proxy</td>
+            <td>Anonymized, name-free prompts (§3.1); song lyrics you write
+            yourself, as written (§3.9)</td>
+            <td>Google — via our EU proxy; may be processed outside the
+            EEA</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Story narration (text-to-speech)</td>
-            <td>Name-free story text and voice choice (§3.2)</td>
+            <td>Story narration (text-to-speech) and song composition
+            (music)</td>
+            <td>Name-free story text and voice choice (§3.2); song lyrics
+            and style settings (§3.9)</td>
             <td>United States</td>
           </tr>
           <tr>
@@ -341,10 +371,13 @@
         </tbody>
       </table>
       <p>
-        Narration requests are the one flow processed <strong>outside the
-        EEA</strong>: ElevenLabs processes the name-free story text in the
-        United States under its data-processing terms, which incorporate EU
-        Standard Contractual Clauses. See also:
+        Two flows can be processed <strong>outside the EEA</strong>:
+        ElevenLabs processes narration and song-composition requests — the
+        story text or song lyrics — in the United States under its
+        data-processing terms, which incorporate EU Standard Contractual
+        Clauses; and requests to Google Gemini travel through our EU proxy
+        to Google's Gemini API, where Google may process them outside the
+        EEA under its data-processing terms. See also:
         <a href="https://policies.google.com/privacy">Google Privacy
         Policy</a>.
       </p>
@@ -359,7 +392,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Content of AI requests (prompts, descriptions)</td>
+            <td>Content of AI requests (prompts, descriptions, lyrics)</td>
             <td>Not stored — processed in transit only</td>
           </tr>
           <tr>
@@ -389,7 +422,7 @@
             </td>
           </tr>
           <tr>
-            <td>Story illustrations (cloud copy)</td>
+            <td>Story illustrations and song cover images (cloud copy)</td>
             <td>Until replaced by a regenerated version, or on request</td>
           </tr>
           <tr>
@@ -423,8 +456,9 @@
         The pupil information a teacher enters is the teacher's own
         professional record: it is stored only on the teacher's device, and
         as described in §2 and §3, it is never transmitted anywhere in a form
-        that identifies a child. Purchases are tied to the adult teacher's
-        Google Play account.
+        that identifies a child. If you write song lyrics yourself, they are
+        sent as written (§3.9) — please avoid children's personal details
+        there. Purchases are tied to the adult teacher's Google Play account.
       </p>
 
       <h2 id="rights">8. Your rights (GDPR)</h2>
@@ -461,7 +495,8 @@
         is restricted to the developer and secret-gated; logs never contain
         request content. No security measure is absolute, but the
         architecture is designed so that the most sensitive data — anything
-        naming a child — never reaches a server in the first place.
+        naming a child — never reaches a server in the first place (the
+        deliberate exception: lyrics you write yourself, §3.9).
       </p>
 
       <h2 id="changes">10. Changes to this policy</h2>

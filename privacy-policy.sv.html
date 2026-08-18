@@ -128,7 +128,7 @@
         <strong>Utvecklare och personuppgiftsansvarig:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Senast uppdaterad:</strong> 4 augusti 2026
+        <strong>Senast uppdaterad:</strong> 18 augusti 2026
       </p>
 
       <div class="prevails-note">Detta dokument är en översättning som tillhandahålls för din bekvämlighet. Vid eventuella avvikelser mellan denna översättning och den <a href="privacy-policy.html">engelska versionen</a> har den engelska versionen företräde.</div>
@@ -149,6 +149,10 @@
         enhet</strong>: barnens namn, datum, anteckningar och alla andra
         identifierande uppgifter tas bort eller ersätts med neutrala etiketter
         på själva enheten innan någon förfrågan skickas till någon tjänst.
+        Sångtexter som du
+        skriver eller redigerar i appen är ett medvetet undantag: de skickas
+        precis som du skrev dem
+        (§3.9).
       </p>
 
       <h2 id="on-device">2. Uppgifter som stannar på din enhet</h2>
@@ -157,7 +161,8 @@
         appens lokala databas och privata lagringsutrymme. De laddas aldrig
         upp automatiskt. Det enda som kan få något av detta att lämna enheten
         är åtgärder som du själv vidtar: att exportera eller dela en fil,
-        eller att skicka in en innehållsrapport (§3.8).
+        att skicka in en innehållsrapport (§3.8) eller att skapa en sång av
+        en text du själv har skrivit (§3.9).
       </p>
       <ul>
         <li>
@@ -166,11 +171,15 @@
         </li>
         <li>Klasser och grupper</li>
         <li>
-          Genererade dagsplaneringar och sagor (efter genereringen sätter
-          appen lokalt tillbaka de riktiga namnen – de versioner som
+          Genererade dagsplaneringar, sagor och sånger (där innehållet
+          personaliseras med riktiga namn sätter appen lokalt tillbaka dem
+          efter genereringen – de versioner som
           innehåller riktiga namn finns endast på din enhet)
         </li>
-        <li>Nedladdad ljuduppläsning av sagor och exporterade sagovideor</li>
+        <li>
+          Nedladdad ljuduppläsning av sagor, komponerat sångljud och
+          exporterade sago- eller sångvideor
+        </li>
         <li>
           Foton som du väljer som videobakgrund – valda via Androids
           systemväljare för foton (appen har ingen behörighet att bläddra i
@@ -298,6 +307,25 @@
         med Google Plays policy för AI-genererat innehåll.
       </p>
 
+      <h3>3.9. Sångskapande</h3>
+      <p>
+        När du skapar en sång förbereds först dess text. Du kan låta AI:n
+        skriva den utifrån ditt tema och dina val – då gäller samma hantering
+        som i §3.1, med behovsbeskrivningar som anonymiseras på enheten –
+        eller så skriver eller redigerar du texten själv. <strong>Sångtexter
+        som du själv skriver eller redigerar anonymiseras avsiktligt
+        inte</strong>: de är din egen text och
+        skickas exakt som du skrev dem – till den AI-tjänst som ordnar dem
+        i en sångstruktur och, om du begär en omslagsbild, till bildtjänsten
+        (som tar emot sångens titel och text). Redigeraren påminner dig om
+        detta där du skriver; ta inte med personuppgifter som du inte vill få
+        behandlade. Den färdiga texten skickas sedan till ElevenLabs (USA,
+        §4) för att komponera ljudet, som laddas ner till din enhet och
+        endast sparas där – servern lagrar varken din text eller det
+        komponerade ljudet. Omslagsbilder lagras på samma sätt som
+        sagoillustrationer (§3.3).
+      </p>
+
       <h2 id="processors">4. Tjänsteleverantörer</h2>
 <p>Appen anlitar följande personuppgiftsbiträden:</p>
       <table>
@@ -313,13 +341,16 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>AI-generering av text och bilder</td>
-            <td>Anonymiserade, namnfria prompter (§3.1)</td>
-            <td>Via vår EU-proxy</td>
+            <td>Anonymiserade, namnfria prompter (§3.1); sångtexter du själv
+            skriver, precis som du skrev dem (§3.9)</td>
+            <td>Google – via vår EU-proxy; kan behandlas utanför EES</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Ljuduppläsning av sagor (text till tal)</td>
-            <td>Namnfri sagotext och röstval (§3.2)</td>
+            <td>Ljuduppläsning av sagor (text till tal) och komponering av
+            sånger (musik)</td>
+            <td>Namnfri sagotext och röstval (§3.2); sångtext och
+            stilinställningar (§3.9)</td>
             <td>USA</td>
           </tr>
           <tr>
@@ -349,10 +380,14 @@
         </tbody>
       </table>
       <p>
-        Uppläsningsförfrågningar är det enda flöde som behandlas
-        <strong>utanför EES</strong>: ElevenLabs behandlar den namnfria
-        sagotexten i USA enligt sina villkor för personuppgiftsbehandling, som
-        innefattar EU:s standardavtalsklausuler. Se även:
+        Två flöden kan behandlas
+        <strong>utanför EES</strong>: ElevenLabs behandlar förfrågningar om
+        uppläsning och sångkomponering – sagotexten eller
+        sångtexten – i USA enligt sina villkor för personuppgiftsbehandling, som
+        innefattar EU:s standardavtalsklausuler, och förfrågningar till
+        Google Gemini går via vår EU-proxy till Googles Gemini-API, där
+        Google kan behandla dem utanför EES enligt sina villkor för
+        personuppgiftsbehandling. Se även:
         <a href="https://policies.google.com/privacy">Googles
         integritetspolicy</a>.
       </p>
@@ -367,7 +402,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Innehållet i AI-förfrågningar (prompter, beskrivningar)</td>
+            <td>Innehållet i AI-förfrågningar (prompter, beskrivningar, sångtexter)</td>
             <td>Lagras inte – behandlas endast under överföringen</td>
           </tr>
           <tr>
@@ -398,7 +433,7 @@
             </td>
           </tr>
           <tr>
-            <td>Sagoillustrationer (kopia i molnet)</td>
+            <td>Sagoillustrationer och omslagsbilder för sånger (kopia i molnet)</td>
             <td>Tills de ersätts av en nygenererad version, eller på begäran</td>
           </tr>
           <tr>
@@ -433,7 +468,9 @@
         De uppgifter om barnen som en lärare matar in är lärarens egen
         yrkesmässiga dokumentation: de lagras endast på lärarens enhet och,
         som beskrivs i §2 och §3, överförs de aldrig någonstans i en form som
-        identifierar ett barn. Köp är knutna till den vuxna lärarens Google
+        identifierar ett barn. Om du själv skriver en sångtext skickas den
+        precis som du skrev den (§3.9) – undvik barns personuppgifter där.
+        Köp är knutna till den vuxna lärarens Google
         Play-konto.
       </p>
 
@@ -472,7 +509,9 @@
         begränsad till utvecklaren och skyddad av en hemlig nyckel; loggarna
         innehåller aldrig förfrågningarnas innehåll. Ingen säkerhetsåtgärd är
         absolut, men arkitekturen är utformad så att de känsligaste
-        uppgifterna – allt som namnger ett barn – aldrig ens når en server.
+        uppgifterna – allt som namnger ett barn – aldrig ens når en server
+        (det avsiktliga undantaget är sångtexter du själv skriver,
+        §3.9).
       </p>
 
       <h2 id="changes">10. Ändringar av denna policy</h2>

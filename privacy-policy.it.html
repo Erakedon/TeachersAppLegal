@@ -128,7 +128,7 @@
         <strong>Sviluppatore e titolare del trattamento:</strong> Maciej Bernacki<br />
         <strong>Contatto:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Ultimo aggiornamento:</strong> 4 agosto 2026
+        <strong>Ultimo aggiornamento:</strong> 18 agosto 2026
       </p>
 
       <div class="prevails-note">Questo documento è una traduzione fornita per comodità. In caso di discrepanza tra questa traduzione e la <a href="privacy-policy.html">versione inglese</a>, prevale la versione inglese.</div>
@@ -151,6 +151,10 @@
         qualsiasi altro dettaglio identificativo vengono rimossi o
         sostituiti con etichette neutre direttamente sul dispositivo prima
         che qualsiasi richiesta venga inviata a un qualsiasi servizio.
+        Il testo di canzone che
+        scrivi o modifichi tu nell'app è un'eccezione deliberata: viene
+        inviato esattamente come lo hai
+        scritto (§3.9).
       </p>
 
       <h2 id="on-device">2. Dati che restano sul tuo dispositivo</h2>
@@ -159,8 +163,9 @@
         dispositivo</strong>, nel database locale dell'app e nella sua
         memoria privata. Non vengono mai caricati automaticamente. Gli unici
         modi in cui possono lasciare il dispositivo sono le azioni che compi
-        tu stesso: esportare o condividere un file, oppure inviare una
-        segnalazione di contenuti (§3.8).
+        tu stesso: esportare o condividere un file, inviare una
+        segnalazione di contenuti (§3.8) oppure creare una canzone da un
+        testo scritto da te (§3.9).
       </p>
       <ul>
         <li>
@@ -169,11 +174,15 @@
         </li>
         <li>Classi e gruppi</li>
         <li>
-          Piani della giornata e fiabe generati (dopo la generazione, l'app
-          reinserisce localmente i nomi reali — le versioni contenenti i
+          Piani della giornata, fiabe e canzoni generati (dove il contenuto
+          è personalizzato con i nomi reali, l'app li reinserisce localmente
+          dopo la generazione — le versioni contenenti i
           nomi reali esistono solo sul tuo dispositivo)
         </li>
-        <li>L'audio di narrazione delle fiabe scaricato e i video delle fiabe esportati</li>
+        <li>
+          L'audio di narrazione delle fiabe scaricato, l'audio delle
+          canzoni composte e i video di fiabe o canzoni esportati
+        </li>
         <li>
           Le foto che scegli come sfondo di un video — selezionate tramite
           il selettore di foto di sistema di Android (l'app non ha alcuna
@@ -314,6 +323,27 @@
         Play sui contenuti generati dall'IA.
       </p>
 
+      <h3>3.9. Creazione di canzoni</h3>
+      <p>
+        Quando crei una canzone, il testo viene preparato per primo. Puoi
+        lasciare che l'IA lo scriva a partire dal tuo tema e dalle tue
+        scelte — in tal caso è trattato come nella §3.1, con le descrizioni
+        delle esigenze anonimizzate sul dispositivo — oppure puoi scrivere
+        o modificare il testo tu. <strong>Il testo che scrivi o
+        modifichi tu, deliberatamente, non
+        viene anonimizzato</strong>: è il tuo testo e viene inviato
+        esattamente come lo hai scritto — al servizio di IA che lo organizza
+        nella struttura di una canzone e, se richiedi una copertina, al
+        servizio di immagini (che riceve il titolo e il testo della
+        canzone). L'editor te lo ricorda proprio dove scrivi; non inserire
+        dati personali che non desideri vengano trattati. Il testo finale
+        viene poi inviato a ElevenLabs (Stati Uniti, §4) per comporre
+        l'audio, che viene scaricato sul tuo dispositivo e conservato solo
+        lì — il server non memorizza né il tuo testo né l'audio composto.
+        Le copertine sono conservate come le illustrazioni delle fiabe
+        (§3.3).
+      </p>
+
       <h2 id="processors">4. Fornitori di servizi</h2>
 <p>L'app si avvale dei seguenti responsabili del trattamento:</p>
       <table>
@@ -329,13 +359,17 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>Generazione di testi e immagini con l'IA</td>
-            <td>Prompt anonimizzati e privi di nomi (§3.1)</td>
-            <td>Tramite il nostro proxy nell'UE</td>
+            <td>Prompt anonimizzati e privi di nomi (§3.1); il testo di
+            canzone che scrivi tu, così come lo hai scritto (§3.9)</td>
+            <td>Google — tramite il nostro proxy nell'UE; il trattamento può
+            avvenire al di fuori del SEE</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Narrazione delle fiabe (sintesi vocale)</td>
-            <td>Testo della fiaba privo di nomi e voce scelta (§3.2)</td>
+            <td>Narrazione delle fiabe (sintesi vocale) e composizione di
+            canzoni (musica)</td>
+            <td>Testo della fiaba privo di nomi e voce scelta (§3.2); testo
+            della canzone e impostazioni di stile (§3.9)</td>
             <td>Stati Uniti</td>
           </tr>
           <tr>
@@ -365,11 +399,16 @@
         </tbody>
       </table>
       <p>
-        Le richieste di narrazione sono l'unico flusso trattato
-        <strong>al di fuori del SEE</strong>: ElevenLabs tratta il testo
-        della fiaba privo di nomi negli Stati Uniti in base ai propri
+        Due flussi possono essere trattati
+        <strong>al di fuori del SEE</strong>: ElevenLabs tratta le richieste
+        di narrazione e di composizione di canzoni — il testo
+        della fiaba o il testo della canzone — negli Stati Uniti in base ai
+        propri
         termini di trattamento dei dati, che incorporano le Clausole
-        Contrattuali Standard dell'UE. Vedi anche:
+        Contrattuali Standard dell'UE; le richieste a Google Gemini,
+        invece, passano dal nostro proxy nell'UE all'API Gemini di Google,
+        dove Google può trattarle al di fuori del SEE in base ai propri
+        termini di trattamento dei dati. Vedi anche:
         <a href="https://policies.google.com/privacy">Informativa sulla
         privacy di Google</a>.
       </p>
@@ -384,7 +423,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Contenuto delle richieste all'IA (prompt, descrizioni)</td>
+            <td>Contenuto delle richieste all'IA (prompt, descrizioni, testi delle canzoni)</td>
             <td>Non memorizzato — trattato solo in transito</td>
           </tr>
           <tr>
@@ -415,7 +454,7 @@
             </td>
           </tr>
           <tr>
-            <td>Illustrazioni delle fiabe (copia nel cloud)</td>
+            <td>Illustrazioni delle fiabe e copertine delle canzoni (copia nel cloud)</td>
             <td>Finché non vengono sostituite da una versione rigenerata, oppure su richiesta</td>
           </tr>
           <tr>
@@ -453,7 +492,9 @@
         sono la documentazione professionale dell'insegnante stesso: sono
         conservate solo sul dispositivo dell'insegnante e, come descritto
         nelle §2 e §3, non vengono mai trasmesse in alcun luogo in una
-        forma che identifichi un bambino. Gli acquisti sono collegati
+        forma che identifichi un bambino. Se scrivi tu il testo di una
+        canzone, viene inviato come lo hai scritto (§3.9) — evita di
+        inserirvi dati personali di bambini. Gli acquisti sono collegati
         all'account Google Play dell'insegnante adulto.
       </p>
 
@@ -495,7 +536,8 @@
         contenuto delle richieste. Nessuna misura di sicurezza è assoluta,
         ma l'architettura è progettata in modo che i dati più sensibili —
         qualsiasi elemento che nomini un bambino — non raggiungano mai
-        alcun server.
+        alcun server (l'eccezione deliberata è il testo
+        che scrivi tu, §3.9).
       </p>
 
       <h2 id="changes">10. Modifiche alla presente informativa</h2>

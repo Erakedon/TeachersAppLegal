@@ -128,7 +128,7 @@
         <strong>Deweloper i administrator danych:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Data aktualizacji:</strong> 4 sierpnia 2026
+        <strong>Data aktualizacji:</strong> 18 sierpnia 2026
       </p>
 
       <div class="prevails-note">Niniejszy dokument jest tłumaczeniem udostępnionym dla wygody użytkownika. W razie jakichkolwiek rozbieżności między tym tłumaczeniem a <a href="privacy-policy.html">wersją angielską</a> rozstrzygające znaczenie ma wersja angielska.</div>
@@ -151,7 +151,10 @@
         urządzenia</strong>: imiona dzieci, daty, notatki i wszelkie inne dane
         umożliwiające identyfikację są usuwane lub zastępowane neutralnymi
         etykietami na samym urządzeniu, zanim jakiekolwiek zapytanie zostanie
-        wysłane do jakiejkolwiek usługi.
+        wysłane do jakiejkolwiek usługi. Celowym wyjątkiem jest tekst
+        piosenki, który samodzielnie napiszesz lub
+        zmienisz w aplikacji: taki tekst jest wysyłany dokładnie w takiej
+        postaci, w jakiej go zapiszesz (§3.9).
       </p>
 
       <h2 id="on-device">2. Dane, które pozostają na Twoim urządzeniu</h2>
@@ -160,8 +163,9 @@
         urządzeniu</strong>, w lokalnej bazie danych aplikacji i w jej
         prywatnej pamięci. Nigdy nie są przesyłane automatycznie. Jedyne
         sposoby, w jakie mogą opuścić urządzenie, to działania podejmowane
-        przez Ciebie samodzielnie: wyeksportowanie lub udostępnienie pliku
-        albo wysłanie zgłoszenia treści (§3.8).
+        przez Ciebie samodzielnie: wyeksportowanie lub udostępnienie pliku,
+        wysłanie zgłoszenia treści (§3.8) albo stworzenie piosenki z
+        napisanego przez Ciebie tekstu (§3.9).
       </p>
       <ul>
         <li>
@@ -170,11 +174,15 @@
         </li>
         <li>Klasy i grupy</li>
         <li>
-          Wygenerowane plany dnia i opowiadania (po wygenerowaniu aplikacja
-          lokalnie wstawia z powrotem prawdziwe imiona — wersje zawierające
+          Wygenerowane plany dnia, opowiadania i piosenki (tam, gdzie treść
+          jest personalizowana prawdziwymi imionami, aplikacja po
+          wygenerowaniu wstawia je z powrotem lokalnie — wersje zawierające
           prawdziwe imiona istnieją wyłącznie na Twoim urządzeniu)
         </li>
-        <li>Pobrane nagrania narracji opowiadań i wyeksportowane wideo z opowiadaniami</li>
+        <li>
+          Pobrane nagrania narracji opowiadań, skomponowane nagrania
+          piosenek oraz wyeksportowane wideo z opowiadaniami lub piosenkami
+        </li>
         <li>
           Zdjęcia wybrane przez Ciebie jako tło filmu — wskazane za
           pośrednictwem systemowego selektora zdjęć w systemie Android
@@ -310,6 +318,27 @@
         przez AI.
       </p>
 
+      <h3>3.9. Tworzenie piosenek</h3>
+      <p>
+        Gdy tworzysz piosenkę, najpierw powstaje jej tekst. Możesz zlecić
+        jego napisanie AI na podstawie tematu i Twoich wyborów — wtedy
+        obowiązują zasady z §3.1, z opisami potrzeb anonimizowanymi na
+        urządzeniu — albo napisać lub zmienić tekst samodzielnie.
+        <strong>Tekst piosenki napisany lub zmieniony przez Ciebie celowo
+        nie jest anonimizowany</strong>: to Twój
+        własny tekst i jest wysyłany dokładnie w takiej postaci, w jakiej go
+        zapiszesz — do usługi AI, która układa go w strukturę piosenki, a
+        jeżeli poprosisz o okładkę, także do usługi generującej obrazy
+        (otrzymuje ona tytuł i tekst piosenki). Edytor przypomina o tym w
+        miejscu, w którym piszesz; prosimy nie umieszczać w tekście danych
+        osobowych, których przetwarzania sobie nie życzysz. Gotowy tekst
+        jest następnie wysyłany do ElevenLabs (Stany Zjednoczone, §4) w celu
+        skomponowania nagrania, które jest pobierane na Twoje urządzenie i
+        przechowywane wyłącznie tam — serwer nie przechowuje ani Twojego
+        tekstu, ani skomponowanego nagrania. Okładki piosenek są
+        przechowywane tak jak ilustracje do opowiadań (§3.3).
+      </p>
+
       <h2 id="processors">4. Dostawcy usług</h2>
 <p>Aplikacja korzysta z następujących podmiotów przetwarzających:</p>
       <table>
@@ -325,13 +354,18 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>Generowanie tekstu i obrazów przez AI</td>
-            <td>Zanonimizowane prompty pozbawione imion (§3.1)</td>
-            <td>Przez nasz serwer pośredniczący w UE</td>
+            <td>Zanonimizowane prompty pozbawione imion (§3.1); tekst
+            piosenki napisany przez Ciebie, w niezmienionej postaci
+            (§3.9)</td>
+            <td>Google — przez nasz serwer pośredniczący w UE; przetwarzanie
+            może odbywać się poza EOG</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Narracja opowiadań (zamiana tekstu na mowę)</td>
-            <td>Pozbawiony imion tekst opowiadania i wybór głosu (§3.2)</td>
+            <td>Narracja opowiadań (zamiana tekstu na mowę) i komponowanie
+            piosenek (muzyka)</td>
+            <td>Pozbawiony imion tekst opowiadania i wybór głosu (§3.2);
+            tekst piosenki i ustawienia stylu (§3.9)</td>
             <td>Stany Zjednoczone</td>
           </tr>
           <tr>
@@ -361,10 +395,15 @@
         </tbody>
       </table>
       <p>
-        Zapytania o narrację to jedyny przypadek przetwarzania danych
-        <strong>poza EOG</strong>: ElevenLabs przetwarza pozbawiony imion tekst opowiadania
+        Dwa przepływy danych mogą być przetwarzane
+        <strong>poza EOG</strong>: ElevenLabs przetwarza zapytania o
+        narrację i komponowanie piosenek — tekst opowiadania lub tekst
+        piosenki —
         w Stanach Zjednoczonych na podstawie swoich warunków przetwarzania
-        danych, które obejmują standardowe klauzule umowne UE. Zobacz również:
+        danych, które obejmują standardowe klauzule umowne UE, a zapytania
+        do Google Gemini trafiają przez nasz serwer pośredniczący w UE do
+        interfejsu Gemini API Google, gdzie Google może przetwarzać je poza
+        EOG na podstawie swoich warunków przetwarzania danych. Zobacz również:
         <a href="https://policies.google.com/privacy">Polityka prywatności
         Google</a>.
       </p>
@@ -379,7 +418,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Treść zapytań do AI (prompty, opisy)</td>
+            <td>Treść zapytań do AI (prompty, opisy, teksty piosenek)</td>
             <td>Nieprzechowywana — przetwarzana wyłącznie w trakcie przesyłania</td>
           </tr>
           <tr>
@@ -410,7 +449,7 @@
             </td>
           </tr>
           <tr>
-            <td>Ilustracje do opowiadań (kopia w chmurze)</td>
+            <td>Ilustracje do opowiadań i okładki piosenek (kopia w chmurze)</td>
             <td>
               Do czasu zastąpienia ponownie wygenerowaną wersją lub
               usunięcia na żądanie
@@ -451,6 +490,9 @@
         stanowią jego własną dokumentację zawodową: są przechowywane wyłącznie
         na urządzeniu nauczyciela i — jak opisano w §2 i §3 — nigdy nie są
         nigdzie przesyłane w postaci umożliwiającej identyfikację dziecka.
+        Jeżeli samodzielnie piszesz tekst piosenki, jest on wysyłany w takiej
+        postaci, w jakiej go zapiszesz (§3.9) — prosimy nie umieszczać w nim
+        danych osobowych dzieci.
         Zakupy są powiązane z kontem Google Play dorosłego nauczyciela.
       </p>
 
@@ -492,7 +534,8 @@
         zawierają treści zapytań. Żaden środek bezpieczeństwa nie jest
         absolutny, ale architektura została zaprojektowana tak, aby dane
         najbardziej wrażliwe — wszystko, co wskazuje konkretne dziecko — w
-        ogóle nie trafiały na serwer.
+        ogóle nie trafiały na serwer (celowym wyjątkiem jest tekst
+        piosenki napisany przez Ciebie, §3.9).
       </p>
 
       <h2 id="changes">10. Zmiany niniejszej Polityki</h2>

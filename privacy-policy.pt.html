@@ -128,7 +128,7 @@
         <strong>Programador e responsável pelo tratamento:</strong> Maciej Bernacki<br />
         <strong>Contacto:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Última atualização:</strong> 4 de agosto de 2026
+        <strong>Última atualização:</strong> 18 de agosto de 2026
       </p>
 
       <div class="prevails-note">Este documento é uma tradução disponibilizada por conveniência. Em caso de divergência entre esta tradução e a <a href="privacy-policy.html">versão inglesa</a>, prevalece a versão inglesa.</div>
@@ -150,7 +150,10 @@
         nomes das crianças, as datas, as notas e quaisquer outros elementos
         identificativos são removidos ou substituídos por etiquetas neutras no
         próprio dispositivo, antes de ser enviado qualquer pedido para
-        qualquer serviço.
+        qualquer serviço. A letra de
+        canção que escreves ou editas na aplicação é uma exceção
+        deliberada: é enviada tal como a
+        escreveste (§3.9).
       </p>
 
       <h2 id="on-device">2. Dados que ficam no teu dispositivo</h2>
@@ -159,8 +162,9 @@
         dispositivo</strong>, na base de dados local e no armazenamento
         privado da aplicação. Nunca são carregados automaticamente. As únicas
         formas de qualquer um deles sair do dispositivo são ações da tua
-        iniciativa: exportar ou partilhar um ficheiro, ou enviar uma denúncia
-        de conteúdo (§3.8).
+        iniciativa: exportar ou partilhar um ficheiro, enviar uma denúncia
+        de conteúdo (§3.8) ou criar uma canção a partir de uma letra
+        escrita por ti (§3.9).
       </p>
       <ul>
         <li>
@@ -169,13 +173,14 @@
         </li>
         <li>Turmas e grupos</li>
         <li>
-          Planos do dia e histórias gerados (depois da geração, a aplicação
-          volta a inserir os nomes reais localmente — as versões que contêm
+          Planos do dia, histórias e canções gerados (quando o conteúdo é
+          personalizado com nomes reais, a aplicação volta a inseri-los
+          localmente depois da geração — as versões que contêm
           nomes reais existem apenas no teu dispositivo)
         </li>
         <li>
-          Narrações áudio de histórias que transferiste e vídeos de histórias
-          que exportaste
+          Narrações áudio de histórias que transferiste, áudio de canções
+          compostas e vídeos de histórias ou de canções que exportaste
         </li>
         <li>
           Fotografias que escolhes como fundo de vídeo — selecionadas através
@@ -314,6 +319,26 @@
         por IA.
       </p>
 
+      <h3>3.9. Criação de canções</h3>
+      <p>
+        Quando crias uma canção, a letra é preparada primeiro como texto.
+        Podes pedir à IA que a escreva a partir do teu tema e das tuas
+        escolhas — tratada como no §3.1, com as descrições de necessidades
+        anonimizadas no dispositivo — ou podes escrever ou editar a letra tu
+        mesmo. <strong>A letra que escreves ou editas tu mesmo,
+        deliberadamente, não é anonimizada</strong>: é
+        o teu próprio texto e é enviada exatamente como a escreveste — para
+        o serviço de IA que a organiza na estrutura de uma canção e, se
+        pedires uma capa, para o serviço de imagens (que recebe o título e a
+        letra da canção). O editor recorda-te disto no local onde escreves;
+        não incluas dados pessoais que não queiras ver tratados. A letra
+        final é depois enviada à ElevenLabs (Estados Unidos, §4) para compor
+        o áudio, que é transferido para o teu dispositivo e guardado apenas
+        aí — o servidor não guarda a tua letra nem o áudio composto. As
+        imagens de capa são guardadas como as ilustrações das histórias
+        (§3.3).
+      </p>
+
       <h2 id="processors">4. Prestadores de serviços</h2>
 <p>A aplicação recorre aos seguintes subcontratantes:</p>
       <table>
@@ -329,13 +354,17 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>Geração de texto e de imagens por IA</td>
-            <td>Prompts anonimizados e sem nomes (§3.1)</td>
-            <td>Através do nosso proxy na UE</td>
+            <td>Prompts anonimizados e sem nomes (§3.1); a letra de canção
+            que escreves tu mesmo, tal como a escreveste (§3.9)</td>
+            <td>Google — através do nosso proxy na UE; pode ser tratada
+            fora do EEE</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Narração de histórias (conversão de texto em fala)</td>
-            <td>Texto da história sem nomes e escolha da voz (§3.2)</td>
+            <td>Narração de histórias (conversão de texto em fala) e
+            composição de canções (música)</td>
+            <td>Texto da história sem nomes e escolha da voz (§3.2); letra
+            da canção e definições de estilo (§3.9)</td>
             <td>Estados Unidos</td>
           </tr>
           <tr>
@@ -365,10 +394,15 @@
         </tbody>
       </table>
       <p>
-        Os pedidos de narração são o único fluxo tratado <strong>fora do
-        EEE</strong>: a ElevenLabs trata o texto da história sem nomes nos
+        Dois fluxos podem ser tratados <strong>fora do
+        EEE</strong>: a ElevenLabs trata os pedidos de narração e de
+        composição de canções — o texto da história ou a letra da canção —
+        nos
         Estados Unidos ao abrigo das suas condições de tratamento de dados,
-        que incorporam as Cláusulas Contratuais-Tipo da UE. Ver também:
+        que incorporam as Cláusulas Contratuais-Tipo da UE; e os pedidos ao
+        Google Gemini passam pelo nosso proxy na UE até à API Gemini da
+        Google, onde a Google os pode tratar fora do EEE ao abrigo das suas
+        condições de tratamento de dados. Ver também:
         <a href="https://policies.google.com/privacy">Política de Privacidade
         da Google</a>.
       </p>
@@ -383,7 +417,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Conteúdo dos pedidos de IA (prompts, descrições)</td>
+            <td>Conteúdo dos pedidos de IA (prompts, descrições, letras de canções)</td>
             <td>Não guardado — tratado apenas em trânsito</td>
           </tr>
           <tr>
@@ -413,7 +447,7 @@
             </td>
           </tr>
           <tr>
-            <td>Ilustrações das histórias (cópia na nuvem)</td>
+            <td>Ilustrações das histórias e imagens de capa das canções (cópia na nuvem)</td>
             <td>Até serem substituídas por uma nova versão gerada, ou mediante pedido</td>
           </tr>
           <tr>
@@ -451,7 +485,9 @@
         introduz constituem o registo profissional do próprio professor: são
         guardadas apenas no seu dispositivo e, tal como descrito no §2 e no §3,
         nunca são transmitidas para lado nenhum de uma forma que identifique
-        uma criança. As compras estão associadas à conta Google Play do
+        uma criança. Se escreveres tu mesmo a letra de uma canção, ela é
+        enviada tal como a escreveste (§3.9) — evita incluir aí dados
+        pessoais de crianças. As compras estão associadas à conta Google Play do
         professor adulto.
       </p>
 
@@ -493,7 +529,8 @@
         contêm o conteúdo dos pedidos. Nenhuma medida de segurança é
         absoluta, mas a arquitetura foi concebida para que os dados mais
         sensíveis — tudo o que identifique uma criança — nunca cheguem
-        sequer a um servidor.
+        sequer a um servidor (a exceção deliberada é a letra de canção
+        que escreves tu mesmo, §3.9).
       </p>
 
       <h2 id="changes">10. Alterações a esta política</h2>

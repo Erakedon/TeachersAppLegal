@@ -128,7 +128,7 @@
         <strong>Kehittäjä ja rekisterinpitäjä:</strong> Maciej Bernacki<br />
         <strong>Yhteystiedot:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Viimeksi päivitetty:</strong> 4. elokuuta 2026
+        <strong>Viimeksi päivitetty:</strong> 18. elokuuta 2026
       </p>
 
       <div class="prevails-note">Tämä asiakirja on käännös, joka on laadittu lukemisen helpottamiseksi. Jos tämän käännöksen ja <a href="privacy-policy.html">englanninkielisen version</a> välillä on ristiriita, englanninkielinen versio on ratkaiseva.</div>
@@ -150,6 +150,9 @@
         nimet, päivämäärät, muistiinpanot ja kaikki muut tunnistetiedot
         poistetaan tai korvataan neutraaleilla merkinnöillä itse laitteella,
         ennen kuin yhtäkään pyyntöä lähetetään millekään palvelulle.
+        Sovelluksessa itse kirjoittamasi tai muokkaamasi laulunsanat ovat
+        tarkoituksellinen poikkeus: ne lähetetään sellaisina kuin kirjoitit
+        ne (§3.9).
       </p>
 
       <h2 id="on-device">2. Tiedot, jotka pysyvät laitteellasi</h2>
@@ -158,7 +161,8 @@
         sovelluksen paikalliseen tietokantaan ja yksityiseen tallennustilaan.
         Niitä ei koskaan lähetetä automaattisesti. Ainoat tavat, joilla mikään
         niistä voi poistua laitteelta, ovat omat toimesi: tiedoston vienti tai
-        jakaminen taikka sisältöilmoituksen lähettäminen (§3.8).
+        jakaminen, sisältöilmoituksen lähettäminen (§3.8) taikka laulun
+        luominen itse kirjoittamistasi sanoista (§3.9).
       </p>
       <ul>
         <li>
@@ -167,11 +171,15 @@
         </li>
         <li>Luokat ja ryhmät</li>
         <li>
-          Luodut päiväsuunnitelmat ja sadut (luonnin jälkeen sovellus lisää
-          oikeat nimet takaisin paikallisesti — oikeita nimiä sisältävät
+          Luodut päiväsuunnitelmat, sadut ja laulut (kun sisältö
+          personoidaan oikeilla nimillä, sovellus lisää ne takaisin
+          paikallisesti luonnin jälkeen — oikeita nimiä sisältävät
           versiot ovat olemassa vain laitteellasi)
         </li>
-        <li>Ladatut satujen äänikerronnat ja viedyt satuvideot</li>
+        <li>
+          Ladatut satujen äänikerronnat, sävelletyt laulujen äänitteet ja
+          viedyt satu- tai lauluvideot
+        </li>
         <li>
           Valokuvat, jotka valitset videon taustaksi — ne valitaan Androidin
           järjestelmän kuvanvalitsimella (sovelluksella ei ole oikeutta selata
@@ -303,6 +311,27 @@
         Playn tekoälyn luomaa sisältöä koskeva käytäntö edellyttää.
       </p>
 
+      <h3>3.9. Laulujen luominen</h3>
+      <p>
+        Kun luot laulun, sen sanat valmistellaan ensin tekstinä. Voit antaa
+        tekoälyn kirjoittaa ne aiheesi ja valintojesi pohjalta — tällöin
+        niitä käsitellään kuten §3.1:ssä, ja tarvekuvaukset anonymisoidaan
+        laitteella — tai voit kirjoittaa tai muokata sanat itse.
+        <strong>Itse kirjoittamasi tai muokkaamasi laulunsanat jätetään
+        tarkoituksella anonymisoimatta</strong>: ne ovat
+        omaa tekstiäsi ja ne lähetetään täsmälleen sellaisina kuin kirjoitit
+        ne — tekoälypalvelulle, joka järjestää ne laulun rakenteeksi, ja jos
+        pyydät kansikuvaa, kuvapalvelulle (joka vastaanottaa laulun nimen ja
+        sanat). Editori muistuttaa tästä siinä kentässä, johon kirjoitat sanat;
+        älä sisällytä
+        sanoihin henkilötietoja, joita et halua käsiteltävän. Valmiit sanat
+        lähetetään sitten ElevenLabsille (Yhdysvallat, §4) äänen
+        säveltämistä varten; äänite ladataan laitteellesi ja säilytetään
+        vain siellä — palvelin ei tallenna sanojasi eikä sävellettyä
+        äänitettä. Kansikuvat tallennetaan samoin kuin satujen kuvitukset
+        (§3.3).
+      </p>
+
       <h2 id="processors">4. Palveluntarjoajat</h2>
 <p>Sovellus käyttää seuraavia henkilötietojen käsittelijöitä:</p>
       <table>
@@ -318,13 +347,18 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>Tekoälyn teksti- ja kuvagenerointi</td>
-            <td>Anonymisoidut, nimettömät kehotteet (§3.1)</td>
-            <td>EU-välityspalvelimemme kautta</td>
+            <td>Anonymisoidut, nimettömät kehotteet (§3.1); itse
+            kirjoittamasi laulunsanat sellaisina kuin kirjoitit ne
+            (§3.9)</td>
+            <td>Google — EU-välityspalvelimemme kautta; käsittely voi
+            tapahtua ETA:n ulkopuolella</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Satujen äänikerronta (tekstistä puheeksi)</td>
-            <td>Nimetön sadun teksti ja äänen valinta (§3.2)</td>
+            <td>Satujen äänikerronta (tekstistä puheeksi) ja laulujen
+            säveltäminen (musiikki)</td>
+            <td>Nimetön sadun teksti ja äänen valinta (§3.2); laulunsanat
+            ja tyyliasetukset (§3.9)</td>
             <td>Yhdysvallat</td>
           </tr>
           <tr>
@@ -354,10 +388,15 @@
         </tbody>
       </table>
       <p>
-        Kerrontapyynnöt ovat ainoa toiminto, joka käsitellään <strong>ETA:n
-        ulkopuolella</strong>: ElevenLabs käsittelee nimettömän sadun tekstin
-        Yhdysvalloissa tietojenkäsittelyehtojensa mukaisesti, joihin sisältyvät
-        EU:n vakiosopimuslausekkeet. Katso myös:
+        Kaksi tietovirtaa voidaan käsitellä <strong>ETA:n
+        ulkopuolella</strong>: ElevenLabs käsittelee kerronta- ja
+        laulunsävellyspyynnöt — sadun tekstin tai laulunsanat —
+        Yhdysvalloissa tietojenkäsittelyehtojensa mukaisesti, joihin
+        sisältyvät
+        EU:n vakiosopimuslausekkeet, ja Google Gemini -pyynnöt kulkevat
+        EU-välityspalvelimemme kautta Googlen Gemini-rajapintaan, jossa
+        Google voi käsitellä niitä ETA:n ulkopuolella omien
+        tietojenkäsittelyehtojensa mukaisesti. Katso myös:
         <a href="https://policies.google.com/privacy">Googlen
         tietosuojakäytäntö</a>.
       </p>
@@ -372,7 +411,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Tekoälypyyntöjen sisältö (kehotteet, kuvaukset)</td>
+            <td>Tekoälypyyntöjen sisältö (kehotteet, kuvaukset, laulunsanat)</td>
             <td>Ei tallenneta — käsitellään vain siirron aikana</td>
           </tr>
           <tr>
@@ -403,7 +442,7 @@
             </td>
           </tr>
           <tr>
-            <td>Satujen kuvitukset (pilvikopio)</td>
+            <td>Satujen kuvitukset ja laulujen kansikuvat (pilvikopio)</td>
             <td>Kunnes ne korvataan uudelleen luodulla versiolla tai pyynnöstä</td>
           </tr>
           <tr>
@@ -440,7 +479,9 @@
         henkilötietoja. Opettajan syöttämät lapsia koskevat tiedot ovat
         opettajan omaa ammatillista aineistoa: ne tallennetaan vain opettajan
         laitteelle, ja kuten §2 ja §3 kuvaavat, niitä ei koskaan siirretä
-        minnekään sellaisessa muodossa, joka tunnistaisi lapsen. Ostot on
+        minnekään sellaisessa muodossa, joka tunnistaisi lapsen. Jos
+        kirjoitat laulunsanat itse, ne lähetetään sellaisina kuin kirjoitit
+        ne (§3.9) — vältä lasten henkilötietoja niissä. Ostot on
         sidottu aikuisen opettajan Google Play -tiliin.
       </p>
 
@@ -481,7 +522,8 @@
         salaisella avaimella; lokit eivät koskaan sisällä pyyntöjen sisältöä.
         Mikään tietoturvatoimi ei ole absoluuttinen, mutta arkkitehtuuri on
         suunniteltu niin, ettei kaikkein arkaluonteisin tieto — mikään lapsen
-        nimeävä tieto — päädy lainkaan palvelimelle.
+        nimeävä tieto — päädy lainkaan palvelimelle (tarkoituksellinen
+        poikkeus ovat itse kirjoittamasi laulunsanat, §3.9).
       </p>
 
       <h2 id="changes">10. Tämän selosteen muutokset</h2>

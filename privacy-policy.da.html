@@ -128,7 +128,7 @@
         <strong>Udvikler og dataansvarlig:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Sidst opdateret:</strong> 4. august 2026
+        <strong>Sidst opdateret:</strong> 18. august 2026
       </p>
 
       <div class="prevails-note">Dette dokument er en oversættelse, der stilles til rådighed af praktiske hensyn. I tilfælde af uoverensstemmelse mellem denne oversættelse og den <a href="privacy-policy.html">engelske version</a> har den engelske version forrang.</div>
@@ -149,7 +149,9 @@
         aldrig forlader din enhed</strong>: børnenes navne, datoer, noter og
         alle andre identificerende oplysninger fjernes eller erstattes med
         neutrale mærkater på selve enheden, før der sendes en anmodning til
-        nogen tjeneste.
+        nogen tjeneste. Sangtekster, du skriver eller redigerer i appen, er
+        en bevidst undtagelse: de sendes, som du
+        skrev dem (§ 3.9).
       </p>
 
       <h2 id="on-device">2. Data, der bliver på din enhed</h2>
@@ -157,8 +159,9 @@
         Følgende data gemmes <strong>kun på din enhed</strong>, i appens
         lokale database og private lager. De uploades aldrig automatisk. De
         eneste måder, hvorpå noget af det kan forlade enheden, er de
-        handlinger, du selv foretager: at eksportere eller dele en fil eller
-        at indsende en indholdsrapport (§ 3.8).
+        handlinger, du selv foretager: at eksportere eller dele en fil, at
+        indsende en indholdsrapport (§ 3.8) eller at skabe en sang ud
+        fra en tekst, du selv har skrevet (§ 3.9).
       </p>
       <ul>
         <li>
@@ -167,11 +170,15 @@
         </li>
         <li>Klasser og grupper</li>
         <li>
-          Genererede dagsplaner og eventyr (efter genereringen indsætter appen
-          de rigtige navne igen lokalt — de versioner, der indeholder rigtige
+          Genererede dagsplaner, eventyr og sange (hvor indholdet
+          personaliseres med rigtige navne, indsætter appen dem igen lokalt
+          efter genereringen — de versioner, der indeholder rigtige
           navne, findes kun på din enhed)
         </li>
-        <li>Downloadet lydoplæsning af eventyr og eksporterede eventyrvideoer</li>
+        <li>
+          Downloadet lydoplæsning af eventyr, komponeret sanglyd og
+          eksporterede eventyr- eller sangvideoer
+        </li>
         <li>
           Billeder, du vælger som videobaggrund — valgt via Androids
           systembilledvælger (appen har ikke tilladelse til at gennemse dit
@@ -297,6 +304,24 @@
         for AI-genereret indhold.
       </p>
 
+      <h3>3.9. Oprettelse af sange</h3>
+      <p>
+        Når du laver en sang, forberedes teksten først. Du kan lade AI'en
+        skrive den ud fra dit emne og dine valg — behandlet som i § 3.1,
+        med behovsbeskrivelser, der anonymiseres på enheden — eller du kan
+        selv skrive eller redigere teksten. <strong>Sangtekster, du selv
+        skriver eller redigerer, anonymiseres bevidst ikke</strong>: de er din egen tekst og sendes præcis,
+        som du skrev dem — til den AI-tjeneste, der ordner dem i en
+        sangstruktur, og, hvis du beder om et coverbillede, til
+        billedtjenesten (som modtager sangens titel og tekst). Editoren
+        minder dig om det, dér hvor du skriver; medtag ikke
+        personoplysninger, du ikke ønsker behandlet. Den færdige tekst
+        sendes derefter til ElevenLabs (USA, § 4) for at komponere lyden,
+        som downloades til din enhed og kun opbevares dér — serveren gemmer
+        hverken din tekst eller den komponerede lyd. Coverbilleder gemmes på
+        samme måde som illustrationer til eventyr (§ 3.3).
+      </p>
+
       <h2 id="processors">4. Tjenesteudbydere</h2>
 <p>Appen benytter følgende databehandlere:</p>
       <table>
@@ -312,13 +337,16 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>AI-generering af tekst og billeder</td>
-            <td>Anonymiserede, navnefri prompts (§ 3.1)</td>
-            <td>Via vores EU-proxy</td>
+            <td>Anonymiserede, navnefri prompts (§ 3.1); sangtekster, du
+            selv skriver, som du skrev dem (§ 3.9)</td>
+            <td>Google — via vores EU-proxy; kan behandles uden for EØS</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Oplæsning af eventyr (tekst-til-tale)</td>
-            <td>Navnefri eventyrtekst og valg af stemme (§ 3.2)</td>
+            <td>Oplæsning af eventyr (tekst-til-tale) og komponering af
+            sange (musik)</td>
+            <td>Navnefri eventyrtekst og valg af stemme (§ 3.2); sangtekst
+            og stilindstillinger (§ 3.9)</td>
             <td>USA</td>
           </tr>
           <tr>
@@ -348,10 +376,14 @@
         </tbody>
       </table>
       <p>
-        Anmodninger om oplæsning er det ene flow, der behandles
-        <strong>uden for EØS</strong>: ElevenLabs behandler den navnefri
-        eventyrtekst i USA i henhold til sine databehandlingsvilkår, som
-        indarbejder EU's standardkontraktbestemmelser. Se også:
+        To typer anmodninger kan behandles
+        <strong>uden for EØS</strong>: ElevenLabs behandler anmodninger om
+        oplæsning og sangkomponering — eventyrteksten eller sangteksten —
+        i USA i henhold til sine databehandlingsvilkår, som
+        indarbejder EU's standardkontraktbestemmelser, og anmodninger til
+        Google Gemini går via vores EU-proxy til Googles Gemini-API, hvor
+        Google kan behandle dem uden for EØS i henhold til sine
+        databehandlingsvilkår. Se også:
         <a href="https://policies.google.com/privacy">Googles
         privatlivspolitik</a>.
       </p>
@@ -366,7 +398,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Indholdet af AI-anmodninger (prompts, beskrivelser)</td>
+            <td>Indholdet af AI-anmodninger (prompts, beskrivelser, sangtekster)</td>
             <td>Gemmes ikke — behandles kun undervejs</td>
           </tr>
           <tr>
@@ -396,7 +428,7 @@
             </td>
           </tr>
           <tr>
-            <td>Illustrationer til eventyr (kopi i skyen)</td>
+            <td>Illustrationer til eventyr og coverbilleder til sange (kopi i skyen)</td>
             <td>Indtil de erstattes af en nygenereret version, eller efter anmodning</td>
           </tr>
           <tr>
@@ -432,7 +464,9 @@
         De oplysninger om børnene, som en lærer indtaster, er lærerens egen
         professionelle dokumentation: de gemmes udelukkende på lærerens enhed,
         og som beskrevet i § 2 og § 3 overføres de aldrig nogen steder i en
-        form, der identificerer et barn. Køb er knyttet til den voksne lærers
+        form, der identificerer et barn. Hvis du selv skriver en sangtekst,
+        sendes den, som du skrev den (§ 3.9) — undgå børns
+        personoplysninger dér. Køb er knyttet til den voksne lærers
         Google Play-konto.
       </p>
 
@@ -472,7 +506,8 @@
         indeholder aldrig indholdet af anmodninger. Ingen
         sikkerhedsforanstaltning er absolut, men arkitekturen er udformet, så
         de mest følsomme data — alt, der nævner et barn ved navn — slet ikke
-        når frem til en server i første omgang.
+        når frem til en server i første omgang (den bevidste
+        undtagelse er sangtekster, du selv skriver, § 3.9).
       </p>
 
       <h2 id="changes">10. Ændringer af denne politik</h2>

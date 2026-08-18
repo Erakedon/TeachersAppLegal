@@ -128,7 +128,7 @@
         <strong>Razvojni programer i voditelj obrade podataka:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Posljednje ažuriranje:</strong> 4. kolovoza 2026.
+        <strong>Posljednje ažuriranje:</strong> 18. kolovoza 2026.
       </p>
 
       <div class="prevails-note">Ovaj je dokument prijevod koji se pruža radi praktičnosti. U slučaju bilo kakvog odstupanja između ovog prijevoda i engleske verzije mjerodavna je <a href="privacy-policy.html">engleska verzija</a>.</div>
@@ -149,7 +149,9 @@
         napuštaju vaš uređaj</strong>: imena djece, datumi, bilješke i svi
         drugi identifikacijski podaci uklanjaju se ili zamjenjuju neutralnim
         oznakama na samom uređaju prije nego što se bilo koji zahtjev pošalje
-        bilo kojoj usluzi.
+        bilo kojoj usluzi. Tekst pjesme koji napišete ili uredite u
+        aplikaciji namjerna je iznimka: šalje se točno
+        onako kako ste ga napisali (§3.9).
       </p>
 
       <h2 id="on-device">2. Podaci koji ostaju na vašem uređaju</h2>
@@ -158,7 +160,8 @@
         u lokalnoj bazi podataka aplikacije i njezinoj privatnoj pohrani.
         Nikada se ne prenose automatski. Jedini načini na koje bilo što od
         toga može napustiti uređaj jesu radnje koje sami poduzmete: izvoz ili
-        dijeljenje datoteke, odnosno slanje prijave sadržaja (§3.8).
+        dijeljenje datoteke, slanje prijave sadržaja (§3.8) ili stvaranje
+        pjesme iz teksta koji ste sami napisali (§3.9).
       </p>
       <ul>
         <li>
@@ -167,11 +170,15 @@
         </li>
         <li>Razredi i skupine</li>
         <li>
-          Generirani dnevni planovi i priče (nakon generiranja aplikacija
-          lokalno ponovno umeće stvarna imena — verzije koje sadrže stvarna
+          Generirani dnevni planovi, priče i pjesme (ondje gdje se sadržaj
+          personalizira stvarnim imenima, aplikacija ih nakon generiranja
+          ponovno umeće lokalno — verzije koje sadrže stvarna
           imena postoje samo na vašem uređaju)
         </li>
-        <li>Preuzeti zvučni zapisi naracije priča i izvezeni videozapisi priča</li>
+        <li>
+          Preuzeti zvučni zapisi naracije priča, skladani zvučni zapisi
+          pjesama i izvezeni videozapisi priča ili pjesama
+        </li>
         <li>
           Fotografije koje odaberete kao pozadinu videozapisa — biraju se
           putem Androidova sustavskog alata za odabir fotografija (aplikacija
@@ -305,6 +312,25 @@
         inteligencijom.
       </p>
 
+      <h3>3.9. Stvaranje pjesama</h3>
+      <p>
+        Kada stvarate pjesmu, njezin se tekst najprije priprema u pisanom
+        obliku. Možete prepustiti AI-ju da ga napiše na temelju vaše teme i odabira
+        — tada se obrađuje kao u §3.1, s opisima potreba anonimiziranima na
+        uređaju — ili tekst možete napisati ili urediti sami. <strong>Tekst
+        pjesme koji sami napišete ili uredite namjerno se ne
+        anonimizira</strong>: to je vaš vlastiti tekst i
+        šalje se točno onako kako ste ga napisali — AI usluzi koja ga slaže
+        u strukturu pjesme te, ako zatražite naslovnicu, usluzi za slike
+        (koja prima naslov i tekst pjesme). Uređivač vas na to podsjeća na
+        mjestu na kojem pišete; ne unosite osobne podatke čiju obradu ne
+        želite. Gotov tekst zatim se šalje tvrtki ElevenLabs (Sjedinjene
+        Američke Države, §4) radi skladanja zvučnog zapisa, koji se
+        preuzima na vaš uređaj i čuva samo ondje — poslužitelj ne pohranjuje
+        ni vaš tekst ni skladani zvučni zapis. Naslovnice se pohranjuju kao
+        i ilustracije priča (§3.3).
+      </p>
+
       <h2 id="processors">4. Pružatelji usluga</h2>
 <p>Aplikacija se oslanja na sljedeće izvršitelje obrade:</p>
       <table>
@@ -320,13 +346,17 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>AI generiranje teksta i slika</td>
-            <td>Anonimizirani upiti bez imena (§3.1)</td>
-            <td>Putem našeg proxy poslužitelja u EU-u</td>
+            <td>Anonimizirani upiti bez imena (§3.1); tekst pjesme koji sami
+            napišete, u izvornom obliku (§3.9)</td>
+            <td>Google — putem našeg proxy poslužitelja u EU-u; obrada se
+            može odvijati izvan EGP-a</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Naracija priča (pretvorba teksta u govor)</td>
-            <td>Tekst priče bez imena i odabir glasa (§3.2)</td>
+            <td>Naracija priča (pretvorba teksta u govor) i skladanje
+            pjesama (glazba)</td>
+            <td>Tekst priče bez imena i odabir glasa (§3.2); tekst pjesme i
+            postavke stila (§3.9)</td>
             <td>Sjedinjene Američke Države</td>
           </tr>
           <tr>
@@ -356,10 +386,16 @@
         </tbody>
       </table>
       <p>
-        Zahtjevi za naraciju jedini su tijek obrade koji se odvija
-        <strong>izvan EGP-a</strong>: ElevenLabs obrađuje tekst priče bez
-        imena u Sjedinjenim Američkim Državama u skladu sa svojim uvjetima
-        obrade podataka, koji uključuju standardne ugovorne klauzule EU-a.
+        Dva tijeka obrade mogu se odvijati
+        <strong>izvan EGP-a</strong>: ElevenLabs obrađuje zahtjeve za
+        naraciju i skladanje pjesama — tekst priče ili
+        tekst pjesme — u Sjedinjenim Američkim Državama u skladu sa svojim
+        uvjetima
+        obrade podataka, koji uključuju standardne ugovorne klauzule EU-a,
+        a zahtjevi prema usluzi Google Gemini putuju preko našeg proxy
+        poslužitelja u EU-u do Googleova sučelja Gemini API, gdje ih Google
+        može obrađivati izvan EGP-a u skladu sa svojim uvjetima obrade
+        podataka.
         Vidjeti također:
         <a href="https://policies.google.com/privacy">Googleova pravila o
         privatnosti</a>.
@@ -375,7 +411,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Sadržaj AI zahtjeva (upiti, opisi)</td>
+            <td>Sadržaj AI zahtjeva (upiti, opisi, tekstovi pjesama)</td>
             <td>Ne pohranjuje se — obrađuje se samo u prijenosu</td>
           </tr>
           <tr>
@@ -405,7 +441,7 @@
             </td>
           </tr>
           <tr>
-            <td>Ilustracije priča (kopija u oblaku)</td>
+            <td>Ilustracije priča i naslovnice pjesama (kopija u oblaku)</td>
             <td>Dok ih ne zamijeni ponovno generirana verzija ili dok se ne izbrišu na zahtjev</td>
           </tr>
           <tr>
@@ -442,7 +478,9 @@
         Podaci o djeci koje učitelj unosi njegova su vlastita profesionalna
         evidencija: pohranjeni su samo na učiteljevu uređaju i, kako je
         opisano u §2 i §3, nikada se nikamo ne prenose u obliku koji
-        identificira dijete. Kupnje su vezane uz Google Play račun odraslog
+        identificira dijete. Ako tekst pjesme napišete sami, šalje se onako
+        kako ste ga napisali (§3.9) — izbjegavajte u njemu osobne podatke
+        djece. Kupnje su vezane uz Google Play račun odraslog
         učitelja.
       </p>
 
@@ -481,7 +519,8 @@
         razvojnog programera i zaštićen tajnim ključem; zapisnici nikada ne
         sadrže sadržaj zahtjeva. Nijedna sigurnosna mjera nije apsolutna,
         ali arhitektura je osmišljena tako da najosjetljiviji podaci — sve
-        što imenuje dijete — uopće i ne dospiju na poslužitelj.
+        što imenuje dijete — uopće i ne dospiju na poslužitelj (namjerna je
+        iznimka tekst pjesme koji sami napišete, §3.9).
       </p>
 
       <h2 id="changes">10. Izmjene ovih pravila</h2>

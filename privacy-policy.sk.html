@@ -128,7 +128,7 @@
         <strong>Vývojár a prevádzkovateľ osobných údajov:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Posledná aktualizácia:</strong> 4. augusta 2026
+        <strong>Posledná aktualizácia:</strong> 18. augusta 2026
       </p>
 
       <div class="prevails-note">Tento dokument je preklad poskytovaný pre pohodlie používateľa. V prípade akéhokoľvek rozporu medzi týmto prekladom a anglickou verziou má prednosť <a href="privacy-policy.html">anglická verzia</a>.</div>
@@ -149,7 +149,10 @@
         neopustia tvoje zariadenie</strong>: mená detí, dátumy, poznámky a
         všetky ostatné identifikačné údaje sa odstránia alebo nahradia
         neutrálnymi označeniami priamo v zariadení ešte predtým, než sa
-        akákoľvek požiadavka odošle akejkoľvek službe.
+        akákoľvek požiadavka odošle akejkoľvek službe. Text pesničky, ktorý
+        v aplikácii
+        napíšeš alebo upravíš, je zámernou výnimkou: odošle sa presne v
+        takej podobe, v akej ho napíšeš (§3.9).
       </p>
 
       <h2 id="on-device">2. Údaje, ktoré zostávajú v tvojom zariadení</h2>
@@ -158,7 +161,8 @@
         v lokálnej databáze aplikácie a v jej súkromnom úložisku. Nikdy sa
         nenahrávajú automaticky. Jediné spôsoby, ako môže čokoľvek z nich
         opustiť zariadenie, sú kroky, ktoré vykonáš ty: export alebo
-        zdieľanie súboru, prípadne odoslanie nahlásenia obsahu (§3.8).
+        zdieľanie súboru, odoslanie nahlásenia obsahu (§3.8), prípadne
+        vytvorenie pesničky z vlastného textu (§3.9).
       </p>
       <ul>
         <li>
@@ -167,11 +171,15 @@
         </li>
         <li>Triedy a skupiny</li>
         <li>
-          Vygenerované plány dňa a rozprávky (po vygenerovaní aplikácia
-          lokálne znova vloží skutočné mená — verzie obsahujúce skutočné mená
+          Vygenerované plány dňa, rozprávky a pesničky (tam, kde sa obsah
+          personalizuje skutočnými menami, ich aplikácia po vygenerovaní
+          znova vloží lokálne — verzie obsahujúce skutočné mená
           existujú iba v tvojom zariadení)
         </li>
-        <li>Stiahnuté zvukové nahrávky rozprávania rozprávok a exportované videá rozprávok</li>
+        <li>
+          Stiahnuté zvukové nahrávky rozprávania rozprávok, skomponované
+          nahrávky pesničiek a exportované videá rozprávok alebo pesničiek
+        </li>
         <li>
           Fotografie, ktoré vyberieš ako pozadie videa — vyberajú sa cez
           systémový nástroj Androidu na výber fotiek (aplikácia nemá
@@ -301,6 +309,25 @@
         inteligenciou.
       </p>
 
+      <h3>3.9. Tvorba pesničiek</h3>
+      <p>
+        Keď tvoríš pesničku, najprv sa pripraví jej text. Môžeš nechať AI,
+        aby ho napísala podľa tvojej témy a volieb — vtedy platí to isté čo
+        v §3.1 a opisy potrieb sa anonymizujú v zariadení — alebo text
+        napíšeš či upravíš ty. <strong>Text pesničky, ktorý napíšeš alebo
+        upravíš ty, sa zámerne
+        neanonymizuje</strong>: je to tvoj vlastný text a odošle sa presne v
+        takej podobe, v akej ho napíšeš — službe AI, ktorá ho usporiada do
+        štruktúry pesničky, a ak si vyžiadaš obal, aj službe na generovanie
+        obrázkov (tá dostane názov a text pesničky). Editor ti to pripomína
+        priamo tam, kde píšeš; neuvádzaj v texte osobné údaje, ktorých
+        spracúvanie si neželáš. Hotový text sa potom odošle spoločnosti
+        ElevenLabs (Spojené štáty, §4) na skomponovanie nahrávky, ktorá sa
+        stiahne do tvojho zariadenia a uchováva sa iba tam — server
+        neukladá ani tvoj text, ani skomponovanú nahrávku. Obaly pesničiek
+        sa ukladajú rovnako ako ilustrácie rozprávok (§3.3).
+      </p>
+
       <h2 id="processors">4. Poskytovatelia služieb</h2>
 <p>Aplikácia využíva nasledujúcich sprostredkovateľov:</p>
       <table>
@@ -316,13 +343,17 @@
           <tr>
             <td>Google Gemini (2.5 Flash)</td>
             <td>Generovanie textu a obrázkov pomocou AI</td>
-            <td>Anonymizované zadania bez mien (§3.1)</td>
-            <td>Cez náš proxy server v EÚ</td>
+            <td>Anonymizované zadania bez mien (§3.1); text pesničky, ktorý
+            napíšeš ty, v nezmenenej podobe (§3.9)</td>
+            <td>Google — cez náš proxy server v EÚ; spracúvanie môže
+            prebiehať mimo EHP</td>
           </tr>
           <tr>
             <td>ElevenLabs, Inc.</td>
-            <td>Rozprávanie rozprávok (prevod textu na reč)</td>
-            <td>Text rozprávky bez mien a voľba hlasu (§3.2)</td>
+            <td>Rozprávanie rozprávok (prevod textu na reč) a komponovanie
+            pesničiek (hudba)</td>
+            <td>Text rozprávky bez mien a voľba hlasu (§3.2); text pesničky
+            a nastavenia štýlu (§3.9)</td>
             <td>Spojené štáty</td>
           </tr>
           <tr>
@@ -352,10 +383,14 @@
         </tbody>
       </table>
       <p>
-        Požiadavky na rozprávanie sú jediným tokom spracúvaným <strong>mimo
-        EHP</strong>: ElevenLabs spracúva text rozprávky bez mien v
+        Dva toky údajov sa môžu spracúvať <strong>mimo
+        EHP</strong>: ElevenLabs spracúva požiadavky na rozprávanie a
+        komponovanie pesničiek — text rozprávky alebo text pesničky — v
         Spojených štátoch podľa svojich podmienok spracúvania údajov, ktoré
-        zahŕňajú štandardné zmluvné doložky EÚ. Pozri tiež:
+        zahŕňajú štandardné zmluvné doložky EÚ, a požiadavky na Google
+        Gemini putujú cez náš proxy server v EÚ do rozhrania Gemini API
+        spoločnosti Google, kde ich Google môže spracúvať mimo EHP podľa
+        svojich podmienok spracúvania údajov. Pozri tiež:
         <a href="https://policies.google.com/privacy">Zásady ochrany
         súkromia spoločnosti Google</a>.
       </p>
@@ -370,7 +405,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Obsah požiadaviek AI (zadania, opisy)</td>
+            <td>Obsah požiadaviek AI (zadania, opisy, texty pesničiek)</td>
             <td>Neukladá sa — spracúva sa iba počas prenosu</td>
           </tr>
           <tr>
@@ -400,7 +435,7 @@
             </td>
           </tr>
           <tr>
-            <td>Ilustrácie rozprávok (kópia v cloude)</td>
+            <td>Ilustrácie rozprávok a obaly pesničiek (kópia v cloude)</td>
             <td>Kým ich nenahradí novo vygenerovaná verzia, alebo na požiadanie</td>
           </tr>
           <tr>
@@ -436,6 +471,8 @@
         deťoch, ktoré učiteľ zadá, sú jeho vlastným profesijným záznamom:
         ukladajú sa iba v zariadení učiteľa a — ako je opísané v §2 a §3 —
         nikdy sa nikam neprenášajú v podobe, ktorá by identifikovala dieťa.
+        Ak text pesničky napíšeš ty, odošle sa presne v takej podobe, v
+        akej ho napíšeš (§3.9) — vyhýbaj sa v ňom osobným údajom detí.
         Nákupy sú viazané na účet Google Play dospelého učiteľa.
       </p>
 
@@ -475,7 +512,8 @@
         tajným kľúčom; logy nikdy neobsahujú obsah požiadaviek. Žiadne
         bezpečnostné opatrenie nie je absolútne, ale architektúra je
         navrhnutá tak, aby sa najcitlivejšie údaje — čokoľvek, čo menuje
-        dieťa — na server vôbec nedostali.
+        dieťa — na server vôbec nedostali (zámernou výnimkou je
+        text pesničky, ktorý napíšeš ty, §3.9).
       </p>
 
       <h2 id="changes">10. Zmeny týchto zásad</h2>

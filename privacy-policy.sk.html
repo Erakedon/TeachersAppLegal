@@ -128,7 +128,7 @@
         <strong>Vývojár a prevádzkovateľ osobných údajov:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Posledná aktualizácia:</strong> 18. augusta 2026
+        <strong>Posledná aktualizácia:</strong> 6. septembra 2026
       </p>
 
       <div class="prevails-note">Tento dokument je preklad poskytovaný pre pohodlie používateľa. V prípade akéhokoľvek rozporu medzi týmto prekladom a anglickou verziou má prednosť <a href="privacy-policy.html">anglická verzia</a>.</div>
@@ -153,6 +153,16 @@
         v aplikácii
         napíšeš alebo upravíš, je zámernou výnimkou: odošle sa presne v
         takej podobe, v akej ho napíšeš (§3.9).
+      </p>
+      <p>
+        To, že nezhromažďujeme tvoje meno, neznamená, že ťa reklamné
+        služby nevidia. Bezplatná verzia zobrazuje reklamy poskytované
+        službou Google AdMob a keď si kúpiš predplatné alebo balík tokenov,
+        aplikácia odošle spoločnosti Meta jednu meraciu udalosť, aby sme
+        vedeli, ktorá reklama naozaj funguje. Obe sú podrobne opísané v §6,
+        obe pokrýva jediná otázka o súhlase tam, kde to vyžadujú európske
+        pravidlá, a odmietnutie nič nemení na tom, ako pre teba aplikácia
+        funguje.
       </p>
 
       <h2 id="on-device">2. Údaje, ktoré zostávajú v tvojom zariadení</h2>
@@ -259,6 +269,14 @@
         predplatného (napríklad na zrušenie), aby oprávnenia zostali
         správne.
       </p>
+      <p>
+        Na účely merania reklamy opísaného v §6.2 server navyše vypočíta
+        <strong>jednosmerný hash so soľou</strong> z čísla objednávky, ktoré
+        vydala služba Google Play, a vráti ho aplikácii. Umožňuje
+        spoločnosti Meta započítať jeden nákup iba raz; nedá sa z neho
+        spätne získať číslo objednávky a ani samotné číslo objednávky, ani
+        token nákupu sa nikdy neodosielajú reklamnej službe.
+      </p>
 
       <h3>3.5. Limity používania a zostatky tokenov</h3>
       <p>
@@ -328,8 +346,8 @@
         sa ukladajú rovnako ako ilustrácie rozprávok (§3.3).
       </p>
 
-      <h2 id="processors">4. Poskytovatelia služieb</h2>
-<p>Aplikácia využíva nasledujúcich sprostredkovateľov:</p>
+      <h2 id="processors">4. Poskytovatelia služieb a ďalší príjemcovia</h2>
+<p>Aplikácia využíva nasledujúce externé služby:</p>
       <table>
         <thead>
           <tr>
@@ -359,8 +377,16 @@
           <tr>
             <td>Google AdMob</td>
             <td>Reklamy v bezplatnej verzii</td>
-            <td>Reklamné ID, interakcie s reklamami (§6)</td>
+            <td>Reklamné ID, interakcie s reklamami (§6.1)</td>
             <td>Podľa pravidiel Googlu</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Meranie reklamy</td>
+            <td>Jedna udalosť pri každom začatí predplatného alebo nákupe
+            balíka tokenov — obsah je rozpísaný v §6.2</td>
+            <td>Írsko; spracúvanie môže prebiehať v Spojených štátoch
+            podľa vlastných záruk spoločnosti Meta pri prenose údajov</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -383,14 +409,24 @@
         </tbody>
       </table>
       <p>
-        Dva toky údajov sa môžu spracúvať <strong>mimo
+        <strong>AdMob a Meta nie sú našimi sprostredkovateľmi.</strong> To,
+        čo dostávajú, používajú aj na vlastné reklamné účely, ako samostatní
+        prevádzkovatelia. Ku kópiám, ktoré uchovávajú, nemáme prístup a
+        nemôžeme ich opraviť ani vymazať; žiadosti, ktoré sa ich týkajú,
+        smeruj priamo spoločnosti Google alebo Meta (§8).
+      </p>
+      <p>
+        Niektoré z týchto tokov údajov sa môžu spracúvať <strong>mimo
         EHP</strong>: ElevenLabs spracúva požiadavky na rozprávanie a
         komponovanie pesničiek — text rozprávky alebo text pesničky — v
         Spojených štátoch podľa svojich podmienok spracúvania údajov, ktoré
-        zahŕňajú štandardné zmluvné doložky EÚ, a požiadavky na Google
-        Gemini putujú cez náš proxy server v EÚ do rozhrania Gemini API
+        zahŕňajú štandardné zmluvné doložky EÚ; požiadavky na Google Gemini
+        putujú cez náš proxy server v EÚ do rozhrania Gemini API
         spoločnosti Google, kde ich Google môže spracúvať mimo EHP podľa
-        svojich podmienok spracúvania údajov. Pozri tiež:
+        svojich podmienok spracúvania údajov; a udalosti o nákupoch opísané
+        v §6.2 idú spoločnosti Meta Platforms Ireland, ktorá ich môže
+        spracúvať v Spojených štátoch podľa vlastných záruk pri prenose
+        údajov. Pozri tiež:
         <a href="https://policies.google.com/privacy">Zásady ochrany
         súkromia spoločnosti Google</a>.
       </p>
@@ -420,6 +456,15 @@
             </td>
           </tr>
           <tr>
+            <td>Udalosti o nákupoch odoslané spoločnosti Meta (§6.2)</td>
+            <td>
+              Uchováva ich Meta podľa vlastných podmienok, nie našich.
+              Odvolanie súhlasu zastaví budúce udalosti; nevezme späť
+              udalosť, ktorá už bola odoslaná, a kópiu, ktorú má Meta, za
+              teba nemôžeme vymazať
+            </td>
+          </tr>
+          <tr>
             <td>Počítadlá používania a zostatky tokenov</td>
             <td>Kým je aplikácia prevádzkovaná</td>
           </tr>
@@ -446,22 +491,91 @@
       </table>
       <p>
         Všetky serverové záznamy sú naviazané iba na anonymný identifikátor
-        zariadenia. O ich vymazanie môžeš kedykoľvek požiadať (§8).
+        zariadenia. O ich vymazanie môžeš kedykoľvek požiadať (§8). Riadok
+        o spoločnosti Meta uvedený vyššie je jedinou položkou v tejto
+        tabuľke, ktorá nie je naša a nemôžeme ju vymazať.
       </p>
 
       <h2 id="ads">6. Reklamy a súhlas</h2>
 <p>
+        S reklamou v aplikácii súvisia dve veci: reklamy zobrazované v
+        bezplatnej verzii a meracia udalosť odoslaná pri nákupe. V
+        <strong>EHP, Spojenom kráľovstve a Švajčiarsku</strong> obe upravuje
+        <strong>jediný formulár súhlasu</strong>, ktorý aplikácia zobrazí
+        pri prvom spustení. Pýta sa, či môžu byť reklamy personalizované, a
+        — v rámci vlastných účelov aplikácie, ktoré sa týkajú uchovávania
+        informácií v tvojom zariadení alebo prístupu k nim a merania toho,
+        ako dobre reklama funguje — či môžu naši reklamní partneri, medzi
+        nimi aj Meta, dostať meranie opísané v §6.2. Žiadna druhá otázka ani samostatný
+        prepínač neexistujú. Formulár môžeš kedykoľvek znova otvoriť v
+        Nastaveniach aplikácie („Možnosti súkromia reklám“) alebo použiť
+        systémové nastavenia Androidu. <strong>Odmietnutie ťa nič
+        nestojí</strong>: všetky funkcie vrátane nákupov fungujú úplne
+        rovnako.
+      </p>
+      <p>
+        Mimo týchto krajín sa formulár nezobrazuje, pretože sa tam
+        nevzťahujú pravidlá, ktoré ho vyžadujú. Reklamy sú tam personalizované
+        a udalosť o nákupe opísaná v §6.2 sa pri nákupe odošle. Personalizáciu reklám môžeš aj tak obmedziť vo vlastných
+        nastaveniach Androidu, a ak si neželáš, aby sa udalosť o nákupe
+        odosielala, napíš nám (§11).
+      </p>
+
+      <h3>6.1. Reklamy (Google AdMob)</h3>
+      <p>
         Bezplatná verzia zobrazuje reklamy poskytované službou Google AdMob.
         AdMob môže zhromažďovať reklamné ID tvojho zariadenia, údaje o
-        interakciách s reklamami a približnú polohu (na úrovni krajiny). Pri
-        prvom spustení v EHP/Spojenom kráľovstve aplikácia zobrazí formulár
-        súhlasu, v ktorom si vyberieš medzi personalizovanými a
-        nepersonalizovanými reklamami; túto voľbu môžeš kedykoľvek zmeniť v
-        Nastaveniach aplikácie („Možnosti súkromia reklám“) alebo v
-        systémových nastaveniach Androidu. Predplatitelia reklamy nevidia.
-        Podrobnosti:
+        interakciách s reklamami a približnú polohu (na úrovni krajiny).
+        Predplatitelia reklamy nevidia. Podrobnosti:
         <a href="https://policies.google.com/technologies/ads">Pravidlá
         reklám spoločnosti Google</a>.
+      </p>
+
+      <h3>6.2. Meranie nákupov (Meta)</h3>
+      <p>
+        Aby sme vedeli, ktorá reklama ľudí k aplikácii naozaj privedie,
+        aplikácia odošle <strong>spoločnosti Meta jednu udalosť vždy, keď
+        začneš predplatné alebo si kúpiš balík tokenov</strong>. Nič iné sa
+        neodosiela nikdy: ani obnovenie predplatného, ani zmena plánu, ani
+        obnovenie nákupu, ani preinštalovanie, a ak si nikdy nič nekúpiš,
+        neodošle sa vôbec nič. Udalosť putuje z tvojho zariadenia priamo
+        spoločnosti Meta — nie cez náš server — a obsahuje:
+      </p>
+      <ul>
+        <li>
+          náhodný identifikátor, ktorý pre túto inštaláciu vygeneruje
+          softvér spoločnosti Meta. <strong>Reklamné ID Google tvojho
+          zariadenia sa neprenáša</strong> spoločnosti Meta;
+        </li>
+        <li>
+          predmet nákupu a jeho cenu: sumu a menu, produkt, režim
+          aplikácie, ktorý bol vtedy aktívny, a jednosmerný hash so soľou z
+          čísla objednávky Play opísaný v §3.4 — <strong>nikdy nie samotné
+          číslo objednávky a nikdy nie token nákupu</strong>;
+        </li>
+        <li>
+          štandardné údaje o aplikácii a zariadení, ktoré softvér
+          spoločnosti Meta pripája ku všetkému, čo odosiela: názov balíka a
+          verziu aplikácie, tvoju verziu Androidu, model zariadenia, veľkosť
+          obrazovky, jazyk rozhrania, časové pásmo a názov mobilnej siete.
+        </li>
+      </ul>
+      <p>
+        Meta navyše vidí internetovú adresu, z ktorej udalosť prichádza, čo
+        naznačuje približnú polohu. Udalosť nikdy neobsahuje tvoje meno,
+        meno dieťaťa ani žiadny obsah plánu, rozprávky či pesničky.
+      </p>
+      <p>
+        Tam, kde sa formulár súhlasu uplatňuje, <strong>sa žiadna udalosť
+        neodošle bez tvojho súhlasu</strong> s týmito účelmi a so
+        spoločnosťou Meta ako partnerom. Odvolanie tohto súhlasu zastaví
+        budúce udalosti, vymaže z tvojho zariadenia identifikátor uvedený
+        vyššie a zahodí každú udalosť, ktorá ešte nebola odoslaná — nemôže
+        však vziať späť udalosť, ktorá už bola odoslaná. V prípade čohokoľvek,
+        čo už Meta uchováva, kontaktuj priamo spoločnosť Meta (§8). Vlastné
+        zásady spoločnosti Meta:
+        <a href="https://www.facebook.com/privacy/policy/">Zásady ochrany
+        súkromia spoločnosti Meta</a>.
       </p>
 
       <h2 id="children">7. Údaje detí</h2>
@@ -498,8 +612,19 @@
           oprávnení a zostatkov, ktorú obsahujú.
         </li>
         <li>
-          <strong>Odvolanie súhlasu s reklamami</strong> je možné
-          kedykoľvek, ako je opísané v §6.
+          <strong>Súhlas s reklamami</strong> je možné kedykoľvek odvolať
+          tam, kde sa formulár súhlasu uplatňuje (§6) — jedno
+          odvolanie sa vzťahuje na personalizované reklamy aj na udalosť o
+          nákupe odoslanú spoločnosti Meta.
+        </li>
+        <li>
+          <strong>Údaje uchovávané reklamnými partnermi.</strong> Google a
+          Meta uchovávajú to, čo je opísané v §6, ako samostatní
+          prevádzkovatelia, nie v našom mene. Ku kópiám, ktoré uchovávajú,
+          nemáme prístup a nemôžeme ich za teba opraviť ani vymazať:
+          so žiadosťami, ktoré sa ich týkajú, sa obráť priamo na
+          <a href="https://policies.google.com/privacy">Google</a> alebo na
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
         </li>
       </ul>
 

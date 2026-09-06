@@ -128,7 +128,7 @@
         <strong>Développeur et responsable du traitement :</strong> Maciej Bernacki<br />
         <strong>Contact :</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Dernière mise à jour :</strong> 18 août 2026
+        <strong>Dernière mise à jour :</strong> 6 septembre 2026
       </p>
 
       <div class="prevails-note">Ce document est une traduction fournie par souci de commodité. En cas de divergence entre cette traduction et la <a href="privacy-policy.html">version anglaise</a>, la version anglaise prévaut.</div>
@@ -156,6 +156,17 @@
         modifiez dans l'application constituent une exception
         délibérée : elles sont envoyées telles que vous
         les avez écrites (§3.9).
+      </p>
+      <p>
+        Ne pas collecter votre nom ne signifie pas que vous soyez invisible
+        pour les services publicitaires. L'offre gratuite affiche des
+        publicités diffusées par Google AdMob et, lorsque vous achetez un
+        abonnement ou un pack de jetons, l'application envoie un événement de
+        mesure à Meta afin que nous puissions savoir quelle publicité
+        fonctionne réellement. Les deux sont décrits en détail au §6, les deux
+        relèvent d'une seule et même question de consentement là où les
+        règles européennes en imposent une, et refuser ne change rien au
+        fonctionnement de l'application pour vous.
       </p>
 
       <h2 id="on-device">2. Données qui restent sur votre appareil</h2>
@@ -268,6 +279,15 @@
         l'abonnement (par exemple une résiliation), afin que les droits
         d'utilisation restent exacts.
       </p>
+      <p>
+        Pour la mesure publicitaire décrite au §6.2, le serveur calcule en
+        outre un <strong>hachage à sens unique et salé</strong> du numéro de
+        commande émis par Google Play, et le renvoie à l'application. Il
+        permet à Meta de ne comptabiliser qu'une seule fois un même achat ; il
+        ne peut pas être reconverti en numéro de commande, et ni le numéro de
+        commande lui-même ni le jeton d'achat ne sont jamais envoyés à un
+        service publicitaire.
+      </p>
 
       <h3>3.5. Limites d'utilisation et soldes de jetons</h3>
       <p>
@@ -346,8 +366,8 @@
         contes (§3.3).
       </p>
 
-      <h2 id="processors">4. Prestataires de services</h2>
-<p>L'application fait appel aux sous-traitants suivants :</p>
+      <h2 id="processors">4. Prestataires de services et autres destinataires</h2>
+<p>L'application fait appel aux services externes suivants :</p>
       <table>
         <thead>
           <tr>
@@ -378,8 +398,17 @@
           <tr>
             <td>Google AdMob</td>
             <td>Publicité dans l'offre gratuite</td>
-            <td>Identifiant publicitaire, interactions avec les publicités (§6)</td>
+            <td>Identifiant publicitaire, interactions avec les publicités
+            (§6.1)</td>
             <td>Selon la politique de Google</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Mesure publicitaire</td>
+            <td>Un événement par souscription d'abonnement ou achat de jetons
+            — contenu détaillé au §6.2</td>
+            <td>Irlande ; peut être traité aux États-Unis dans le cadre des
+            garanties de transfert propres à Meta</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -402,16 +431,26 @@
         </tbody>
       </table>
       <p>
-        Deux flux peuvent être traités <strong>hors de
+        <strong>AdMob et Meta ne sont pas nos sous-traitants.</strong> Ils
+        utilisent également ce qu'ils reçoivent à leurs propres fins
+        publicitaires, en tant que responsables du traitement indépendants.
+        Nous ne pouvons ni consulter, ni rectifier, ni supprimer les copies
+        qu'ils détiennent ; les demandes à ce sujet doivent être adressées
+        directement à Google ou à Meta (§8).
+      </p>
+      <p>
+        Certains de ces flux peuvent être traités <strong>hors de
         l'EEE</strong> : ElevenLabs traite les requêtes de narration et de
         composition de chansons — le texte du conte ou les paroles de la
         chanson —
         aux États-Unis dans le cadre de ses conditions de traitement des
         données, qui intègrent les clauses contractuelles types de
-        l'UE ; et les requêtes adressées à Google Gemini transitent par
+        l'UE ; les requêtes adressées à Google Gemini transitent par
         notre proxy dans l'UE vers l'API Gemini de Google, où Google peut
         les traiter en dehors de l'EEE dans le cadre de ses conditions de
-        traitement des données. Voir
+        traitement des données ; et les événements d'achat décrits au §6.2
+        sont transmis à Meta Platforms Ireland, qui peut les traiter aux
+        États-Unis dans le cadre de ses propres garanties de transfert. Voir
         aussi :
         <a href="https://policies.google.com/privacy">Politique de
         confidentialité de Google</a>.
@@ -443,6 +482,15 @@
             </td>
           </tr>
           <tr>
+            <td>Événements d'achat envoyés à Meta (§6.2)</td>
+            <td>
+              Conservés par Meta selon ses propres conditions, et non les
+              nôtres. Le retrait du consentement arrête les événements à
+              venir ; il n'annule pas un événement déjà envoyé, et nous ne
+              pouvons pas supprimer à votre place la copie détenue par Meta
+            </td>
+          </tr>
+          <tr>
             <td>Compteurs d'utilisation et soldes de jetons</td>
             <td>Aussi longtemps que l'application est exploitée</td>
           </tr>
@@ -470,23 +518,100 @@
       <p>
         Tous les enregistrements côté serveur sont associés uniquement à
         l'identifiant d'appareil anonyme. Vous pouvez demander leur
-        suppression à tout moment (§8).
+        suppression à tout moment (§8). La ligne Meta ci-dessus est le seul
+        élément de ce tableau dont la suppression ne nous appartient pas.
       </p>
 
       <h2 id="ads">6. Publicité et consentement</h2>
 <p>
+        Deux choses dans l'application relèvent de la publicité : les
+        publicités affichées dans l'offre gratuite et un événement de mesure
+        envoyé lorsque vous achetez quelque chose. Dans l'<strong>EEE, au
+        Royaume-Uni et en Suisse</strong>, les deux sont régis par un
+        <strong>formulaire de consentement unique</strong>, que l'application
+        affiche au premier lancement. Il demande si les publicités peuvent
+        être personnalisées et — au titre des finalités propres à
+        l'application relatives au stockage ou à la lecture d'informations
+        sur votre appareil et à la mesure des performances de la publicité —
+        si nos partenaires publicitaires, dont Meta, peuvent recevoir la
+        mesure décrite au §6.2. Il n'y a pas de deuxième
+        question ni de réglage distinct. Vous pouvez rouvrir le formulaire à
+        tout moment dans les Paramètres de l'application (« Options de
+        confidentialité des publicités ») ou utiliser les paramètres système
+        d'Android. <strong>Refuser ne vous coûte rien</strong> : toutes les
+        fonctionnalités, achats compris, fonctionnent exactement de la même
+        manière.
+      </p>
+      <p>
+        En dehors de ces pays, le formulaire n'est pas affiché, car les règles
+        qui l'imposent n'y sont pas applicables. Les publicités sont alors
+        personnalisées et l'événement d'achat décrit au §6.2 est envoyé
+        lorsque vous effectuez un achat. Vous pouvez néanmoins limiter la
+        personnalisation des publicités dans les paramètres d'Android
+        eux-mêmes et, si vous préférez que l'événement d'achat ne soit pas
+        envoyé, écrivez-nous (§11).
+      </p>
+
+      <h3>6.1. Publicités (Google AdMob)</h3>
+      <p>
         L'offre gratuite affiche des publicités diffusées par Google AdMob.
         AdMob peut collecter l'identifiant publicitaire de votre appareil, des
         données d'interaction avec les publicités et une localisation
-        approximative (au niveau du pays). Au premier lancement dans l'EEE/au
-        Royaume-Uni, l'application affiche un formulaire de consentement dans
-        lequel vous choisissez entre publicités personnalisées et non
-        personnalisées ; vous pouvez modifier ce choix à tout moment dans les
-        Paramètres de l'application (« Options de confidentialité des
-        publicités ») ou dans les paramètres système d'Android. Les abonnés ne
-        voient pas de publicités. Plus de détails :
+        approximative (au niveau du pays). Les abonnés ne voient pas de
+        publicités. Plus de détails :
         <a href="https://policies.google.com/technologies/ads">Règles de
         Google en matière de publicité</a>.
+      </p>
+
+      <h3>6.2. Mesure des achats (Meta)</h3>
+      <p>
+        Afin que nous puissions savoir quelle publicité amène réellement les
+        gens vers l'application, celle-ci envoie <strong>un événement à Meta
+        chaque fois que vous souscrivez un abonnement ou achetez un pack de
+        jetons</strong>. Rien d'autre n'est jamais envoyé : ni le
+        renouvellement d'un abonnement, ni un changement de formule, ni la
+        restauration d'un achat, ni une réinstallation, et absolument rien si
+        vous n'achetez jamais rien. L'événement est transmis de votre appareil
+        à Meta directement — et non via notre serveur — et contient :
+      </p>
+      <ul>
+        <li>
+          un identifiant aléatoire que le logiciel de Meta génère pour cette
+          installation. <strong>L'identifiant publicitaire Google de votre
+          appareil n'est pas transmis</strong> à Meta ;
+        </li>
+        <li>
+          ce que vous avez acheté et ce que cela a coûté : le montant et la
+          devise, le produit, le mode de l'application que vous utilisiez, et
+          le hachage à sens unique et salé du numéro de commande Play décrit
+          au §3.4 — <strong>jamais le numéro de commande lui-même, et jamais
+          le jeton d'achat</strong> ;
+        </li>
+        <li>
+          les informations standard sur l'application et l'appareil que le
+          logiciel de Meta joint à tout ce qu'il envoie : le nom de paquet et
+          la version de l'application, votre version d'Android, le modèle de
+          l'appareil, la taille de l'écran, la langue de l'interface, le
+          fuseau horaire et le nom du réseau mobile.
+        </li>
+      </ul>
+      <p>
+        Meta voit en outre l'adresse internet depuis laquelle l'événement lui
+        parvient, ce qui indique une localisation approximative. L'événement
+        ne comporte jamais votre nom, le nom d'un élève, ni aucun contenu d'un
+        plan, d'un conte ou d'une chanson.
+      </p>
+      <p>
+        Lorsque le formulaire de consentement s'applique, <strong>aucun
+        événement n'est envoyé sans votre accord</strong> à ces finalités et à
+        Meta en tant que partenaire. Le retrait de cet accord arrête les
+        événements à venir, supprime de votre appareil l'identifiant mentionné
+        ci-dessus et écarte tout événement qui n'a pas encore été transmis —
+        mais il ne peut pas annuler un événement déjà envoyé. Pour tout ce que
+        Meta détient déjà, contactez Meta directement (§8). Politique propre à
+        Meta :
+        <a href="https://www.facebook.com/privacy/policy/">Politique de
+        confidentialité de Meta</a>.
       </p>
 
       <h2 id="children">7. Données des enfants</h2>
@@ -528,8 +653,20 @@
           droits d'utilisation et des soldes qu'ils contiennent.
         </li>
         <li>
-          <strong>Le retrait du consentement publicitaire</strong> est
-          possible à tout moment, comme décrit au §6.
+          <strong>Le consentement publicitaire</strong>, là où le formulaire
+          de consentement s'applique (§6), peut être retiré à tout moment —
+          un seul retrait couvre à la fois les publicités personnalisées et
+          l'événement d'achat envoyé à Meta.
+        </li>
+        <li>
+          <strong>Les données détenues par les partenaires
+          publicitaires.</strong> Google et Meta détiennent ce que décrit le
+          §6 en tant que responsables du traitement indépendants, et non pour
+          notre compte. Nous ne pouvons ni consulter, ni rectifier, ni
+          supprimer leurs copies à votre place : les demandes à ce sujet
+          doivent être adressées directement à
+          <a href="https://policies.google.com/privacy">Google</a> ou à
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
         </li>
       </ul>
 

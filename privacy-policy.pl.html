@@ -128,7 +128,7 @@
         <strong>Deweloper i administrator danych:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Data aktualizacji:</strong> 18 sierpnia 2026
+        <strong>Data aktualizacji:</strong> 6 września 2026
       </p>
 
       <div class="prevails-note">Niniejszy dokument jest tłumaczeniem udostępnionym dla wygody użytkownika. W razie jakichkolwiek rozbieżności między tym tłumaczeniem a <a href="privacy-policy.html">wersją angielską</a> rozstrzygające znaczenie ma wersja angielska.</div>
@@ -155,6 +155,17 @@
         piosenki, który samodzielnie napiszesz lub
         zmienisz w aplikacji: taki tekst jest wysyłany dokładnie w takiej
         postaci, w jakiej go zapiszesz (§3.9).
+      </p>
+      <p>
+        To, że nie zbieramy Twojego imienia i nazwiska, nie oznacza, że
+        usługi reklamowe Cię nie widzą. W wersji darmowej
+        wyświetlane są reklamy dostarczane przez Google AdMob, a gdy kupisz
+        subskrypcję lub pakiet tokenów, aplikacja wysyła do Meta jedno
+        zdarzenie pomiarowe, dzięki któremu wiemy, które reklamy
+        rzeczywiście przynoszą efekt. Oba te elementy zostały w całości
+        opisane w §6, oba są objęte jednym pytaniem o zgodę tam, gdzie
+        wymagają tego przepisy europejskie, a odmowa niczego nie zmienia w
+        tym, jak aplikacja działa dla Ciebie.
       </p>
 
       <h2 id="on-device">2. Dane, które pozostają na Twoim urządzeniu</h2>
@@ -265,6 +276,15 @@
         serwer bezpośrednio o zmianach stanu subskrypcji (na przykład o
         rezygnacji), dzięki czemu uprawnienia pozostają aktualne.
       </p>
+      <p>
+        Na potrzeby pomiaru reklamowego opisanego w §6.2 serwer dodatkowo
+        wylicza z numeru zamówienia wystawionego przez Google Play
+        <strong>jednokierunkowy skrót (hash) z solą</strong> i zwraca go do
+        aplikacji.
+        Pozwala on Meta policzyć jeden zakup tylko raz; nie da się go z
+        powrotem zamienić na numer zamówienia, a ani sam numer zamówienia,
+        ani token zakupu nigdy nie są wysyłane do usługi reklamowej.
+      </p>
 
       <h3>3.5. Limity użycia i stany tokenów</h3>
       <p>
@@ -339,8 +359,8 @@
         przechowywane tak jak ilustracje do opowiadań (§3.3).
       </p>
 
-      <h2 id="processors">4. Dostawcy usług</h2>
-<p>Aplikacja korzysta z następujących podmiotów przetwarzających:</p>
+      <h2 id="processors">4. Dostawcy usług i inni odbiorcy</h2>
+<p>Aplikacja korzysta z następujących usług zewnętrznych:</p>
       <table>
         <thead>
           <tr>
@@ -371,8 +391,17 @@
           <tr>
             <td>Google AdMob</td>
             <td>Reklamy w wersji darmowej</td>
-            <td>Identyfikator reklamowy, interakcje z reklamami (§6)</td>
+            <td>Identyfikator reklamowy, interakcje z reklamami (§6.1)</td>
             <td>Zgodnie z zasadami Google</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Pomiar skuteczności reklam</td>
+            <td>Jedno zdarzenie na każde rozpoczęcie subskrypcji lub zakup
+            pakietu tokenów — zawartość wyszczególniona w §6.2</td>
+            <td>Irlandia; przetwarzanie może odbywać się w Stanach
+            Zjednoczonych na podstawie własnych zabezpieczeń Meta
+            dotyczących przekazywania danych</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -395,7 +424,15 @@
         </tbody>
       </table>
       <p>
-        Dwa przepływy danych mogą być przetwarzane
+        <strong>AdMob i Meta nie są naszymi podmiotami
+        przetwarzającymi.</strong> Otrzymane dane wykorzystują również do
+        własnych celów reklamowych, jako niezależni administratorzy. Nie
+        możemy uzyskać dostępu do przechowywanych przez nie kopii,
+        sprostować ich ani usunąć; żądania w tej sprawie należy kierować
+        bezpośrednio do Google lub do Meta (§8).
+      </p>
+      <p>
+        Niektóre z tych przepływów danych mogą być przetwarzane
         <strong>poza EOG</strong>: ElevenLabs przetwarza zapytania o
         narrację i komponowanie piosenek — tekst opowiadania lub tekst
         piosenki —
@@ -403,7 +440,11 @@
         danych, które obejmują standardowe klauzule umowne UE, a zapytania
         do Google Gemini trafiają przez nasz serwer pośredniczący w UE do
         interfejsu Gemini API Google, gdzie Google może przetwarzać je poza
-        EOG na podstawie swoich warunków przetwarzania danych. Zobacz również:
+        EOG na podstawie swoich warunków przetwarzania danych; zdarzenia
+        zakupu opisane w §6.2 trafiają natomiast do Meta Platforms Ireland,
+        która może przetwarzać je w Stanach Zjednoczonych na podstawie
+        własnych zabezpieczeń dotyczących przekazywania danych. Zobacz
+        również:
         <a href="https://policies.google.com/privacy">Polityka prywatności
         Google</a>.
       </p>
@@ -431,6 +472,15 @@
               Przez cały okres funkcjonowania aplikacji — niezbędne do
               utrzymania działania funkcji płatnych i do ochrony przed
               nadużyciami
+            </td>
+          </tr>
+          <tr>
+            <td>Zdarzenia zakupu wysłane do Meta (§6.2)</td>
+            <td>
+              Przechowywane przez Meta na jej własnych warunkach, nie na
+              naszych. Wycofanie zgody zatrzymuje przyszłe zdarzenia; nie
+              cofa zdarzenia, które zostało już wysłane, i nie możemy
+              usunąć za Ciebie kopii posiadanej przez Meta
             </td>
           </tr>
           <tr>
@@ -464,22 +514,95 @@
       <p>
         Wszystkie rekordy po stronie serwera są powiązane wyłącznie z
         anonimowym identyfikatorem urządzenia. W każdej chwili możesz zażądać
-        ich usunięcia (§8).
+        ich usunięcia (§8). Powyższy wiersz dotyczący Meta to jedyna pozycja
+        w tej tabeli, której usunięcie nie leży w naszej gestii.
       </p>
 
       <h2 id="ads">6. Reklamy i zgoda</h2>
 <p>
+        Z reklamami wiążą się w aplikacji dwie rzeczy: reklamy wyświetlane w
+        wersji darmowej oraz zdarzenie pomiarowe wysyłane, gdy coś kupisz. Na
+        terenie <strong>EOG, Wielkiej Brytanii i Szwajcarii</strong> obie te
+        rzeczy są objęte <strong>jednym formularzem zgody</strong>, który
+        aplikacja wyświetla przy pierwszym uruchomieniu. Pyta on, czy reklamy
+        mogą być spersonalizowane oraz — w ramach własnych celów aplikacji,
+        jakimi są przechowywanie informacji na Twoim urządzeniu lub dostęp
+        do nich oraz mierzenie, jak skutecznie działają reklamy — czy nasi
+        partnerzy reklamowi, w tym Meta, mogą otrzymywać pomiar opisany w
+        §6.2. Nie ma drugiego pytania ani osobnego przełącznika. Formularz
+        możesz otworzyć ponownie w dowolnym momencie w Ustawieniach aplikacji
+        („Opcje prywatności reklam”) lub skorzystać z ustawień systemu
+        Android. <strong>Odmowa nic Cię nie kosztuje</strong>: wszystkie
+        funkcje, łącznie z zakupami, działają dokładnie tak samo.
+      </p>
+      <p>
+        Poza tymi krajami formularz nie jest wyświetlany, ponieważ nie
+        obowiązują tam przepisy, które go wymagają. Reklamy są wtedy
+        spersonalizowane, a zdarzenie zakupu opisane w §6.2 jest wysyłane,
+        gdy dokonasz zakupu. Personalizację reklam możesz nadal ograniczyć we
+        własnych ustawieniach systemu Android, a jeżeli wolisz, aby zdarzenie
+        zakupu nie było wysyłane, napisz do nas (§11).
+      </p>
+
+      <h3>6.1. Reklamy (Google AdMob)</h3>
+      <p>
         W wersji darmowej wyświetlane są reklamy dostarczane przez Google
         AdMob. AdMob może zbierać identyfikator reklamowy Twojego urządzenia,
         dane o interakcjach z reklamami oraz przybliżoną lokalizację (na
-        poziomie kraju). Przy pierwszym uruchomieniu na terenie EOG/Wielkiej
-        Brytanii aplikacja wyświetla formularz zgody, w którym wybierasz
-        między reklamami spersonalizowanymi a niespersonalizowanymi; wybór ten
-        możesz zmienić w dowolnym momencie w Ustawieniach aplikacji („Opcje
-        prywatności reklam”) lub w ustawieniach systemu Android. Subskrybenci
-        nie widzą reklam. Szczegóły:
+        poziomie kraju). Subskrybenci nie widzą reklam. Szczegóły:
         <a href="https://policies.google.com/technologies/ads">Polityka
         reklamowa Google</a>.
+      </p>
+
+      <h3>6.2. Pomiar zakupów (Meta)</h3>
+      <p>
+        Abyśmy mogli stwierdzić, które reklamy rzeczywiście sprowadzają ludzi
+        do aplikacji, wysyła ona <strong>jedno zdarzenie do Meta za każdym
+        razem, gdy rozpoczniesz subskrypcję lub kupisz pakiet
+        tokenów</strong>. Nic poza tym nie jest nigdy wysyłane: ani odnowienie
+        subskrypcji, ani zmiana wariantu, ani przywrócenie zakupu, ani ponowna
+        instalacja — a jeżeli nigdy niczego nie kupisz, nie jest wysyłane nic.
+        Zdarzenie trafia z Twojego urządzenia bezpośrednio do Meta — nie przez
+        nasz serwer — i zawiera:
+      </p>
+      <ul>
+        <li>
+          losowy identyfikator, który oprogramowanie Meta generuje dla tej
+          instalacji. <strong>Identyfikator reklamowy Google Twojego
+          urządzenia nie jest przesyłany</strong> do Meta;
+        </li>
+        <li>
+          to, co kupujesz i ile to kosztuje: kwotę i walutę, produkt, tryb
+          aplikacji, z którego korzystasz, oraz opisany w §3.4
+          jednokierunkowy skrót (hash) z solą, wyliczony z numeru zamówienia
+          Play — <strong>nigdy sam numer zamówienia ani token
+          zakupu</strong>;
+        </li>
+        <li>
+          standardowe informacje o aplikacji i urządzeniu, które
+          oprogramowanie Meta dołącza do wszystkiego, co wysyła: nazwę pakietu
+          i wersję aplikacji, wersję systemu Android, model urządzenia,
+          rozmiar ekranu, język interfejsu, strefę czasową oraz nazwę sieci
+          komórkowej.
+        </li>
+      </ul>
+      <p>
+        Meta widzi dodatkowo adres internetowy, z którego przychodzi
+        zdarzenie, co wskazuje przybliżoną lokalizację. Zdarzenie nigdy nie
+        zawiera Twojego imienia i nazwiska, imienia dziecka ani żadnej treści
+        z planu, opowiadania czy piosenki.
+      </p>
+      <p>
+        Tam, gdzie obowiązuje formularz zgody, <strong>żadne zdarzenie nie
+        jest wysyłane, jeżeli nie wyrazisz zgody</strong> na te cele i na Meta
+        jako partnera. Wycofanie tej zgody zatrzymuje przyszłe zdarzenia,
+        usuwa z Twojego urządzenia opisany wyżej identyfikator i odrzuca
+        zdarzenia, które nie zostały jeszcze wysłane — nie może jednak cofnąć
+        zdarzenia, które zostało już wysłane. W sprawie danych, które Meta już
+        posiada, skontaktuj się bezpośrednio z Meta (§8). Własna polityka
+        Meta:
+        <a href="https://www.facebook.com/privacy/policy/">Polityka
+        prywatności Meta</a>.
       </p>
 
       <h2 id="children">7. Dane dzieci</h2>
@@ -519,8 +642,19 @@
           uprawnień i stanów tokenów.
         </li>
         <li>
-          <strong>Wycofanie zgody na reklamy</strong> jest możliwe w każdej
-          chwili w sposób opisany w §6.
+          <strong>Zgodę na reklamy</strong> tam, gdzie obowiązuje formularz
+          zgody (§6), możesz wycofać w każdej chwili — jedno wycofanie
+          obejmuje zarówno reklamy spersonalizowane, jak i zdarzenie zakupu
+          wysyłane do Meta.
+        </li>
+        <li>
+          <strong>Dane przechowywane przez partnerów reklamowych.</strong>
+          Google i Meta przechowują dane opisane w §6 jako niezależni
+          administratorzy, a nie w naszym imieniu. Nie możemy uzyskać za
+          Ciebie dostępu do ich kopii, sprostować ich ani usunąć: żądania w
+          tej sprawie należy kierować bezpośrednio do
+          <a href="https://policies.google.com/privacy">Google</a> lub do
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
         </li>
       </ul>
 

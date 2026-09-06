@@ -128,7 +128,7 @@
         <strong>Utvikler og behandlingsansvarlig:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Sist oppdatert:</strong> 18. august 2026
+        <strong>Sist oppdatert:</strong> 6. september 2026
       </p>
 
       <div class="prevails-note">Dette dokumentet er en oversettelse som er gjort tilgjengelig av praktiske hensyn. Ved eventuelle avvik mellom denne oversettelsen og den <a href="privacy-policy.html">engelske versjonen</a> går den engelske versjonen foran.</div>
@@ -151,6 +151,16 @@
         sendes til noen som helst tjeneste. Sangtekster du skriver eller
         redigerer i appen, er et bevisst unntak: de sendes
         slik du skrev dem (§ 3.9).
+      </p>
+      <p>
+        At vi ikke samler inn navnet ditt, betyr ikke at du er usynlig for
+        annonsetjenester. Gratisversjonen viser annonser levert av Google
+        AdMob, og når du kjøper et abonnement eller en tokenpakke, sender
+        appen én målehendelse til Meta slik at vi kan se hvilken annonsering
+        som faktisk virker. Begge deler er beskrevet i sin helhet i § 6,
+        begge dekkes av ett enkelt samtykkespørsmål der europeiske regler
+        krever det, og det å avslå endrer ingenting ved hvordan appen
+        fungerer for deg.
       </p>
 
       <h2 id="on-device">2. Data som blir værende på enheten din</h2>
@@ -255,6 +265,14 @@
         abonnementsstatus (for eksempel en oppsigelse), slik at rettighetene
         forblir korrekte.
       </p>
+      <p>
+        For annonsemålingen som er beskrevet i § 6.2, beregner serveren i
+        tillegg en <strong>enveis, saltet hash</strong> av ordrenummeret
+        Google Play har utstedt, og returnerer den til appen. Den lar Meta
+        telle ett kjøp én gang; den kan ikke gjøres om til ordrenummeret
+        igjen, og verken selve ordrenummeret eller kjøpstokenet sendes noen
+        gang til en annonsetjeneste.
+      </p>
 
       <h3>3.5. Bruksgrenser og tokensaldoer</h3>
       <p>
@@ -321,8 +339,8 @@
         eventyrillustrasjoner (§ 3.3).
       </p>
 
-      <h2 id="processors">4. Tjenesteleverandører</h2>
-<p>Appen benytter følgende databehandlere:</p>
+      <h2 id="processors">4. Tjenesteleverandører og andre mottakere</h2>
+<p>Appen benytter følgende eksterne tjenester:</p>
       <table>
         <thead>
           <tr>
@@ -351,8 +369,16 @@
           <tr>
             <td>Google AdMob</td>
             <td>Annonsering i gratisversjonen</td>
-            <td>Annonse-ID, annonseinteraksjoner (§ 6)</td>
+            <td>Annonse-ID, annonseinteraksjoner (§ 6.1)</td>
             <td>Etter Googles retningslinjer</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Annonsemåling</td>
+            <td>Én hendelse per abonnementsstart eller tokenkjøp — innholdet
+            er spesifisert i § 6.2</td>
+            <td>Irland; kan behandles i USA under Metas egne
+            overføringsgarantier</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -375,14 +401,23 @@
         </tbody>
       </table>
       <p>
-        To typer forespørsler kan behandles
+        <strong>AdMob og Meta er ikke våre databehandlere.</strong> De bruker
+        også det de mottar til sine egne annonseformål, som selvstendige
+        behandlingsansvarlige. Vi har ikke tilgang til, og kan ikke rette
+        eller slette, kopiene de har; forespørsler om dette må rettes direkte
+        til Google eller til Meta (§ 8).
+      </p>
+      <p>
+        Noen av disse dataflytene kan behandles
         <strong>utenfor EØS</strong>: ElevenLabs behandler forespørsler om
         opplesning og sangkomponering — eventyrteksten eller sangteksten —
         i USA i henhold til sine vilkår for databehandling, som
-        inkorporerer EUs standard personvernbestemmelser, og forespørsler
+        inkorporerer EUs standard personvernbestemmelser; forespørsler
         til Google Gemini går via EU-proxyen vår til Googles Gemini-API,
         der Google kan behandle dem utenfor EØS i henhold til sine vilkår
-        for databehandling. Se også:
+        for databehandling; og kjøpshendelsene som er beskrevet i § 6.2,
+        går til Meta Platforms Ireland, som kan behandle dem i USA under
+        sine egne overføringsgarantier. Se også:
         <a href="https://policies.google.com/privacy">Googles
         personvernerklæring</a>.
       </p>
@@ -409,6 +444,15 @@
             <td>
               Så lenge appen driftes — nødvendig for at betalte funksjoner
               skal fungere og for å hindre misbruk
+            </td>
+          </tr>
+          <tr>
+            <td>Kjøpshendelser som er sendt til Meta (§ 6.2)</td>
+            <td>
+              Oppbevares av Meta etter deres egne vilkår, ikke våre. Å trekke
+              tilbake samtykket stopper fremtidige hendelser; det tilbakekaller
+              ikke en hendelse som allerede er sendt, og vi kan ikke slette
+              Metas kopi for deg
             </td>
           </tr>
           <tr>
@@ -439,21 +483,92 @@
       <p>
         Alle registre på serversiden er knyttet utelukkende til den anonyme
         enhetsidentifikatoren. Du kan når som helst be om at de slettes
-        (§ 8).
+        (§ 8). Meta-raden ovenfor er det ene punktet i denne tabellen som
+        ikke er vårt å slette.
       </p>
 
       <h2 id="ads">6. Annonser og samtykke</h2>
 <p>
+        To ting i appen har med annonsering å gjøre: annonsene som vises i
+        gratisversjonen, og en målehendelse som sendes når du kjøper noe. I
+        <strong>EØS, Storbritannia og Sveits</strong> er begge underlagt
+        <strong>ett enkelt samtykkeskjema</strong>, som appen viser ved
+        første oppstart. Det spør om annonser kan være personlig tilpasset,
+        og — under appens egne formål med å lagre eller lese informasjon
+        på enheten din og med å måle hvor godt annonsering virker — om
+        annonsepartnerne våre, deriblant Meta, kan motta målingen som er
+        beskrevet i § 6.2. Det stilles ikke noe annet spørsmål, og det
+        finnes ingen egen bryter. Du kan når som helst åpne skjemaet på nytt
+        i appens Innstillinger («Personvernalternativer for annonser»),
+        eller bruke Androids systeminnstillinger. <strong>Det koster deg
+        ingenting å avslå</strong>: alle funksjoner, også kjøp, fungerer
+        nøyaktig likt.
+      </p>
+      <p>
+        Utenfor disse landene vises ikke skjemaet, fordi reglene som krever
+        det, ikke gjelder der. Annonser er da personlig tilpasset, og
+        kjøpshendelsen som er beskrevet i § 6.2, sendes når du kjøper. Du
+        kan fortsatt begrense personlig tilpasning av annonser gjennom
+        Androids egne innstillinger, og hvis du heller vil at
+        kjøpshendelsen ikke skal sendes, kan du skrive til oss (§ 11).
+      </p>
+
+      <h3>6.1. Annonser (Google AdMob)</h3>
+      <p>
         Gratisversjonen viser annonser levert av Google AdMob. AdMob kan samle
         inn enhetens annonse-ID, data om annonseinteraksjoner og omtrentlig
-        posisjon (på landnivå). Ved første oppstart i EØS/Storbritannia viser
-        appen et samtykkeskjema der du velger mellom personlig tilpassede og
-        ikke-personlig tilpassede annonser; du kan når som helst endre dette
-        valget i appens Innstillinger («Personvernalternativer for annonser»)
-        eller i Androids systeminnstillinger. Abonnenter ser ingen annonser.
-        Detaljer:
+        posisjon (på landnivå). Abonnenter ser ingen annonser. Detaljer:
         <a href="https://policies.google.com/technologies/ads">Googles
         retningslinjer for annonsering</a>.
+      </p>
+
+      <h3>6.2. Kjøpsmåling (Meta)</h3>
+      <p>
+        For at vi skal kunne se hvilken annonsering som faktisk fører folk
+        til appen, sender den <strong>én hendelse til Meta hver gang du
+        starter et abonnement eller kjøper en tokenpakke</strong>. Ingenting
+        annet sendes noen gang: ikke en fornyelse av abonnementet, ikke et
+        bytte av plan, ikke gjenoppretting av et kjøp, ikke reinstallasjon,
+        og ingenting i det hele tatt hvis du aldri kjøper noe. Hendelsen går
+        fra enheten din direkte til Meta — ikke gjennom serveren vår — og
+        inneholder:
+      </p>
+      <ul>
+        <li>
+          en tilfeldig identifikator som Metas programvare genererer for
+          denne installasjonen. <strong>Enhetens Google-annonse-ID overføres
+          ikke</strong> til Meta;
+        </li>
+        <li>
+          hva du kjøpte og hva det kostet: beløpet og valutaen, produktet,
+          appmodusen du brukte, og den enveis saltede hashen av
+          Play-ordrenummeret som er beskrevet i § 3.4 — <strong>aldri selve
+          ordrenummeret, og aldri kjøpstokenet</strong>;
+        </li>
+        <li>
+          de standardopplysningene om app og enhet som Metas programvare
+          legger ved alt den sender: appens pakkenavn og versjon,
+          Android-versjonen din, enhetsmodell, skjermstørrelse,
+          grensesnittspråk, tidssone og navnet på mobilnettet.
+        </li>
+      </ul>
+      <p>
+        Meta ser i tillegg internettadressen hendelsen kommer fra, som
+        angir omtrentlig posisjon. Hendelsen inneholder aldri navnet ditt,
+        et barns navn eller noe innhold fra en plan, et eventyr eller en
+        sang.
+      </p>
+      <p>
+        Der samtykkeskjemaet gjelder, <strong>sendes ingen hendelse med
+        mindre du har samtykket</strong> til disse formålene og til Meta som
+        partner. Å trekke tilbake samtykket stopper fremtidige hendelser,
+        sletter identifikatoren ovenfor fra enheten din og forkaster
+        hendelser som ennå ikke er lastet opp — men det kan ikke
+        tilbakekalle en hendelse som allerede er sendt. For alt Meta
+        allerede har, må du kontakte Meta direkte (§ 8). Metas egen
+        erklæring:
+        <a href="https://www.facebook.com/privacy/policy/">Metas
+        personvernerklæring</a>.
       </p>
 
       <h2 id="children">7. Barns personopplysninger</h2>
@@ -489,8 +604,19 @@
           og saldoer som de inneholder.
         </li>
         <li>
-          <strong>Tilbaketrekking av annonsesamtykke</strong> er tilgjengelig
-          når som helst, som beskrevet i § 6.
+          <strong>Annonsesamtykke</strong> kan, der samtykkeskjemaet gjelder
+          (§ 6), trekkes tilbake når som helst — én tilbaketrekking dekker
+          både personlig tilpassede annonser og kjøpshendelsen som sendes
+          til Meta.
+        </li>
+        <li>
+          <strong>Data som annonsepartnerne har.</strong> Google og Meta
+          oppbevarer det som er beskrevet i § 6, som selvstendige
+          behandlingsansvarlige, ikke på våre vegne. Vi har ikke tilgang
+          til, og kan ikke rette eller slette, kopiene deres for deg:
+          forespørsler om dette må rettes direkte til
+          <a href="https://policies.google.com/privacy">Google</a> eller til
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
         </li>
       </ul>
 

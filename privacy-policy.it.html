@@ -128,7 +128,7 @@
         <strong>Sviluppatore e titolare del trattamento:</strong> Maciej Bernacki<br />
         <strong>Contatto:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Ultimo aggiornamento:</strong> 18 agosto 2026
+        <strong>Ultimo aggiornamento:</strong> 6 settembre 2026
       </p>
 
       <div class="prevails-note">Questo documento è una traduzione fornita per comodità. In caso di discrepanza tra questa traduzione e la <a href="privacy-policy.html">versione inglese</a>, prevale la versione inglese.</div>
@@ -155,6 +155,17 @@
         scrivi o modifichi tu nell'app è un'eccezione deliberata: viene
         inviato esattamente come lo hai
         scritto (§3.9).
+      </p>
+      <p>
+        Il fatto che non raccogliamo il tuo nome non significa che tu sia
+        invisibile ai servizi pubblicitari. La versione gratuita mostra
+        annunci forniti da Google AdMob e, quando acquisti un abbonamento o
+        un pacchetto di token, l'app invia a Meta un evento di misurazione
+        che ci permette di capire quale pubblicità funziona davvero.
+        Entrambi sono descritti per intero nella §6, entrambi sono coperti
+        da un'unica domanda di consenso dove le norme europee ne
+        richiedono una, e rifiutare non cambia nulla nel modo in cui
+        l'app funziona per te.
       </p>
 
       <h2 id="on-device">2. Dati che restano sul tuo dispositivo</h2>
@@ -267,6 +278,15 @@
         cambiamenti di stato dell'abbonamento (per esempio una disdetta),
         in modo che i diritti di utilizzo restino corretti.
       </p>
+      <p>
+        Per la misurazione pubblicitaria descritta nella §6.2, il server
+        calcola inoltre un <strong>hash unidirezionale con salt</strong> del
+        numero d'ordine emesso da Google Play e lo restituisce all'app.
+        Serve a Meta per conteggiare un acquisto una sola volta; non può
+        essere riconvertito nel numero d'ordine e né il numero d'ordine
+        stesso né il token di acquisto vengono mai inviati a un servizio
+        pubblicitario.
+      </p>
 
       <h3>3.5. Limiti di utilizzo e saldi di token</h3>
       <p>
@@ -344,8 +364,8 @@
         (§3.3).
       </p>
 
-      <h2 id="processors">4. Fornitori di servizi</h2>
-<p>L'app si avvale dei seguenti responsabili del trattamento:</p>
+      <h2 id="processors">4. Fornitori di servizi e altri destinatari</h2>
+<p>L'app si avvale dei seguenti servizi esterni:</p>
       <table>
         <thead>
           <tr>
@@ -375,8 +395,16 @@
           <tr>
             <td>Google AdMob</td>
             <td>Pubblicità nella versione gratuita</td>
-            <td>ID pubblicità, interazioni con gli annunci (§6)</td>
+            <td>ID pubblicità, interazioni con gli annunci (§6.1)</td>
             <td>Secondo le norme di Google</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Misurazione pubblicitaria</td>
+            <td>Un evento per ogni attivazione di abbonamento o acquisto di
+            token — contenuti dettagliati nella §6.2</td>
+            <td>Irlanda; il trattamento può avvenire negli Stati Uniti in
+            base alle garanzie di trasferimento di Meta</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -399,7 +427,15 @@
         </tbody>
       </table>
       <p>
-        Due flussi possono essere trattati
+        <strong>AdMob e Meta non sono nostri responsabili del
+        trattamento.</strong> Utilizzano anche per proprie finalità
+        pubblicitarie ciò che ricevono, in qualità di titolari autonomi del
+        trattamento. Non possiamo accedere alle copie che detengono, né
+        correggerle o eliminarle; le richieste che le riguardano vanno
+        rivolte direttamente a Google o a Meta (§8).
+      </p>
+      <p>
+        Alcuni di questi flussi possono essere trattati
         <strong>al di fuori del SEE</strong>: ElevenLabs tratta le richieste
         di narrazione e di composizione di canzoni — il testo
         della fiaba o il testo della canzone — negli Stati Uniti in base ai
@@ -408,7 +444,10 @@
         Contrattuali Standard dell'UE; le richieste a Google Gemini,
         invece, passano dal nostro proxy nell'UE all'API Gemini di Google,
         dove Google può trattarle al di fuori del SEE in base ai propri
-        termini di trattamento dei dati. Vedi anche:
+        termini di trattamento dei dati; e gli eventi di acquisto descritti
+        nella §6.2 vengono inviati a Meta Platforms Ireland, che può
+        trattarli negli Stati Uniti in base alle proprie garanzie di
+        trasferimento. Vedi anche:
         <a href="https://policies.google.com/privacy">Informativa sulla
         privacy di Google</a>.
       </p>
@@ -439,6 +478,15 @@
             </td>
           </tr>
           <tr>
+            <td>Eventi di acquisto inviati a Meta (§6.2)</td>
+            <td>
+              Conservati da Meta secondo i suoi termini, non i nostri. La
+              revoca del consenso interrompe gli eventi futuri; non ritira
+              un evento già inviato e non possiamo eliminare per te la
+              copia di Meta
+            </td>
+          </tr>
+          <tr>
             <td>Contatori di utilizzo e saldi di token</td>
             <td>Per tutto il tempo in cui l'app è operativa</td>
           </tr>
@@ -466,22 +514,98 @@
       <p>
         Tutti i registri lato server sono associati esclusivamente
         all'identificatore anonimo del dispositivo. Puoi richiederne
-        l'eliminazione in qualsiasi momento (§8).
+        l'eliminazione in qualsiasi momento (§8). La riga relativa a Meta
+        qui sopra è l'unica voce di questa tabella che non spetta a noi
+        eliminare.
       </p>
 
       <h2 id="ads">6. Pubblicità e consenso</h2>
 <p>
+        Nell'app due elementi riguardano la pubblicità: gli annunci mostrati
+        nella versione gratuita e un evento di misurazione inviato quando
+        acquisti qualcosa. Nel <strong>SEE, nel Regno Unito e in
+        Svizzera</strong> entrambi sono disciplinati da un <strong>unico
+        modulo di consenso</strong>, che l'app mostra al primo avvio. Il
+        modulo chiede se gli annunci possono essere personalizzati e — nel
+        quadro delle finalità proprie dell'app relative alla memorizzazione o alla
+        lettura di informazioni sul tuo dispositivo e alla misurazione
+        dell'efficacia della pubblicità — se i nostri partner pubblicitari,
+        tra cui Meta, possono ricevere la misurazione descritta nella §6.2. Non c'è
+        una seconda domanda né un interruttore separato. Puoi riaprire il
+        modulo in qualsiasi momento nelle Impostazioni dell'app («Opzioni
+        privacy degli annunci») oppure usare le impostazioni di sistema di
+        Android. <strong>Rifiutare non ti costa nulla</strong>: tutte le
+        funzioni, acquisti compresi, funzionano esattamente allo stesso
+        modo.
+      </p>
+      <p>
+        Al di fuori di quei paesi il modulo non viene mostrato, perché le
+        norme che lo impongono lì non si applicano. Gli annunci sono quindi
+        personalizzati e l'evento di acquisto descritto nella §6.2 viene
+        inviato quando acquisti. Puoi comunque limitare la
+        personalizzazione degli annunci tramite le impostazioni di Android
+        e, se preferisci che l'evento di acquisto non venga inviato,
+        scrivici (§11).
+      </p>
+
+      <h3>6.1. Annunci (Google AdMob)</h3>
+      <p>
         La versione gratuita mostra annunci forniti da Google AdMob. AdMob
         può raccogliere l'ID pubblicità del tuo dispositivo, dati sulle
         interazioni con gli annunci e la posizione approssimativa (a
-        livello di paese). Al primo avvio nel SEE/Regno Unito l'app mostra
-        un modulo di consenso in cui scegli tra annunci personalizzati e
-        non personalizzati; puoi modificare questa scelta in qualsiasi
-        momento nelle Impostazioni dell'app («Opzioni privacy degli
-        annunci») o nelle impostazioni di sistema di Android. Gli abbonati
-        non vedono annunci. Dettagli:
+        livello di paese). Gli abbonati non vedono annunci. Dettagli:
         <a href="https://policies.google.com/technologies/ads">Norme
         pubblicitarie di Google</a>.
+      </p>
+
+      <h3>6.2. Misurazione degli acquisti (Meta)</h3>
+      <p>
+        Per poter capire quale pubblicità porta davvero le persone all'app,
+        questa invia <strong>un evento a Meta ogni volta che attivi un
+        abbonamento o acquisti un pacchetto di token</strong>. Non viene
+        inviato nient'altro: né il rinnovo di un abbonamento, né un cambio
+        di piano, né il ripristino di un acquisto, né una reinstallazione,
+        e assolutamente nulla se non acquisti mai nulla. L'evento viaggia
+        dal tuo dispositivo a Meta direttamente — non attraverso il nostro
+        server — e contiene:
+      </p>
+      <ul>
+        <li>
+          un identificatore casuale che il software di Meta genera per
+          questa installazione. <strong>L'ID pubblicità Google del tuo
+          dispositivo non viene trasmesso</strong> a Meta;
+        </li>
+        <li>
+          che cosa hai acquistato e quanto è costato: l'importo e la valuta,
+          il prodotto, la modalità dell'app che stavi usando e l'hash
+          unidirezionale con salt del numero d'ordine Play descritto nella
+          §3.4 — <strong>mai il numero d'ordine stesso e mai il token di
+          acquisto</strong>;
+        </li>
+        <li>
+          i dati standard sull'app e sul dispositivo che il software di Meta
+          allega a tutto ciò che invia: il nome del pacchetto e la versione
+          dell'app, la tua versione di Android, il modello del dispositivo,
+          le dimensioni dello schermo, la lingua dell'interfaccia, il fuso
+          orario e il nome della rete mobile.
+        </li>
+      </ul>
+      <p>
+        Meta vede inoltre l'indirizzo internet da cui arriva l'evento, che
+        indica la posizione approssimativa. L'evento non contiene mai il tuo
+        nome, il nome di un bambino né alcun contenuto di un piano, di una
+        fiaba o di una canzone.
+      </p>
+      <p>
+        Dove si applica il modulo di consenso, <strong>nessun evento viene
+        inviato se non hai dato il consenso</strong> a quelle finalità e a
+        Meta come partner. La revoca di tale consenso interrompe gli eventi
+        futuri, elimina dal tuo dispositivo l'identificatore sopra indicato
+        e scarta gli eventi non ancora caricati — ma non può ritirare un
+        evento già inviato. Per ciò che Meta detiene già, contatta
+        direttamente Meta (§8). L'informativa di Meta:
+        <a href="https://www.facebook.com/privacy/policy/">Informativa sulla
+        privacy di Meta</a>.
       </p>
 
       <h2 id="children">7. Dati dei bambini</h2>
@@ -521,8 +645,19 @@
           cronologia dei diritti di utilizzo e dei saldi che contengono.
         </li>
         <li>
-          <strong>La revoca del consenso pubblicitario</strong> è
-          disponibile in qualsiasi momento, come descritto nella §6.
+          <strong>Il consenso pubblicitario</strong>, dove si applica il
+          modulo di consenso (§6), può essere revocato in qualsiasi momento
+          — un'unica revoca copre sia gli annunci personalizzati sia
+          l'evento di acquisto inviato a Meta.
+        </li>
+        <li>
+          <strong>I dati detenuti dai partner pubblicitari.</strong> Google
+          e Meta detengono quanto descritto nella §6 in qualità di titolari
+          autonomi del trattamento, non per nostro conto. Non possiamo
+          accedere alle loro copie, né correggerle o eliminarle per te: le
+          richieste che le riguardano vanno rivolte direttamente a
+          <a href="https://policies.google.com/privacy">Google</a> o a
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
         </li>
       </ul>
 

@@ -128,7 +128,7 @@
         <strong>Programador e responsável pelo tratamento:</strong> Maciej Bernacki<br />
         <strong>Contacto:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Última atualização:</strong> 18 de agosto de 2026
+        <strong>Última atualização:</strong> 6 de setembro de 2026
       </p>
 
       <div class="prevails-note">Este documento é uma tradução disponibilizada por conveniência. Em caso de divergência entre esta tradução e a <a href="privacy-policy.html">versão inglesa</a>, prevalece a versão inglesa.</div>
@@ -154,6 +154,16 @@
         canção que escreves ou editas na aplicação é uma exceção
         deliberada: é enviada tal como a
         escreveste (§3.9).
+      </p>
+      <p>
+        Não recolhermos o teu nome não significa que sejas invisível para os
+        serviços de publicidade. A versão gratuita mostra anúncios
+        apresentados pela Google AdMob e, quando compras uma subscrição ou um
+        pacote de tokens, a aplicação envia um evento de medição à Meta, para
+        podermos saber que publicidade funciona realmente. Ambos são
+        descritos em pormenor no §6, ambos estão abrangidos por uma única
+        pergunta de consentimento onde as regras europeias a exigem, e
+        recusar não altera nada no funcionamento da aplicação para ti.
       </p>
 
       <h2 id="on-device">2. Dados que ficam no teu dispositivo</h2>
@@ -265,6 +275,15 @@
         (por exemplo, um cancelamento), para que os direitos de acesso se
         mantenham corretos.
       </p>
+      <p>
+        Para a medição publicitária descrita no §6.2, o servidor calcula
+        ainda um <strong>hash unidirecional com sal</strong> do número da
+        encomenda emitido pela Google Play e devolve-o à aplicação. Serve
+        para que a Meta possa contar uma compra uma única vez; não pode ser
+        reconvertido no número da encomenda, e nem o próprio número da
+        encomenda nem o token de compra são alguma vez enviados para um
+        serviço de publicidade.
+      </p>
 
       <h3>3.5. Limites de utilização e saldos de tokens</h3>
       <p>
@@ -339,8 +358,8 @@
         (§3.3).
       </p>
 
-      <h2 id="processors">4. Prestadores de serviços</h2>
-<p>A aplicação recorre aos seguintes subcontratantes:</p>
+      <h2 id="processors">4. Prestadores de serviços e outros destinatários</h2>
+<p>A aplicação recorre aos seguintes serviços externos:</p>
       <table>
         <thead>
           <tr>
@@ -370,8 +389,16 @@
           <tr>
             <td>Google AdMob</td>
             <td>Publicidade na versão gratuita</td>
-            <td>Identificador de publicidade, interações com os anúncios (§6)</td>
+            <td>Identificador de publicidade, interações com os anúncios (§6.1)</td>
             <td>Nos termos da política da Google</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Medição publicitária</td>
+            <td>Um evento por início de subscrição ou compra de tokens —
+            conteúdo discriminado no §6.2</td>
+            <td>Irlanda; pode ser tratado nos Estados Unidos ao abrigo das
+            garantias de transferência da própria Meta</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -394,15 +421,25 @@
         </tbody>
       </table>
       <p>
-        Dois fluxos podem ser tratados <strong>fora do
+        <strong>A AdMob e a Meta não são nossas subcontratantes.</strong>
+        Utilizam também o que recebem para as suas próprias finalidades
+        publicitárias, na qualidade de responsáveis pelo tratamento
+        independentes. Não podemos aceder, corrigir nem eliminar as cópias
+        que detêm; os pedidos relativos a essas cópias devem ser dirigidos
+        diretamente à Google ou à Meta (§8).
+      </p>
+      <p>
+        Alguns destes fluxos podem ser tratados <strong>fora do
         EEE</strong>: a ElevenLabs trata os pedidos de narração e de
         composição de canções — o texto da história ou a letra da canção —
-        nos
-        Estados Unidos ao abrigo das suas condições de tratamento de dados,
-        que incorporam as Cláusulas Contratuais-Tipo da UE; e os pedidos ao
-        Google Gemini passam pelo nosso proxy na UE até à API Gemini da
-        Google, onde a Google os pode tratar fora do EEE ao abrigo das suas
-        condições de tratamento de dados. Ver também:
+        nos Estados Unidos ao abrigo das suas condições de tratamento de
+        dados, que incorporam as Cláusulas Contratuais-Tipo da UE; os
+        pedidos ao Google Gemini passam pelo nosso proxy na UE até à API
+        Gemini da Google, onde a Google os pode tratar fora do EEE ao abrigo
+        das suas condições de tratamento de dados; e os eventos de compra
+        descritos no §6.2 seguem para a Meta Platforms Ireland, que os pode
+        tratar nos Estados Unidos ao abrigo das suas próprias garantias de
+        transferência. Ver também:
         <a href="https://policies.google.com/privacy">Política de Privacidade
         da Google</a>.
       </p>
@@ -429,6 +466,15 @@
             <td>
               Enquanto a aplicação for operada — necessário para manter as
               funcionalidades pagas a funcionar e para prevenir abusos
+            </td>
+          </tr>
+          <tr>
+            <td>Eventos de compra enviados à Meta (§6.2)</td>
+            <td>
+              Conservados pela Meta ao abrigo das condições dela, e não das
+              nossas. A retirada do consentimento impede o envio de eventos
+              futuros; não anula um evento já enviado, e não podemos
+              eliminar por ti a cópia da Meta
             </td>
           </tr>
           <tr>
@@ -459,22 +505,94 @@
       <p>
         Todos os registos do lado do servidor estão associados apenas ao
         identificador anónimo do dispositivo. Podes solicitar a sua eliminação
-        a qualquer momento (§8).
+        a qualquer momento (§8). A linha da Meta acima é o único elemento
+        desta tabela que não nos cabe eliminar.
       </p>
 
       <h2 id="ads">6. Publicidade e consentimento</h2>
 <p>
+        Há duas coisas na aplicação que envolvem publicidade: os anúncios
+        mostrados na versão gratuita e um evento de medição enviado quando
+        compras algo. No <strong>EEE, no Reino Unido e na Suíça</strong>,
+        ambas são regidas por um <strong>único formulário de
+        consentimento</strong>, que a aplicação mostra no primeiro arranque.
+        Pergunta se os anúncios podem ser personalizados e — ao abrigo das
+        finalidades da própria aplicação relativas ao armazenamento ou à
+        leitura de informações no teu dispositivo e à medição do desempenho
+        da publicidade — se os nossos parceiros publicitários, entre eles a
+        Meta, podem receber a medição descrita no §6.2. Não há uma segunda
+        pergunta nem um controlo separado. Podes reabrir o formulário a
+        qualquer momento nas Definições da aplicação (“Opções de privacidade
+        dos anúncios”) ou utilizar as definições do sistema Android.
+        <strong>Recusar não te custa nada</strong>: todas as funcionalidades,
+        incluindo as compras, funcionam exatamente da mesma forma.
+      </p>
+      <p>
+        Fora desses países, o formulário não é mostrado, porque as regras que
+        o exigem não se aplicam aí. Nesse caso, os anúncios são
+        personalizados e o evento de compra descrito no §6.2 é enviado quando
+        fazes uma compra. Ainda assim, podes limitar a personalização dos
+        anúncios através das próprias definições do Android e, se preferires
+        que o evento de compra não seja enviado, escreve-nos (§11).
+      </p>
+
+      <h3>6.1. Anúncios (Google AdMob)</h3>
+      <p>
         A versão gratuita mostra anúncios apresentados pela Google AdMob. A
         AdMob pode recolher o identificador de publicidade do teu dispositivo,
         dados de interação com os anúncios e a localização aproximada (ao
-        nível do país). No primeiro arranque no EEE/Reino Unido, a aplicação
-        mostra um formulário de consentimento no qual escolhes entre anúncios
-        personalizados e não personalizados; podes alterar esta escolha a
-        qualquer momento nas Definições da aplicação (“Opções de privacidade
-        dos anúncios”) ou nas definições do sistema Android. Quem tem
-        subscrição não vê anúncios. Detalhes:
+        nível do país). Quem tem subscrição não vê anúncios. Detalhes:
         <a href="https://policies.google.com/technologies/ads">Política de
         Publicidade da Google</a>.
+      </p>
+
+      <h3>6.2. Medição de compras (Meta)</h3>
+      <p>
+        Para podermos saber que publicidade leva realmente as pessoas até à
+        aplicação, esta envia <strong>um evento à Meta de cada vez que
+        inicias uma subscrição ou compras um pacote de tokens</strong>. Nunca
+        é enviado mais nada: nem a renovação de uma subscrição, nem uma
+        mudança de plano, nem o restauro de uma compra, nem uma reinstalação
+        — e absolutamente nada se nunca comprares seja o que for. O evento
+        segue diretamente do teu dispositivo para a Meta — não passa pelo
+        nosso servidor — e contém:
+      </p>
+      <ul>
+        <li>
+          um identificador aleatório que o software da Meta gera para esta
+          instalação. O <strong>identificador de publicidade da Google do teu
+          dispositivo não é transmitido</strong> à Meta;
+        </li>
+        <li>
+          o que compraste e quanto custou: o montante e a moeda, o produto, o
+          modo da aplicação que estavas a utilizar e o hash unidirecional com
+          sal do número da encomenda da Play descrito no §3.4 — <strong>nunca
+          o próprio número da encomenda e nunca o token de compra</strong>;
+        </li>
+        <li>
+          os dados padrão da aplicação e do dispositivo que o software da
+          Meta junta a tudo o que envia: o nome do pacote e a versão da
+          aplicação, a tua versão do Android, o modelo do dispositivo, o
+          tamanho do ecrã, o idioma da interface, o fuso horário e o nome da
+          rede móvel.
+        </li>
+      </ul>
+      <p>
+        A Meta vê ainda o endereço de Internet a partir do qual o evento
+        chega, o que indica a localização aproximada. O evento nunca
+        transporta o teu nome, o nome de uma criança, nem qualquer conteúdo
+        de um plano, de uma história ou de uma canção.
+      </p>
+      <p>
+        Onde o formulário de consentimento se aplica, <strong>nenhum evento é
+        enviado sem que tenhas dado o teu acordo</strong> a essas finalidades
+        e à Meta como parceira. Retirar esse acordo impede o envio de eventos
+        futuros, elimina do teu dispositivo o identificador acima referido e
+        descarta qualquer evento que ainda não tenha sido carregado — mas não
+        pode anular um evento já enviado. Para tudo o que a Meta já detenha,
+        contacta diretamente a Meta (§8). A política da própria Meta:
+        <a href="https://www.facebook.com/privacy/policy/">Política de
+        Privacidade da Meta</a>.
       </p>
 
       <h2 id="children">7. Dados das crianças</h2>
@@ -514,8 +632,20 @@
           acesso e de saldos que eles contêm.
         </li>
         <li>
-          <strong>A retirada do consentimento publicitário</strong> está
-          disponível a qualquer momento, conforme descrito no §6.
+          <strong>O consentimento publicitário</strong>, onde o formulário de
+          consentimento se aplica (§6), pode ser retirado a qualquer momento
+          — uma única retirada abrange tanto os anúncios personalizados como
+          o evento de compra enviado à Meta.
+        </li>
+        <li>
+          <strong>Dados detidos pelos parceiros publicitários.</strong> A
+          Google e a Meta detêm o que o §6 descreve na qualidade de
+          responsáveis pelo tratamento independentes, e não em nosso nome.
+          Não podemos aceder, corrigir nem eliminar por ti as cópias que
+          detêm: os pedidos relativos a essas cópias devem ser dirigidos
+          diretamente à
+          <a href="https://policies.google.com/privacy">Google</a> ou à
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
         </li>
       </ul>
 

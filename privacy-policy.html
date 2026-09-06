@@ -128,7 +128,7 @@
         <strong>Developer &amp; data controller:</strong> Maciej Bernacki<br />
         <strong>Contact:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Last updated:</strong> August 18, 2026
+        <strong>Last updated:</strong> September 6, 2026
       </p>
 
 
@@ -149,6 +149,15 @@
         the device itself before any request is sent to any service. Song
         lyrics you write or edit in the app are a deliberate exception: they
         are sent as written (§3.9).
+      </p>
+      <p>
+        Not collecting your name does not mean you are invisible to
+        advertising services. The free tier shows ads served by Google
+        AdMob, and when you buy a subscription or a token package the app
+        sends one measurement event to Meta so we can tell which advertising
+        actually works. Both are described in full in §6, both are covered
+        by a single consent question where European rules require one, and
+        declining changes nothing about how the app works for you.
       </p>
 
       <h2 id="on-device">2. Data that stays on your device</h2>
@@ -251,6 +260,14 @@
         notifies our server directly about subscription state changes (for
         example a cancellation), so entitlements stay correct.
       </p>
+      <p>
+        For the advertising measurement described in §6.2, the server
+        additionally computes a <strong>one-way, salted hash</strong> of the
+        order number Google Play issued, and returns it to the app. It lets
+        Meta count one purchase once; it cannot be turned back into the
+        order number, and neither the order number itself nor the purchase
+        token is ever sent to an advertising service.
+      </p>
 
       <h3>3.5. Usage limits and token balances</h3>
       <p>
@@ -316,8 +333,8 @@
         like story illustrations (§3.3).
       </p>
 
-      <h2 id="processors">4. Service providers</h2>
-<p>The app relies on the following processors:</p>
+      <h2 id="processors">4. Service providers and other recipients</h2>
+<p>The app relies on the following external services:</p>
       <table>
         <thead>
           <tr>
@@ -347,8 +364,16 @@
           <tr>
             <td>Google AdMob</td>
             <td>Advertising in the free tier</td>
-            <td>Advertising ID, ad interactions (§6)</td>
+            <td>Advertising ID, ad interactions (§6.1)</td>
             <td>Per Google's policy</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Advertising measurement</td>
+            <td>One event per subscription start or token purchase —
+            contents itemised in §6.2</td>
+            <td>Ireland; may be processed in the United States under Meta's
+            own transfer safeguards</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -371,14 +396,23 @@
         </tbody>
       </table>
       <p>
-        Two flows can be processed <strong>outside the EEA</strong>:
-        ElevenLabs processes narration and song-composition requests — the
-        story text or song lyrics — in the United States under its
-        data-processing terms, which incorporate EU Standard Contractual
-        Clauses; and requests to Google Gemini travel through our EU proxy
-        to Google's Gemini API, where Google may process them outside the
-        EEA under its data-processing terms. See also:
-        <a href="https://policies.google.com/privacy">Google Privacy
+        <strong>AdMob and Meta are not our processors.</strong> They also
+        use what they receive for their own advertising purposes, as
+        independent controllers. We cannot access, correct or delete the
+        copies they hold; requests about those go to Google or to Meta
+        directly (§8).
+      </p>
+      <p>
+        Some of these flows can be processed <strong>outside the
+        EEA</strong>: ElevenLabs processes narration and song-composition
+        requests — the story text or song lyrics — in the United States
+        under its data-processing terms, which incorporate EU Standard
+        Contractual Clauses; requests to Google Gemini travel through our EU
+        proxy to Google's Gemini API, where Google may process them outside
+        the EEA under its data-processing terms; and the purchase events
+        described in §6.2 go to Meta Platforms Ireland, which may process
+        them in the United States under its own transfer safeguards. See
+        also: <a href="https://policies.google.com/privacy">Google Privacy
         Policy</a>.
       </p>
 
@@ -404,6 +438,14 @@
             <td>
               For as long as the app is operated — required to keep paid
               features working and to prevent abuse
+            </td>
+          </tr>
+          <tr>
+            <td>Purchase events sent to Meta (§6.2)</td>
+            <td>
+              Held by Meta under its own terms, not ours. Withdrawing
+              consent stops future events; it does not recall an event
+              already sent, and we cannot delete Meta's copy for you
             </td>
           </tr>
           <tr>
@@ -433,20 +475,88 @@
       </table>
       <p>
         All server-side records are keyed to the anonymous device identifier
-        only. You can request their deletion at any time (§8).
+        only, and you can request their deletion at any time (§8). The Meta
+        row above is the one item in this table that is not ours to delete.
       </p>
 
       <h2 id="ads">6. Advertising and consent</h2>
 <p>
+        Two things in the app involve advertising: the ads shown in the free
+        tier, and a measurement event sent when you buy something. In the
+        <strong>EEA, the UK and Switzerland</strong> both are governed by a
+        <strong>single consent form</strong>, which the app shows on first
+        launch. It asks whether ads may be personalized and, under the app's
+        own purposes for storing or reading information on your device and
+        for measuring how well advertising performs, whether our advertising
+        partners — Meta among them — may receive the measurement described
+        in §6.2. There is no second question and no
+        separate toggle. You can reopen the form at any time in the app's
+        Settings ("Ad privacy options"), or use Android's system settings.
+        <strong>Declining costs you nothing</strong>: every feature,
+        purchases included, works exactly the same.
+      </p>
+      <p>
+        Outside those countries the form is not shown, because the rules
+        that require it do not apply there. Ads are then personalized and
+        the purchase event described in §6.2 is sent when you buy. You can
+        still limit ad personalization through Android's own settings, and
+        if you would rather the purchase event were not sent, write to us
+        (§11).
+      </p>
+
+      <h3>6.1. Ads (Google AdMob)</h3>
+      <p>
         The free tier shows ads served by Google AdMob. AdMob may collect
         your device's advertising ID, ad-interaction data, and approximate
-        (country-level) location. On first launch in the EEA/UK the app shows
-        a consent form where you choose between personalized and
-        non-personalized ads; you can change this choice at any time in the
-        app's Settings ("Ad privacy options") or in Android's system
-        settings. Subscribers do not see ads. Details:
+        (country-level) location. Subscribers do not see ads. Details:
         <a href="https://policies.google.com/technologies/ads">Google
         Advertising Policy</a>.
+      </p>
+
+      <h3>6.2. Purchase measurement (Meta)</h3>
+      <p>
+        So that we can tell which advertising actually leads people to the
+        app, it sends <strong>one event to Meta each time you start a
+        subscription or buy a token package</strong>. Nothing else is ever
+        sent: not a subscription renewal, not a change of plan, not
+        restoring a purchase, not reinstalling, and nothing at all if you
+        never buy anything. The event travels from your device to Meta
+        directly — not through our server — and contains:
+      </p>
+      <ul>
+        <li>
+          a random identifier that Meta's software generates for this
+          installation. <strong>Your device's Google advertising ID is not
+          transmitted</strong> to Meta;
+        </li>
+        <li>
+          what you bought and what it cost: the amount and currency, the
+          product, the app mode you were using, and the one-way salted hash
+          of the Play order number described in §3.4 — <strong>never the
+          order number itself, and never the purchase token</strong>;
+        </li>
+        <li>
+          the standard app and device details Meta's software attaches to
+          everything it sends: the app's package name and version, your
+          Android version, device model, screen size, interface language,
+          time zone, and mobile-network name.
+        </li>
+      </ul>
+      <p>
+        Meta additionally sees the internet address the event arrives from,
+        which indicates approximate location. The event never carries your
+        name, a pupil's name, or any content from a plan, story or song.
+      </p>
+      <p>
+        Where the consent form applies, <strong>no event is sent unless you
+        agreed</strong> to those purposes and to Meta as a partner.
+        Withdrawing that agreement stops future events, deletes the
+        identifier above from your device, and discards any event that has
+        not yet been uploaded — but it cannot recall an event already sent.
+        For anything Meta already holds, contact Meta directly (§8). Meta's
+        own policy:
+        <a href="https://www.facebook.com/privacy/policy/">Meta Privacy
+        Policy</a>.
       </p>
 
       <h2 id="children">7. Children's data</h2>
@@ -482,8 +592,18 @@
           history they carry.
         </li>
         <li>
-          <strong>Ad-consent withdrawal</strong> is available at any time as
-          described in §6.
+          <strong>Advertising consent</strong>, where the consent form
+          applies (§6), can be withdrawn at any time — one withdrawal covers
+          both personalized ads and the purchase event sent to Meta.
+        </li>
+        <li>
+          <strong>Data held by advertising partners.</strong> Google and
+          Meta hold what §6 describes as independent controllers, not on our
+          behalf. We cannot access, correct or delete their copies for you:
+          requests about those go to
+          <a href="https://policies.google.com/privacy">Google</a> or to
+          <a href="https://www.facebook.com/privacy/policy/">Meta</a>
+          directly.
         </li>
       </ul>
 

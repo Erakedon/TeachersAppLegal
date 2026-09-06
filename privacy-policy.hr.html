@@ -128,7 +128,7 @@
         <strong>Razvojni programer i voditelj obrade podataka:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Posljednje ažuriranje:</strong> 18. kolovoza 2026.
+        <strong>Posljednje ažuriranje:</strong> 6. rujna 2026.
       </p>
 
       <div class="prevails-note">Ovaj je dokument prijevod koji se pruža radi praktičnosti. U slučaju bilo kakvog odstupanja između ovog prijevoda i engleske verzije mjerodavna je <a href="privacy-policy.html">engleska verzija</a>.</div>
@@ -152,6 +152,16 @@
         bilo kojoj usluzi. Tekst pjesme koji napišete ili uredite u
         aplikaciji namjerna je iznimka: šalje se točno
         onako kako ste ga napisali (§3.9).
+      </p>
+      <p>
+        To što ne prikupljamo vaše ime ne znači da ste nevidljivi uslugama
+        oglašavanja. Besplatna verzija prikazuje oglase koje poslužuje
+        Google AdMob, a kada kupite pretplatu ili paket tokena, aplikacija
+        šalje jedan mjerni događaj tvrtki Meta kako bismo mogli utvrditi
+        koje oglašavanje doista funkcionira. Oboje je u cijelosti opisano u
+        §6, oboje je obuhvaćeno jednim pitanjem o privoli ondje gdje europski
+        propisi to zahtijevaju, a odbijanje ne mijenja ništa u načinu na
+        koji aplikacija radi za vas.
       </p>
 
       <h2 id="on-device">2. Podaci koji ostaju na vašem uređaju</h2>
@@ -260,6 +270,14 @@
         promjenama stanja pretplate (na primjer o otkazivanju), kako bi
         prava korištenja ostala točna.
       </p>
+      <p>
+        Za mjerenje oglašavanja opisano u §6.2 poslužitelj dodatno
+        izračunava <strong>jednosmjerni sažetak sa soli</strong> (engl.
+        salted hash) broja narudžbe koji je izdao Google Play i vraća ga
+        aplikaciji. On tvrtki Meta omogućuje da jednu kupnju izbroji jednom;
+        ne može se pretvoriti natrag u broj narudžbe, a ni sam broj narudžbe
+        ni token kupnje nikada se ne šalju usluzi oglašavanja.
+      </p>
 
       <h3>3.5. Ograničenja korištenja i stanja tokena</h3>
       <p>
@@ -331,8 +349,8 @@
         i ilustracije priča (§3.3).
       </p>
 
-      <h2 id="processors">4. Pružatelji usluga</h2>
-<p>Aplikacija se oslanja na sljedeće izvršitelje obrade:</p>
+      <h2 id="processors">4. Pružatelji usluga i drugi primatelji</h2>
+<p>Aplikacija se oslanja na sljedeće vanjske usluge:</p>
       <table>
         <thead>
           <tr>
@@ -362,8 +380,17 @@
           <tr>
             <td>Google AdMob</td>
             <td>Oglašavanje u besplatnoj verziji</td>
-            <td>ID za oglašavanje, interakcije s oglasima (§6)</td>
+            <td>ID za oglašavanje, interakcije s oglasima (§6.1)</td>
             <td>Prema Googleovim pravilima</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Mjerenje oglašavanja</td>
+            <td>Jedan događaj po pokretanju pretplate ili kupnji paketa
+            tokena — sadržaj je naveden u §6.2</td>
+            <td>Irska; obrada se može odvijati u Sjedinjenim Američkim
+            Državama na temelju Metinih vlastitih zaštitnih mjera za
+            prijenos</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -386,16 +413,25 @@
         </tbody>
       </table>
       <p>
-        Dva tijeka obrade mogu se odvijati
+        <strong>AdMob i Meta nisu naši izvršitelji obrade.</strong> Ono što
+        prime upotrebljavaju i za vlastite svrhe oglašavanja, kao neovisni
+        voditelji obrade. Ne možemo pristupiti primjercima koje oni čuvaju
+        niti ih ispraviti ili izbrisati; zahtjevi u vezi s njima upućuju se
+        izravno Googleu ili tvrtki Meta (§8).
+      </p>
+      <p>
+        Neki od tih tijekova mogu se odvijati
         <strong>izvan EGP-a</strong>: ElevenLabs obrađuje zahtjeve za
         naraciju i skladanje pjesama — tekst priče ili
         tekst pjesme — u Sjedinjenim Američkim Državama u skladu sa svojim
         uvjetima
-        obrade podataka, koji uključuju standardne ugovorne klauzule EU-a,
-        a zahtjevi prema usluzi Google Gemini putuju preko našeg proxy
+        obrade podataka, koji uključuju standardne ugovorne klauzule EU-a;
+        zahtjevi prema usluzi Google Gemini putuju preko našeg proxy
         poslužitelja u EU-u do Googleova sučelja Gemini API, gdje ih Google
         može obrađivati izvan EGP-a u skladu sa svojim uvjetima obrade
-        podataka.
+        podataka; a događaji o kupnji opisani u §6.2 idu tvrtki Meta
+        Platforms Ireland, koja ih može obrađivati u Sjedinjenim Američkim
+        Državama na temelju vlastitih zaštitnih mjera za prijenos.
         Vidjeti također:
         <a href="https://policies.google.com/privacy">Googleova pravila o
         privatnosti</a>.
@@ -426,6 +462,15 @@
             </td>
           </tr>
           <tr>
+            <td>Događaji o kupnji poslani tvrtki Meta (§6.2)</td>
+            <td>
+              Čuva ih tvrtka Meta prema vlastitim uvjetima, a ne našima.
+              Povlačenje privole zaustavlja buduće događaje; njime se ne
+              povlači natrag događaj koji je već poslan i ne možemo umjesto
+              vas izbrisati primjerak koji čuva tvrtka Meta
+            </td>
+          </tr>
+          <tr>
             <td>Brojači korištenja i stanja tokena</td>
             <td>Dokle god se aplikacija pruža</td>
           </tr>
@@ -453,22 +498,91 @@
       <p>
         Svi poslužiteljski zapisi vezani su isključivo uz anonimni
         identifikator uređaja. Njihovo brisanje možete zatražiti u bilo
-        kojem trenutku (§8).
+        kojem trenutku (§8). Redak koji se odnosi na tvrtku Meta jedina je
+        stavka u ovoj tablici koju mi ne možemo izbrisati.
       </p>
 
       <h2 id="ads">6. Oglašavanje i privola</h2>
 <p>
+        Dvije stvari u aplikaciji uključuju oglašavanje: oglasi koji se
+        prikazuju u besplatnoj verziji i mjerni događaj koji se šalje kada
+        nešto kupite. U <strong>EGP-u, Ujedinjenoj Kraljevini i
+        Švicarskoj</strong> oboje je uređeno <strong>jednim obrascem za
+        privolu</strong>, koji aplikacija prikazuje pri prvom pokretanju. U
+        njemu se pita smiju li oglasi biti personalizirani te — u okviru
+        vlastitih svrha aplikacije koje se odnose na pohranjivanje
+        informacija na vašem uređaju ili njihovo čitanje te na mjerenje
+        toga koliko je oglašavanje uspješno — smiju li naši partneri u
+        oglašavanju, među kojima je i Meta, primiti mjerenje opisano u §6.2.
+        Nema drugog pitanja ni zasebnog prekidača. Obrazac možete ponovno
+        otvoriti u bilo kojem trenutku u Postavkama aplikacije („Mogućnosti
+        privatnosti oglasa”) ili upotrijebiti postavke sustava Android.
+        <strong>Odbijanje vas ne stoji ništa</strong>: sve značajke,
+        uključujući kupnje, rade potpuno jednako.
+      </p>
+      <p>
+        Izvan tih zemalja obrazac se ne prikazuje jer se propisi koji ga
+        zahtijevaju ondje ne primjenjuju. Oglasi su tada personalizirani, a
+        događaj o kupnji opisan u §6.2 šalje se kada nešto kupite.
+        Personalizaciju oglasa i dalje možete ograničiti u samim postavkama
+        sustava Android, a ako ne želite da se događaj o kupnji šalje,
+        javite nam se (§11).
+      </p>
+
+      <h3>6.1. Oglasi (Google AdMob)</h3>
+      <p>
         Besplatna verzija prikazuje oglase koje poslužuje Google AdMob.
         AdMob može prikupljati ID za oglašavanje vašeg uređaja, podatke o
         interakcijama s oglasima i približnu lokaciju (na razini države).
-        Pri prvom pokretanju u EGP-u/Ujedinjenoj Kraljevini aplikacija
-        prikazuje obrazac za privolu u kojem birate između personaliziranih
-        i nepersonaliziranih oglasa; taj izbor možete promijeniti u bilo
-        kojem trenutku u Postavkama aplikacije („Mogućnosti privatnosti
-        oglasa”) ili u postavkama sustava Android. Pretplatnici ne vide
-        oglase. Pojedinosti:
+        Pretplatnici ne vide oglase. Pojedinosti:
         <a href="https://policies.google.com/technologies/ads">Googleova
         pravila oglašavanja</a>.
+      </p>
+
+      <h3>6.2. Mjerenje kupnji (Meta)</h3>
+      <p>
+        Kako bismo mogli utvrditi koje oglašavanje doista dovodi ljude do
+        aplikacije, ona šalje <strong>jedan događaj tvrtki Meta svaki put
+        kada pokrenete pretplatu ili kupite paket tokena</strong>. Ništa se
+        drugo nikada ne šalje: ni obnova pretplate, ni promjena plana, ni
+        vraćanje kupnje, ni ponovna instalacija, a ako nikada ništa ne
+        kupite, ne šalje se baš ništa. Događaj putuje s vašeg uređaja
+        izravno tvrtki Meta — ne preko našeg poslužitelja — i sadrži:
+      </p>
+      <ul>
+        <li>
+          nasumični identifikator koji softver tvrtke Meta generira za ovu
+          instalaciju. <strong>Googleov ID za oglašavanje vašeg uređaja ne
+          prenosi se</strong> tvrtki Meta;
+        </li>
+        <li>
+          što ste kupili i koliko je to stajalo: iznos i valutu, proizvod,
+          način rada aplikacije koji ste koristili te jednosmjerni sažetak
+          sa soli broja narudžbe iz Google Playa opisan u §3.4 —
+          <strong>nikada sam broj narudžbe i nikada token kupnje</strong>;
+        </li>
+        <li>
+          standardne podatke o aplikaciji i uređaju koje softver tvrtke Meta
+          prilaže svemu što šalje: naziv paketa i verziju aplikacije, vašu
+          verziju sustava Android, model uređaja, veličinu zaslona, jezik
+          sučelja, vremensku zonu i naziv mobilne mreže.
+        </li>
+      </ul>
+      <p>
+        Tvrtka Meta dodatno vidi internetsku adresu s koje događaj stiže,
+        što upućuje na približnu lokaciju. Događaj nikada ne nosi vaše ime,
+        ime djeteta ni bilo kakav sadržaj iz plana, priče ili pjesme.
+      </p>
+      <p>
+        Ondje gdje se obrazac za privolu primjenjuje, <strong>nijedan se
+        događaj ne šalje ako niste pristali</strong> na te svrhe i na tvrtku
+        Meta kao partnera. Povlačenje tog pristanka zaustavlja buduće
+        događaje, briše gore navedeni identifikator s vašeg uređaja i
+        odbacuje svaki događaj koji još nije prenesen — ali ne može povući
+        natrag događaj koji je već poslan. Za sve što tvrtka Meta već ima
+        obratite se izravno njoj (§8). Vlastita pravila tvrtke Meta:
+        <a href="https://www.facebook.com/privacy/policy/">Metina pravila o
+        privatnosti</a>.
       </p>
 
       <h2 id="children">7. Podaci djece</h2>
@@ -505,8 +619,19 @@
           korištenja i stanja tokena koju ti zapisi nose.
         </li>
         <li>
-          <strong>Povlačenje privole za oglase</strong> dostupno je u bilo
-          kojem trenutku, kako je opisano u §6.
+          <strong>Privolu za oglašavanje</strong>, ondje gdje se obrazac za
+          privolu primjenjuje (§6), možete povući u bilo kojem trenutku —
+          jedno povlačenje obuhvaća i personalizirane oglase i događaj o
+          kupnji koji se šalje tvrtki Meta.
+        </li>
+        <li>
+          <strong>Podaci koje čuvaju partneri u oglašavanju.</strong> Google
+          i Meta ono što je opisano u §6 čuvaju kao neovisni voditelji
+          obrade, a ne u naše ime. Ne možemo umjesto vas pristupiti njihovim
+          primjercima niti ih ispraviti ili izbrisati: zahtjevi u vezi s
+          njima upućuju se izravno
+          <a href="https://policies.google.com/privacy">Googleu</a> ili
+          <a href="https://www.facebook.com/privacy/policy/">Meti</a>.
         </li>
       </ul>
 

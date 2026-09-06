@@ -128,7 +128,7 @@
         <strong>Kehittäjä ja rekisterinpitäjä:</strong> Maciej Bernacki<br />
         <strong>Yhteystiedot:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Viimeksi päivitetty:</strong> 18. elokuuta 2026
+        <strong>Viimeksi päivitetty:</strong> 6. syyskuuta 2026
       </p>
 
       <div class="prevails-note">Tämä asiakirja on käännös, joka on laadittu lukemisen helpottamiseksi. Jos tämän käännöksen ja <a href="privacy-policy.html">englanninkielisen version</a> välillä on ristiriita, englanninkielinen versio on ratkaiseva.</div>
@@ -153,6 +153,16 @@
         Sovelluksessa itse kirjoittamasi tai muokkaamasi laulunsanat ovat
         tarkoituksellinen poikkeus: ne lähetetään sellaisina kuin kirjoitit
         ne (§3.9).
+      </p>
+      <p>
+        Se, ettemme kerää nimeäsi, ei tarkoita, että olisit näkymätön
+        mainospalveluille. Ilmaisversiossa näytetään Google AdMobin
+        välittämiä mainoksia, ja kun ostat tilauksen tai token-paketin,
+        sovellus lähettää Metalle yhden mittaustapahtuman, jotta tiedämme,
+        mikä mainonta todella toimii. Molemmat kuvataan kokonaisuudessaan
+        §6:ssa, molemmat kuuluvat saman suostumuskysymyksen piiriin siellä,
+        missä eurooppalaiset säännöt sitä edellyttävät, eikä kieltäytyminen
+        muuta mitenkään sitä, miten sovellus sinulle toimii.
       </p>
 
       <h2 id="on-device">2. Tiedot, jotka pysyvät laitteellasi</h2>
@@ -260,6 +270,14 @@
         tilauksen tilan muutoksista (esimerkiksi peruutuksesta), jotta
         käyttöoikeudet pysyvät oikeina.
       </p>
+      <p>
+        Kohdassa §6.2 kuvattua mainonnan mittausta varten palvelin laskee
+        lisäksi <strong>yksisuuntaisen, suolatun tiivisteen</strong> Google
+        Playn myöntämästä tilausnumerosta ja palauttaa sen sovellukselle.
+        Sen avulla Meta voi laskea yhden oston kerran; tiivistettä ei voi
+        muuntaa takaisin tilausnumeroksi, eikä tilausnumeroa itseään tai
+        ostotunnistetta koskaan lähetetä millekään mainospalvelulle.
+      </p>
 
       <h3>3.5. Käyttörajat ja token-saldot</h3>
       <p>
@@ -332,8 +350,8 @@
         (§3.3).
       </p>
 
-      <h2 id="processors">4. Palveluntarjoajat</h2>
-<p>Sovellus käyttää seuraavia henkilötietojen käsittelijöitä:</p>
+      <h2 id="processors">4. Palveluntarjoajat ja muut vastaanottajat</h2>
+<p>Sovellus käyttää seuraavia ulkoisia palveluita:</p>
       <table>
         <thead>
           <tr>
@@ -364,8 +382,16 @@
           <tr>
             <td>Google AdMob</td>
             <td>Mainonta ilmaisversiossa</td>
-            <td>Mainostunnus, mainosten kanssa tapahtuva vuorovaikutus (§6)</td>
+            <td>Mainostunnus, mainosten kanssa tapahtuva vuorovaikutus (§6.1)</td>
             <td>Googlen käytännön mukaisesti</td>
+          </tr>
+          <tr>
+            <td>Meta Platforms Ireland Limited</td>
+            <td>Mainonnan mittaus</td>
+            <td>Yksi tapahtuma kutakin tilauksen aloitusta tai token-ostoa
+            kohden — sisältö eritelty §6.2:ssa</td>
+            <td>Irlanti; käsittely voi tapahtua Yhdysvalloissa Metan omien
+            tiedonsiirtoa koskevien suojatoimien nojalla</td>
           </tr>
           <tr>
             <td>Google Play Billing</td>
@@ -388,15 +414,25 @@
         </tbody>
       </table>
       <p>
-        Kaksi tietovirtaa voidaan käsitellä <strong>ETA:n
+        <strong>AdMob ja Meta eivät ole henkilötietojen
+        käsittelijöitämme.</strong> Ne käyttävät saamiaan tietoja myös omiin
+        mainontatarkoituksiinsa itsenäisinä rekisterinpitäjinä. Emme voi
+        päästä käsiksi niiden hallussa oleviin kopioihin emmekä oikaista tai
+        poistaa niitä; näitä koskevat pyynnöt on osoitettava suoraan
+        Googlelle tai Metalle (§8).
+      </p>
+      <p>
+        Osa näistä tietovirroista voidaan käsitellä <strong>ETA:n
         ulkopuolella</strong>: ElevenLabs käsittelee kerronta- ja
         laulunsävellyspyynnöt — sadun tekstin tai laulunsanat —
         Yhdysvalloissa tietojenkäsittelyehtojensa mukaisesti, joihin
-        sisältyvät
-        EU:n vakiosopimuslausekkeet, ja Google Gemini -pyynnöt kulkevat
-        EU-välityspalvelimemme kautta Googlen Gemini-rajapintaan, jossa
-        Google voi käsitellä niitä ETA:n ulkopuolella omien
-        tietojenkäsittelyehtojensa mukaisesti. Katso myös:
+        sisältyvät EU:n vakiosopimuslausekkeet; Google Gemini -pyynnöt
+        kulkevat EU-välityspalvelimemme kautta Googlen Gemini-rajapintaan,
+        jossa Google voi käsitellä niitä ETA:n ulkopuolella omien
+        tietojenkäsittelyehtojensa mukaisesti; ja §6.2:ssa kuvatut
+        ostotapahtumat lähetetään Meta Platforms Irelandille, joka voi
+        käsitellä niitä Yhdysvalloissa omien tiedonsiirtoa koskevien
+        suojatoimiensa nojalla. Katso myös:
         <a href="https://policies.google.com/privacy">Googlen
         tietosuojakäytäntö</a>.
       </p>
@@ -427,6 +463,15 @@
             </td>
           </tr>
           <tr>
+            <td>Metalle lähetetyt ostotapahtumat (§6.2)</td>
+            <td>
+              Meta säilyttää ne omien ehtojensa, ei meidän ehtojemme,
+              mukaisesti. Suostumuksen peruuttaminen lopettaa tulevat
+              tapahtumat; se ei peruuta eikä poista jo lähetettyä
+              tapahtumaa, emmekä voi poistaa Metan kopiota puolestasi
+            </td>
+          </tr>
+          <tr>
             <td>Käyttölaskurit ja token-saldot</td>
             <td>Niin kauan kuin sovellusta ylläpidetään</td>
           </tr>
@@ -454,22 +499,96 @@
       <p>
         Kaikki palvelinpuolen tiedot on liitetty ainoastaan anonyymiin
         laitetunnisteeseen. Voit pyytää niiden poistamista milloin tahansa
-        (§8).
+        (§8). Yllä oleva Metaa koskeva rivi on tämän taulukon ainoa kohta,
+        jonka poistaminen ei ole meidän vallassamme.
       </p>
 
       <h2 id="ads">6. Mainonta ja suostumus</h2>
 <p>
+        Sovelluksessa kaksi asiaa liittyy mainontaan: ilmaisversiossa
+        näytettävät mainokset ja mittaustapahtuma, joka lähetetään, kun
+        ostat jotain. <strong>ETA-alueella, Yhdistyneessä kuningaskunnassa
+        ja Sveitsissä</strong> molempia koskee <strong>yksi ainoa
+        suostumuslomake</strong>, jonka sovellus näyttää ensimmäisellä
+        käynnistyskerralla. Siinä kysytään, saako mainokset personoida, ja
+        — sovelluksen omien käyttötarkoitusten osalta, jotka koskevat
+        tietojen tallentamista laitteellesi tai laitteellasi olevien
+        tietojen lukemista sekä mainonnan tehokkuuden mittaamista —
+        saavatko mainoskumppanimme, Meta mukaan lukien, vastaanottaa
+        §6.2:ssa kuvatun mittaustiedon. Toista kysymystä tai erillistä valintaa ei
+        ole. Voit avata lomakkeen uudelleen milloin tahansa sovelluksen
+        asetuksissa (”Mainosten tietosuoja-asetukset”) tai käyttää Androidin
+        järjestelmäasetuksia. <strong>Kieltäytyminen ei maksa sinulle
+        mitään</strong>: kaikki ominaisuudet, ostot mukaan lukien, toimivat
+        täsmälleen samalla tavalla.
+      </p>
+      <p>
+        Näiden maiden ulkopuolella lomaketta ei näytetä, koska sitä
+        edellyttävät säännöt eivät ole siellä voimassa. Tällöin mainokset
+        personoidaan ja §6.2:ssa kuvattu ostotapahtuma lähetetään, kun
+        ostat. Voit silti rajoittaa mainosten personointia Androidin omissa
+        asetuksissa, ja jos et halua ostotapahtumaa lähetettävän, ota
+        meihin yhteyttä (§11).
+      </p>
+
+      <h3>6.1. Mainokset (Google AdMob)</h3>
+      <p>
         Ilmaisversiossa näytetään Google AdMobin välittämiä mainoksia. AdMob
         voi kerätä laitteesi mainostunnuksen, mainosten kanssa tapahtuvaa
         vuorovaikutusta koskevat tiedot ja likimääräisen (maatasoisen)
-        sijainnin. Ensimmäisellä käynnistyskerralla ETA-alueella tai
-        Yhdistyneessä kuningaskunnassa sovellus näyttää suostumuslomakkeen,
-        jossa valitset personoitujen ja personoimattomien mainosten välillä;
-        voit muuttaa tätä valintaa milloin tahansa sovelluksen asetuksissa
-        (”Mainosten tietosuoja-asetukset”) tai Androidin
-        järjestelmäasetuksissa. Tilaajat eivät näe mainoksia. Lisätietoja:
+        sijainnin. Tilaajat eivät näe mainoksia. Lisätietoja:
         <a href="https://policies.google.com/technologies/ads">Googlen
         mainontakäytäntö</a>.
+      </p>
+
+      <h3>6.2. Ostojen mittaus (Meta)</h3>
+      <p>
+        Jotta tiedämme, mikä mainonta todella tuo ihmisiä sovellukseen,
+        sovellus lähettää <strong>Metalle yhden tapahtuman aina, kun aloitat
+        tilauksen tai ostat token-paketin</strong>. Mitään muuta ei koskaan
+        lähetetä: ei tilauksen uusiutumista, ei tilausjakson vaihtoa, ei
+        oston palauttamista, ei uudelleenasennusta eikä yhtään mitään, jos
+        et koskaan osta mitään. Tapahtuma kulkee laitteeltasi suoraan
+        Metalle — ei palvelimemme kautta — ja se sisältää:
+      </p>
+      <ul>
+        <li>
+          satunnaisen tunnisteen, jonka Metan ohjelmisto luo tälle
+          asennukselle. <strong>Laitteesi Google-mainostunnusta ei
+          välitetä</strong> Metalle;
+        </li>
+        <li>
+          tiedon siitä, mitä ostit ja mitä se maksoi: summan ja valuutan,
+          tuotteen, käyttämäsi sovellustilan sekä §3.4:ssä kuvatun
+          yksisuuntaisen, suolatun tiivisteen Google Playn tilausnumerosta —
+          <strong>ei koskaan tilausnumeroa itseään eikä koskaan
+          ostotunnistetta</strong>;
+        </li>
+        <li>
+          vakiomuotoiset sovellus- ja laitetiedot, jotka Metan ohjelmisto
+          liittää kaikkeen lähettämäänsä: sovelluksen pakettinimen ja
+          version, Android-versiosi, laitemallin, näytön koon,
+          käyttöliittymän kielen, aikavyöhykkeen ja matkapuhelinverkon
+          nimen.
+        </li>
+      </ul>
+      <p>
+        Lisäksi Meta näkee internetosoitteen, josta tapahtuma saapuu, ja se
+        kertoo likimääräisen sijainnin. Tapahtuma ei koskaan sisällä
+        nimeäsi, lapsen nimeä eikä mitään sisältöä suunnitelmasta, sadusta
+        tai laulusta.
+      </p>
+      <p>
+        Siellä, missä suostumuslomaketta sovelletaan, <strong>tapahtumaa ei
+        lähetetä, ellet ole hyväksynyt</strong> näitä käyttötarkoituksia ja
+        Metaa kumppaniksi. Suostumuksen peruuttaminen lopettaa tulevat
+        tapahtumat, poistaa edellä mainitun tunnisteen laitteeltasi ja
+        hylkää tapahtuman, jota ei ole vielä lähetetty — mutta se ei peruuta
+        eikä poista jo lähetettyä tapahtumaa. Jos asia koskee tietoja, jotka
+        ovat jo Metan hallussa, ota yhteyttä suoraan Metaan (§8). Metan oma
+        käytäntö:
+        <a href="https://www.facebook.com/privacy/policy/">Metan
+        tietosuojakäytäntö</a>.
       </p>
 
       <h2 id="children">7. Lasten tiedot</h2>
@@ -508,8 +627,19 @@
           käyttöoikeus- ja saldohistorian.
         </li>
         <li>
-          <strong>Mainossuostumuksen peruuttaminen</strong> on mahdollista
-          milloin tahansa, kuten §6 kuvaa.
+          <strong>Mainossuostumuksen</strong> voi peruuttaa milloin tahansa
+          siellä, missä suostumuslomaketta sovelletaan (§6) — yksi peruutus
+          kattaa sekä personoidut mainokset että Metalle lähetetyn
+          ostotapahtuman.
+        </li>
+        <li>
+          <strong>Mainoskumppaneiden hallussa olevat tiedot.</strong> Google
+          ja Meta pitävät hallussaan §6:ssa kuvattuja tietoja itsenäisinä
+          rekisterinpitäjinä, eivät meidän puolestamme. Emme voi päästä
+          käsiksi niiden kopioihin emmekä oikaista tai poistaa niitä
+          puolestasi: näitä koskevat pyynnöt on osoitettava suoraan
+          <a href="https://policies.google.com/privacy">Googlelle</a> tai
+          <a href="https://www.facebook.com/privacy/policy/">Metalle</a>.
         </li>
       </ul>
 

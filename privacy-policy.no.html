@@ -128,7 +128,7 @@
         <strong>Utvikler og behandlingsansvarlig:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Sist oppdatert:</strong> 6. september 2026
+        <strong>Sist oppdatert:</strong> 15. september 2026
       </p>
 
       <div class="prevails-note">Dette dokumentet er en oversettelse som er gjort tilgjengelig av praktiske hensyn. Ved eventuelle avvik mellom denne oversettelsen og den <a href="privacy-policy.html">engelske versjonen</a> går den engelske versjonen foran.</div>
@@ -138,8 +138,11 @@
         Denne personvernerklæringen forklarer hvilke data <em>Lærerappen</em>
         behandler, hva som aldri forlater enheten din, hva som sendes til
         eksterne tjenester og hvorfor, og hvor lenge noe som helst oppbevares.
-        Appen er en planleggings- og eventyrassistent for barnehagelærere og
-        er ment for voksne, profesjonelle brukere.
+        Appen er en planleggings- og eventyrassistent for voksne som tar seg
+        av små barn: barnehagelærere som planlegger for gruppene sine, og
+        foreldre som bruker appens foreldremodus (vist som
+        <em>Foreldreappen</em>) til å planlegge for egne barn hjemme. Denne
+        erklæringen gjelder begge.
       </p>
       <p>
         Appen har <strong>ingen brukerkontoer</strong>. Vi samler ikke inn
@@ -151,6 +154,12 @@
         sendes til noen som helst tjeneste. Sangtekster du skriver eller
         redigerer i appen, er et bevisst unntak: de sendes
         slik du skrev dem (§ 3.9).
+      </p>
+      <p>
+        For å se om appen faktisk hjelper folk med å komme i gang, oppbevarer serveren vår en liten oppføring om hvordan hver installasjon brukes —
+        hvilke dager den ble brukt, og hvor langt den kom i de første stegene —
+        knyttet bare til en tilfeldig identifikator for installasjonen
+        (§ 3.10).
       </p>
       <p>
         At vi ikke samler inn navnet ditt, betyr ikke at du er usynlig for
@@ -167,15 +176,16 @@
 <p>
         Følgende data lagres <strong>bare på enheten din</strong>, i appens
         lokale database og private lagringsområde. De lastes aldri opp
-        automatisk. De eneste måtene noe av dette kan forlate enheten på, er
-        handlinger du selv utfører: å eksportere eller dele en fil, å sende inn
+        automatisk. De eneste måtene noe av dette kan forlate enheten på, er handlinger du selv utfører: å generere innhold, som sender de anonymiserte beskrivelsene som er forklart i § 3.1, å eksportere eller dele en fil, å sende inn
         en innholdsrapport (§ 3.8) eller å lage en sang av en tekst du
         selv har skrevet (§ 3.9).
       </p>
       <ul>
         <li>
-          Barneprofiler — navn og dine beskrivelser av hvert barns pedagogiske
-          behov
+          Profiler for barna du planlegger for — i lærermodus barnas navn og
+          dine beskrivelser av hvert barns pedagogiske behov; i foreldremodus
+          barnas navn, fødselsår (valgfritt), hva de liker og ikke liker, og
+          alt du noterer om behovene deres
         </li>
         <li>Klasser og grupper</li>
         <li>
@@ -211,10 +221,10 @@
         AI-leverandørene. Hver forespørsel til proxyen inneholder: en
         <strong>anonym enhetsidentifikator</strong> (en tilfeldig UUID som
         opprettes ved installasjon — den identifiserer installasjonen, ikke
-        deg), appversjonen og, for enkelte forespørsler, et Google Play
-        Integrity-token som brukes til å blokkere misbruk. Loggene til proxyen
-        registrerer bare tekniske metadata (forespørselstype, resultat,
-        tidspunkt, en anonymisert enhetsidentifikator) —
+        deg), appversjonen, for enkelte forespørsler et Google Play
+        Integrity-token som brukes til å blokkere misbruk, og — i nyere versjoner av appen — de fremdriftsmarkørene for de første stegene som § 3.10 beskriver. Loggene til proxyen
+        registrerer bare tekniske metadata (for eksempel forespørselstype, resultat, tidspunkt, den anonyme enhetsidentifikatoren og, for forespørsler om
+        dagsplaner, hvilket lands utdanningssystem som er valgt) —
         <strong>aldri innholdet i forespørslene dine</strong>.
       </p>
 
@@ -231,6 +241,15 @@
         generere innholdet ditt og <strong>lagres ikke på serveren
         vår</strong>. Genererte eventyr skrives utelukkende med fiktive
         karakternavn.
+      </p>
+
+      <p>
+        I <strong>foreldremodus</strong> går appen lenger: den legger aldri selv inn et barns eget navn i en forespørsel. Hvert barn du velger, beskrives bare
+        med en omtrentlig alder beregnet ut fra fødselsåret du har oppgitt, og
+        med det du har notert om hva barnet liker, ikke liker og har behov
+        for, og barnas navn fjernes på enheten fra alt annet du skriver før det
+        sendes — med unntak av sangtekster og sangtitler du skriver eller redigerer selv, som sendes slik du skrev dem (§ 3.9). Akkurat som i lærermodus lagres disse
+        beskrivelsene ikke på serveren vår.
       </p>
 
       <h3>3.2. Opplesning av eventyr (tekst-til-tale)</h3>
@@ -279,7 +298,9 @@
         For at grensene i gratisversjonen og tokenøkonomiene skal fungere
         rettferdig på tvers av reinstallasjoner, holder serveren tellere per
         enhet knyttet til den anonyme enhetsidentifikatoren: hvor mange gratis genereringer
-        som er brukt, og gjeldende saldoer for eventyr- og lydtokens.
+        som er brukt, hvor mange annonser med belønning som er kreditert,
+        gjeldende saldoer for eventyr- og lydtokens og når hver av disse
+        oppføringene ble opprettet.
       </p>
 
       <h3>3.6. Annonser med belønning</h3>
@@ -294,7 +315,7 @@
       <p>
         Hvis du installerer appen via en annens anbefalingslenke, inneholder
         installasjonshenvisningen fra Google Play vedkommendes
-        anbefalingskode; appen leser <strong>bare denne koden</strong> fra den.
+        anbefalingskode; appen leser <strong>bare denne koden</strong> fra den — og, for installasjoner fra butikksiden til <em>Foreldreappen</em>, en markør som forhåndsvelger foreldremodus og som blir værende på enheten din.
         Når en anbefaling krediteres, knyttes den nye installasjonens anonyme
         enhetsidentifikator til inviterens anonyme enhetsidentifikator på
         serveren vår. Ingen av identifikatorene kan spores til en person — vi
@@ -339,6 +360,52 @@
         eventyrillustrasjoner (§ 3.3).
       </p>
 
+      <h3>3.10. Installasjonsaktivitet og fremdrift i de første stegene</h3>
+      <p>
+        For å forstå om folk som installerer appen, klarer å komme i gang og
+        fortsetter å bruke den, oppbevarer serveren én liten oppføring per
+        installasjon, knyttet til den anonyme enhetsidentifikatoren. Den
+        inneholder når appen første gang kontaktet serveren vår, når den sist gjorde det (oppdateres høyst omtrent én gang om dagen), appversjonen på disse to tidspunktene, og
+        en liste over dagene appen kontaktet serveren vår.
+      </p>
+      <p>
+        Nyere versjoner av appen sender i tillegg
+        <strong>fremdriftsmarkører for de første stegene</strong> med
+        forespørslene sine, og oppføringen lagrer også disse. En markør er et
+        tall som betyr at installasjonen har nådd ett av stegene for å komme i
+        gang: for eksempel at velkomstskjermen ble vist (og om den kunne
+        forhåndsvelge landet ditt ut fra regioninnstillingen på enheten), at
+        lærer- eller foreldremodus ble valgt, at den første klassen eller det første barnet ble lagret, at steget med barneprofilen ble åpnet,
+        fullført eller hoppet over, at en dagsplanskjerm ble åpnet, at det ble
+        trykket på knappen for å generere, at en plan ble lagret, at
+        introduksjonen ble fullført, eller at utskrifts- eller delingsdialogen
+        ble åpnet for en plan. Én av markørene angir bare at installasjonen er
+        eldre enn denne funksjonen. Markørene omfatter verken innhold, navn eller noe du har skrevet.
+      </p>
+      <p>
+        Vi bruker denne oppføringen bare til å måle hvordan installasjoner kommer i gang og kommer tilbake — mest samlet for alle installasjoner og, for å undersøke et problem, ved å se på én enkelt installasjons oppføring sammen med brukstellerne (§ 3.5) og abonnementsstatusen (§ 3.4). Den
+        brukes ikke til annonsering og gis ikke videre til annonsepartnere.
+      </p>
+
+      <h3>3.11. Påminnelser</h3>
+      <p>
+        Appen kan sende påminnelser av og til — for eksempel en påminnelse
+        søndag kveld om å planlegge uken som kommer. De er slått av til du selv
+        slår dem på: appen tilbyr dem etter at du har generert en plan, og ber
+        Google om et varslingstoken bare hvis du takker ja og Android tillater
+        varsler. Deretter sender appen dette <strong>tokenet</strong> — en identifikator utstedt av Google Firebase Cloud Messaging som gjør at en melding kan nå denne installasjonen — til serveren vår sammen med den anonyme enhetsidentifikatoren, appens grensesnittspråk,
+        tidssonens forskyvning fra UTC (slik at påminnelsen kommer til riktig
+        lokal tid) og appversjonen. Serveren registrerer også når denne registreringen startet og når appen sist fornyet den (omtrent én gang om dagen mens du bruker appen), og når en påminnelse sist ble sendt til installasjonen, slik at samme påminnelse ikke sendes
+        to ganger.
+      </p>
+      <p>
+        Påminnelser leveres via Google Firebase Cloud Messaging, som mottar
+        tokenet og påminnelsens tekst. Teksten er den samme for alle som bruker
+        appen på ditt språk, og inneholder aldri navnet ditt, et barns navn
+        eller noe fra planene dine. Du kan når som helst slå av påminnelser i
+        Androids varslingsinnstillinger for appen.
+      </p>
+
       <h2 id="processors">4. Tjenesteleverandører og andre mottakere</h2>
 <p>Appen benytter følgende eksterne tjenester:</p>
       <table>
@@ -369,7 +436,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Annonsering i gratisversjonen</td>
-            <td>Annonse-ID, annonseinteraksjoner (§ 6.1)</td>
+            <td>Enhetsidentifikatorer, interaksjoner med appen og annonsene, ytelsesdata (§ 6.1)</td>
             <td>Etter Googles retningslinjer</td>
           </tr>
           <tr>
@@ -390,6 +457,12 @@
             <td>Google Play Integrity</td>
             <td>Beskyttelse mot misbruk</td>
             <td>Integritetssignaler for enhet/installasjon</td>
+            <td>Etter Googles retningslinjer</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Levering av påminnelser, hvis du slår dem på</td>
+            <td>Varslingstokenet og påminnelsens tekst (§ 3.11)</td>
             <td>Etter Googles retningslinjer</td>
           </tr>
           <tr>
@@ -417,7 +490,9 @@
         der Google kan behandle dem utenfor EØS i henhold til sine vilkår
         for databehandling; og kjøpshendelsene som er beskrevet i § 6.2,
         går til Meta Platforms Ireland, som kan behandle dem i USA under
-        sine egne overføringsgarantier. Se også:
+        sine egne overføringsgarantier. Påminnelser (§ 3.11) leveres via
+        Google Firebase Cloud Messaging, som også kan behandle tokenet og
+        påminnelsens tekst utenfor EØS. Se også:
         <a href="https://policies.google.com/privacy">Googles
         personvernerklæring</a>.
       </p>
@@ -458,6 +533,20 @@
           <tr>
             <td>Brukstellere og tokensaldoer</td>
             <td>Så lenge appen driftes</td>
+          </tr>
+          <tr>
+            <td>Oppføring om installasjonsaktivitet og fremdrift i de første stegene (§ 3.10)</td>
+            <td>Så lenge appen driftes</td>
+          </tr>
+          <tr>
+            <td>Varslingstoken og påminnelseshistorikk (§ 3.11)</td>
+            <td>
+              Så lenge appen driftes, med mindre oppføringen fjernes tidligere —
+              automatisk når Google ved utsending av en påminnelse melder at
+              tokenet ikke lenger er gyldig, eller på forespørsel. Å slå av
+              varsler i Android gjør at påminnelser ikke lenger vises, men
+              sletter ikke i seg selv denne oppføringen
+            </td>
           </tr>
           <tr>
             <td>Anbefalingsregistre</td>
@@ -515,9 +604,7 @@
 
       <h3>6.1. Annonser (Google AdMob)</h3>
       <p>
-        Gratisversjonen viser annonser levert av Google AdMob. AdMob kan samle
-        inn enhetens annonse-ID, data om annonseinteraksjoner og omtrentlig
-        posisjon (på landnivå). Abonnenter ser ingen annonser. Detaljer:
+        Gratisversjonen viser annonser levert av Google AdMob. AdMob kan samle inn enhetens annonse-ID og andre enhetsidentifikatorer, hvordan appen og annonsene i den brukes (for eksempel appstarter, trykk og videovisninger), informasjon om appens ytelse og omtrentlig posisjon (på landnivå). Abonnenter ser ingen annonser. Detaljer:
         <a href="https://policies.google.com/technologies/ads">Googles
         retningslinjer for annonsering</a>.
       </p>
@@ -573,15 +660,16 @@
 
       <h2 id="children">7. Barns personopplysninger</h2>
 <p>
-        Appen er et profesjonelt verktøy for voksne lærere og er ikke rettet
+        Appen er et verktøy for voksne — lærere og foreldre — og er ikke rettet
         mot barn; vi samler ikke bevisst inn personopplysninger fra barn.
-        Opplysningene om barna som en lærer legger inn, er lærerens egen
-        profesjonelle dokumentasjon: de lagres bare på lærerens enhet, og som
-        beskrevet i § 2 og § 3 overføres de aldri noe sted i en
-        form som identifiserer et barn. Hvis du selv skriver en sangtekst,
-        sendes den slik du skrev den (§ 3.9) — unngå barns
-        personopplysninger der. Kjøp er knyttet til den voksne lærerens
-        Google Play-konto.
+        Opplysningene en lærer legger inn om barna, er lærerens egen
+        profesjonelle dokumentasjon, og opplysningene en forelder legger inn i
+        foreldremodus, gjelder forelderens egne barn. I begge tilfeller lagres
+        de bare på den voksnes egen enhet, og som beskrevet i § 2 og § 3
+        overføres de aldri noe sted i en form som identifiserer et barn. Hvis
+        du selv skriver en sangtekst, sendes den slik du skrev den (§ 3.9) —
+        unngå barns personopplysninger der. Kjøp er knyttet til den voksnes
+        egen Google Play-konto.
       </p>
 
       <h2 id="rights">8. Rettighetene dine (GDPR)</h2>

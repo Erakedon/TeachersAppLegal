@@ -128,7 +128,7 @@
         <strong>Vývojár a prevádzkovateľ osobných údajov:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Posledná aktualizácia:</strong> 6. septembra 2026
+        <strong>Posledná aktualizácia:</strong> 15. septembra 2026
       </p>
 
       <div class="prevails-note">Tento dokument je preklad poskytovaný pre pohodlie používateľa. V prípade akéhokoľvek rozporu medzi týmto prekladom a anglickou verziou má prednosť <a href="privacy-policy.html">anglická verzia</a>.</div>
@@ -139,8 +139,11 @@
         <em>Učiteľská aplikácia</em> pracuje, čo nikdy neopustí tvoje
         zariadenie, čo sa odosiela externým službám a prečo, a ako dlho sa
         čokoľvek uchováva. Aplikácia je asistent na plánovanie a tvorbu
-        rozprávok pre učiteľov v predprimárnom vzdelávaní a je určená pre
-        dospelých profesionálnych používateľov.
+        rozprávok pre dospelých, ktorí sa starajú o malé deti: pre učiteľov v
+        predprimárnom vzdelávaní, ktorí plánujú pre svoje skupiny, a pre
+        rodičov, ktorí v režime rodiča (zobrazovanom ako <em>Rodičovská
+        aplikácia</em>) plánujú aktivity pre vlastné deti doma. Tieto zásady
+        sa vzťahujú na oba spôsoby používania.
       </p>
       <p>
         Aplikácia <strong>nemá používateľské účty</strong>. Nezhromažďujeme
@@ -153,6 +156,9 @@
         v aplikácii
         napíšeš alebo upravíš, je zámernou výnimkou: odošle sa presne v
         takej podobe, v akej ho napíšeš (§3.9).
+      </p>
+      <p>
+        Aby sme zistili, či aplikácia ľuďom naozaj pomáha začať s ňou pracovať, náš server vedie pre každú inštaláciu malý záznam o tom, ako sa používa — v ktoré dni sa používala a ako ďaleko sa dostala v prvých krokoch. Tento záznam je prepojený iba s náhodným identifikátorom inštalácie (§3.10).
       </p>
       <p>
         To, že nezhromažďujeme tvoje meno, neznamená, že ťa reklamné
@@ -170,14 +176,16 @@
         Nasledujúce údaje sa ukladajú <strong>iba v tvojom zariadení</strong>,
         v lokálnej databáze aplikácie a v jej súkromnom úložisku. Nikdy sa
         nenahrávajú automaticky. Jediné spôsoby, ako môže čokoľvek z nich
-        opustiť zariadenie, sú kroky, ktoré vykonáš ty: export alebo
+        opustiť zariadenie, sú kroky, ktoré vykonáš ty: generovanie obsahu, pri ktorom sa odosielajú anonymizované opisy vysvetlené v §3.1, export alebo
         zdieľanie súboru, odoslanie nahlásenia obsahu (§3.8), prípadne
         vytvorenie pesničky z vlastného textu (§3.9).
       </p>
       <ul>
         <li>
-          Profily detí — mená a tvoje opisy vzdelávacích potrieb každého
-          dieťaťa
+          Profily detí, pre ktoré plánuješ — v režime učiteľa mená detí a tvoje
+          opisy vzdelávacích potrieb každého dieťaťa; v režime rodiča mená
+          tvojich detí, rok narodenia (nepovinný), čo majú a čo nemajú radi, a
+          všetko, čo si zapíšeš o ich potrebách
         </li>
         <li>Triedy a skupiny</li>
         <li>
@@ -215,10 +223,11 @@
         poskytovateľmi AI priamo. Každá požiadavka na proxy server obsahuje:
         <strong>anonymný identifikátor zariadenia</strong> (náhodné UUID
         vytvorené pri inštalácii — identifikuje inštaláciu, nie teba),
-        verziu aplikácie a pri niektorých požiadavkách token Google Play
-        Integrity, ktorý slúži na blokovanie zneužívania. Logy proxy servera
-        zaznamenávajú iba technické metadáta (typ požiadavky, výsledok,
-        časové údaje, anonymizovaný identifikátor zariadenia) —
+        verziu aplikácie, pri niektorých požiadavkách token Google Play
+        Integrity, ktorý slúži na blokovanie zneužívania, a — v aktuálnych
+        verziách aplikácie — značky postupu v prvých krokoch opísané v §3.10. Logy proxy servera
+        zaznamenávajú iba technické metadáta (napríklad typ požiadavky, výsledok, časové údaje, anonymný identifikátor zariadenia a pri požiadavkách
+        na plán dňa aj krajinu, ktorej systém vzdelávania bol zvolený) —
         <strong>nikdy nie obsah tvojich požiadaviek</strong>.
       </p>
 
@@ -235,6 +244,14 @@
         skutočné meno. Opisy sa spracúvajú na vygenerovanie tvojho obsahu a
         <strong>neukladajú sa na našom serveri</strong>. Vygenerované
         rozprávky sa píšu výhradne s vymyslenými menami postáv.
+      </p>
+
+      <p>
+        V <strong>režime rodiča</strong> ide aplikácia ešte ďalej: sama nikdy nevkladá meno dieťaťa do požiadavky. Každé vybrané dieťa je
+        opísané iba približným vekom vypočítaným z uvedeného roku narodenia a tým, čo si o ňom zapíšeš — čo má rado, čo nemá rado a aké má potreby;
+        mená tvojich detí sa navyše priamo v zariadení odstránia zo všetkého
+        ostatného, čo napíšeš, ešte pred odoslaním — s výnimkou textov a názvov pesničiek, ktoré napíšeš alebo upravíš ty; tie sa odošlú presne v takej podobe, v akej ich napíšeš (§3.9). Rovnako ako v režime učiteľa sa tieto opisy
+        neukladajú na našom serveri.
       </p>
 
       <h3>3.2. Rozprávanie rozprávok (prevod textu na reč)</h3>
@@ -283,8 +300,9 @@
         Aby limity bezplatnej verzie a tokenové systémy fungovali
         spravodlivo aj pri preinštalovaní, server vedie počítadlá pre
         jednotlivé zariadenia naviazané na anonymný identifikátor
-        zariadenia: koľko bezplatných generovaní bolo použitých a aktuálne
-        zostatky tokenov na rozprávky a audio.
+        zariadenia: koľko bezplatných generovaní bolo použitých, za koľko
+        reklám s odmenou bola pripísaná odmena, aktuálne zostatky tokenov na
+        rozprávky a audio a kedy bol každý z týchto záznamov vytvorený.
       </p>
 
       <h3>3.6. Reklamy s odmenou</h3>
@@ -299,7 +317,7 @@
       <p>
         Ak si aplikáciu nainštaluješ cez odkaz na odporúčanie od inej osoby,
         inštalačný referrer služby Google Play nesie jej kód odporúčania;
-        aplikácia z neho číta <strong>iba tento kód</strong>. Pri pripísaní
+        aplikácia z neho číta <strong>iba tento kód</strong> — a pri inštaláciách zo stránky <em>Rodičovskej aplikácie</em> v obchode aj značku, ktorá predvolí režim rodiča a zostáva v tvojom zariadení. Pri pripísaní
         odporúčania sa na našom serveri prepojí anonymný identifikátor
         zariadenia novej inštalácie s anonymným identifikátorom zariadenia
         pozývajúceho. Ani jeden identifikátor sa nedá priradiť ku konkrétnej
@@ -346,6 +364,54 @@
         sa ukladajú rovnako ako ilustrácie rozprávok (§3.3).
       </p>
 
+      <h3>3.10. Aktivita inštalácie a postup v prvých krokoch</h3>
+      <p>
+        Aby sme pochopili, či ľudia, ktorí si aplikáciu nainštalujú, s ňou
+        dokážu začať pracovať a vracajú sa k nej, server uchováva pre každú
+        inštaláciu jeden malý záznam naviazaný na anonymný identifikátor
+        zariadenia. Obsahuje čas, keď aplikácia prvýkrát kontaktovala náš
+        server, čas posledného kontaktu (aktualizuje sa najviac približne raz denne), verziu aplikácie v týchto dvoch okamihoch a zoznam dní, v ktoré aplikácia kontaktovala náš
+        server.
+      </p>
+      <p>
+        Aktuálne verzie aplikácie navyše spolu s požiadavkami odosielajú
+        <strong>značky postupu v prvých krokoch</strong>, ktoré sa tiež
+        ukladajú do tohto záznamu. Značka je číslo, ktoré znamená, že
+        inštalácia dosiahla jeden z krokov začiatku práce s aplikáciou:
+        napríklad že sa zobrazila uvítacia obrazovka (a či na nej aplikácia mohla predvoliť tvoju krajinu podľa nastavenia regiónu zariadenia), že
+        bol zvolený režim učiteľa alebo rodiča, že sa prvýkrát uložila trieda alebo profil dieťaťa, že krok s profilom dieťaťa bol otvorený, dokončený
+        alebo preskočený, že sa otvorila obrazovka plánu dňa, že sa ťuklo na
+        tlačidlo generovania, že sa uložil plán, že sa dokončil úvod alebo že
+        sa pre plán otvorilo dialógové okno tlače alebo zdieľania. Jedna zo
+        značiek iba označuje, že inštalácia je staršia ako táto funkcia.
+        Značky neobsahujú žiadny obsah, mená ani nič, čo napíšeš.
+      </p>
+      <p>
+        Tento záznam používame výlučne na to, aby sme merali, ako inštalácie s aplikáciou začínajú pracovať a vracajú sa k nej — najmä súhrnne za všetky inštalácie a pri skúmaní problému aj prezretím záznamu jednotlivej inštalácie spolu s jej počítadlami používania (§3.5) a stavom predplatného (§3.4). Nepoužíva sa na reklamu a neposkytuje sa reklamným partnerom.
+      </p>
+
+      <h3>3.11. Pripomienky</h3>
+      <p>
+        Aplikácia môže občas posielať pripomienky — napríklad v nedeľu večer
+        podnet na naplánovanie nasledujúceho týždňa. Sú vypnuté, kým ich
+        nezapneš: aplikácia ich ponúkne po vygenerovaní plánu a token upozornení si od Googlu vyžiada iba vtedy, ak s tým súhlasíš a Android
+        upozornenia povolí. Potom aplikácia odošle na náš server tento
+        <strong>token</strong> — identifikátor, ktorý vydáva Google Firebase
+        Cloud Messaging a vďaka ktorému sa správa môže dostať k tejto
+        inštalácii — spolu s anonymným identifikátorom zariadenia, jazykom
+        rozhrania aplikácie, posunom tvojho časového pásma voči UTC (aby
+        pripomienka prišla v správnom miestnom čase) a verziou aplikácie.
+        Server si tiež zaznamenáva, kedy sa táto registrácia začala a kedy ju aplikácia naposledy obnovila (približne raz denne, keď aplikáciu používaš), ako aj to, kedy bola tejto inštalácii naposledy odoslaná pripomienka, aby sa rovnaká pripomienka neodoslala dvakrát.
+      </p>
+      <p>
+        Pripomienky sa doručujú prostredníctvom služby Google Firebase Cloud
+        Messaging, ktorá dostáva token a text pripomienky. Text je rovnaký pre
+        všetkých, ktorí aplikáciu používajú v tvojom jazyku, a nikdy neobsahuje
+        tvoje meno, meno dieťaťa ani nič z tvojich plánov. Pripomienky môžeš
+        kedykoľvek vypnúť v nastaveniach upozornení Androidu pre túto
+        aplikáciu.
+      </p>
+
       <h2 id="processors">4. Poskytovatelia služieb a ďalší príjemcovia</h2>
 <p>Aplikácia využíva nasledujúce externé služby:</p>
       <table>
@@ -377,7 +443,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Reklamy v bezplatnej verzii</td>
-            <td>Reklamné ID, interakcie s reklamami (§6.1)</td>
+            <td>Identifikátory zariadenia, interakcie s aplikáciou a reklamami, údaje o výkone (§6.1)</td>
             <td>Podľa pravidiel Googlu</td>
           </tr>
           <tr>
@@ -398,6 +464,12 @@
             <td>Google Play Integrity</td>
             <td>Ochrana pred zneužívaním</td>
             <td>Signály integrity zariadenia/inštalácie</td>
+            <td>Podľa pravidiel Googlu</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Doručovanie pripomienok, ak ich zapneš</td>
+            <td>Token upozornení a text pripomienky (§3.11)</td>
             <td>Podľa pravidiel Googlu</td>
           </tr>
           <tr>
@@ -426,7 +498,9 @@
         svojich podmienok spracúvania údajov; a udalosti o nákupoch opísané
         v §6.2 idú spoločnosti Meta Platforms Ireland, ktorá ich môže
         spracúvať v Spojených štátoch podľa vlastných záruk pri prenose
-        údajov. Pozri tiež:
+        údajov. Pripomienky (§3.11) sa doručujú prostredníctvom služby Google
+        Firebase Cloud Messaging, ktorá môže token a text pripomienky tiež
+        spracúvať mimo EHP. Pozri tiež:
         <a href="https://policies.google.com/privacy">Zásady ochrany
         súkromia spoločnosti Google</a>.
       </p>
@@ -467,6 +541,20 @@
           <tr>
             <td>Počítadlá používania a zostatky tokenov</td>
             <td>Kým je aplikácia prevádzkovaná</td>
+          </tr>
+          <tr>
+            <td>Záznam o aktivite inštalácie a postupe v prvých krokoch (§3.10)</td>
+            <td>Kým je aplikácia prevádzkovaná</td>
+          </tr>
+          <tr>
+            <td>Token upozornení a história pripomienok (§3.11)</td>
+            <td>
+              Kým je aplikácia prevádzkovaná, pokiaľ sa neodstráni skôr —
+              automaticky, keď Google pri odosielaní pripomienky oznámi, že
+              token už nie je platný, alebo na požiadanie. Vypnutie upozornení v
+              Androide zabráni zobrazovaniu pripomienok, ale samo osebe tento
+              záznam neodstráni
+            </td>
           </tr>
           <tr>
             <td>Záznamy o odporúčaniach</td>
@@ -524,8 +612,7 @@
       <h3>6.1. Reklamy (Google AdMob)</h3>
       <p>
         Bezplatná verzia zobrazuje reklamy poskytované službou Google AdMob.
-        AdMob môže zhromažďovať reklamné ID tvojho zariadenia, údaje o
-        interakciách s reklamami a približnú polohu (na úrovni krajiny).
+        AdMob môže zhromažďovať reklamné ID tvojho zariadenia a ďalšie identifikátory zariadenia, údaje o tom, ako sa používa aplikácia a reklamy v nej (napríklad spustenia aplikácie, ťuknutia a pozretia videí), informácie o výkone aplikácie a približnú polohu (na úrovni krajiny).
         Predplatitelia reklamy nevidia. Podrobnosti:
         <a href="https://policies.google.com/technologies/ads">Pravidlá
         reklám spoločnosti Google</a>.
@@ -580,14 +667,13 @@
 
       <h2 id="children">7. Údaje detí</h2>
 <p>
-        Aplikácia je profesionálny nástroj pre dospelých učiteľov a nie je
-        určená deťom; vedome nezhromažďujeme osobné údaje detí. Informácie o
-        deťoch, ktoré učiteľ zadá, sú jeho vlastným profesijným záznamom:
-        ukladajú sa iba v zariadení učiteľa a — ako je opísané v §2 a §3 —
-        nikdy sa nikam neprenášajú v podobe, ktorá by identifikovala dieťa.
-        Ak text pesničky napíšeš ty, odošle sa presne v takej podobe, v
-        akej ho napíšeš (§3.9) — vyhýbaj sa v ňom osobným údajom detí.
-        Nákupy sú viazané na účet Google Play dospelého učiteľa.
+        Aplikácia je nástroj pre dospelých — učiteľov a rodičov — a nie je
+        určená deťom; vedome nezhromažďujeme osobné údaje detí. Informácie, ktoré učiteľ zadá o deťoch, sú jeho vlastným profesijným záznamom a informácie, ktoré rodič zadá v režime rodiča, sa týkajú jeho vlastných detí. V oboch prípadoch sa ukladajú iba v zariadení tejto dospelej
+        osoby a — ako je opísané v §2 a §3 — nikdy sa nikam neprenášajú v
+        podobe, ktorá by identifikovala dieťa. Ak text pesničky napíšeš ty,
+        odošle sa presne v takej podobe, v akej ho napíšeš (§3.9) — vyhýbaj sa
+        v ňom osobným údajom detí. Nákupy sú viazané na vlastný účet Google
+        Play dospelej osoby.
       </p>
 
       <h2 id="rights">8. Tvoje práva (GDPR)</h2>

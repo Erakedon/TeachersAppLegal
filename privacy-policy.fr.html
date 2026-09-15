@@ -128,7 +128,7 @@
         <strong>Développeur et responsable du traitement :</strong> Maciej Bernacki<br />
         <strong>Contact :</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Dernière mise à jour :</strong> 6 septembre 2026
+        <strong>Dernière mise à jour :</strong> 15 septembre 2026
       </p>
 
       <div class="prevails-note">Ce document est une traduction fournie par souci de commodité. En cas de divergence entre cette traduction et la <a href="privacy-policy.html">version anglaise</a>, la version anglaise prévaut.</div>
@@ -140,15 +140,19 @@
         votre appareil, lesquelles sont envoyées à des services externes et
         pourquoi, et combien de temps chaque donnée est conservée.
         L'application est un assistant de planification et de création de
-        contes pour les enseignants de la petite enfance, destiné à des
-        utilisateurs professionnels adultes.
+        contes destiné aux adultes qui s'occupent de jeunes enfants : les
+        enseignants de la petite enfance, qui préparent les activités de leur
+        groupe, et les parents, qui utilisent son mode parent (présenté sous le
+        nom <em>L'appli des parents</em>) pour préparer des activités pour
+        leurs propres enfants à la maison. La présente politique couvre ces
+        deux usages.
       </p>
       <p>
         L'application ne comporte <strong>aucun compte utilisateur</strong>.
         Nous ne collectons ni votre nom, ni votre adresse e-mail, ni aucun
         profil vous concernant. Le principe directeur de conception de
         l'application est que <strong>les données personnelles des enfants ne
-        quittent jamais votre appareil</strong> : les noms des élèves, les
+        quittent jamais votre appareil</strong> : les noms des enfants, les
         dates, les notes et tout autre détail permettant une identification
         sont supprimés ou remplacés par des étiquettes neutres sur l'appareil
         lui-même avant qu'une quelconque requête ne soit envoyée à un
@@ -156,6 +160,10 @@
         modifiez dans l'application constituent une exception
         délibérée : elles sont envoyées telles que vous
         les avez écrites (§3.9).
+      </p>
+      <p>
+        Pour savoir si l'application aide réellement ses utilisateurs à la prendre en main, notre serveur conserve un petit enregistrement de l'utilisation de chaque installation — les jours où elle a été utilisée et jusqu'où elle a progressé dans les premières étapes —, rattaché uniquement à un identifiant
+        aléatoire de l'installation (§3.10).
       </p>
       <p>
         Ne pas collecter votre nom ne signifie pas que vous soyez invisible
@@ -174,15 +182,17 @@
         Les données suivantes sont stockées <strong>uniquement sur votre
         appareil</strong>, dans la base de données locale et le stockage privé
         de l'application. Elles ne sont jamais téléversées automatiquement.
-        Elles ne peuvent quitter l'appareil que par des actions que vous
-        effectuez vous-même : l'exportation ou le partage d'un fichier,
+        Elles ne peuvent quitter l'appareil que par des actions que vous effectuez vous-même : la génération de contenu, qui envoie les descriptions anonymisées expliquées au §3.1, l'exportation ou le partage d'un fichier,
         l'envoi d'un signalement de contenu (§3.8) ou la création d'une
         chanson à partir de paroles que vous avez écrites vous-même (§3.9).
       </p>
       <ul>
         <li>
-          Profils d'élèves — les noms et vos descriptions des besoins
-          éducatifs de chaque enfant
+          Profils des enfants pour lesquels vous planifiez — en mode
+          enseignant, les noms des élèves et vos descriptions des besoins
+          éducatifs de chaque enfant ; en mode parent, les noms de vos
+          enfants, leur année de naissance (facultative), ce qu'ils aiment et
+          n'aiment pas, et tout ce que vous notez sur leurs besoins
         </li>
         <li>Classes et groupes</li>
         <li>
@@ -221,10 +231,13 @@
         d'IA. Chaque requête adressée au proxy comporte : un
         <strong>identifiant d'appareil anonyme</strong> (un UUID aléatoire créé
         à l'installation — il identifie l'installation, pas vous), la version
-        de l'application et, pour certaines requêtes, un jeton Google Play
-        Integrity servant à bloquer les abus. Les journaux du proxy
-        n'enregistrent que des métadonnées techniques (type de requête,
-        résultat, horodatage, identifiant d'appareil anonymisé) —
+        de l'application, pour certaines requêtes, un jeton Google Play
+        Integrity servant à bloquer les abus et — dans les versions actuelles
+        de l'application — les marqueurs de progression des premiers pas
+        décrits au §3.10. Les journaux du proxy
+        n'enregistrent que des métadonnées techniques (par exemple type de requête, résultat, horodatage, identifiant d'appareil anonyme et, pour les
+        requêtes de plan de journée, le pays dont le système éducatif a été
+        choisi) —
         <strong>jamais le contenu de vos requêtes</strong>.
       </p>
 
@@ -243,6 +256,16 @@
         nom. Les descriptions sont traitées pour générer votre contenu et
         <strong>ne sont pas stockées sur notre serveur</strong>. Les contes
         générés n'utilisent que des noms de personnages fictifs.
+      </p>
+
+      <p>
+        En <strong>mode parent</strong>, l'application va plus loin : elle n'insère jamais d'elle-même le nom d'un enfant dans une requête. Chaque enfant que vous
+        sélectionnez est décrit uniquement par un âge approximatif, calculé à
+        partir de l'année de naissance que vous avez indiquée, et par ce que
+        vous avez noté sur ce qu'il aime, ce qu'il n'aime pas et ses
+        besoins ; les noms de vos enfants sont en outre supprimés, sur
+        l'appareil, de tout autre texte que vous saisissez avant son envoi — à l'exception des paroles et des titres de chanson que vous écrivez ou modifiez vous-même, qui sont envoyés tels que vous les avez écrits (§3.9). Comme en mode
+        enseignant, ces descriptions ne sont pas stockées sur notre serveur.
       </p>
 
       <h3>3.2. Narration des contes (synthèse vocale)</h3>
@@ -294,8 +317,10 @@
         Pour appliquer équitablement les limites de l'offre gratuite et
         l'économie de jetons, y compris en cas de réinstallation, le serveur
         conserve des compteurs par appareil associés à l'identifiant
-        d'appareil anonyme : le nombre de générations gratuites utilisées et
-        les soldes actuels de jetons de contes et de jetons audio.
+        d'appareil anonyme : le nombre de générations gratuites utilisées, le
+        nombre de publicités avec récompense créditées, les soldes actuels de
+        jetons de contes et de jetons audio, ainsi que la date de création de
+        chacun de ces enregistrements.
       </p>
 
       <h3>3.6. Publicités avec récompense</h3>
@@ -311,8 +336,7 @@
       <p>
         Si vous installez l'application via le lien de parrainage d'une autre
         personne, le référent d'installation de Google Play contient son code
-        de parrainage ; l'application n'en lit <strong>que ce
-        code</strong>. Lorsqu'un parrainage est crédité,
+        de parrainage ; l'application n'en lit <strong>que ce code</strong> — ainsi que, pour les installations effectuées depuis la fiche de <em>L'appli des parents</em> sur le Play Store, un marqueur qui présélectionne le mode parent et reste sur votre appareil. Lorsqu'un parrainage est crédité,
         l'identifiant d'appareil anonyme de la nouvelle installation est
         associé, sur notre serveur, à l'identifiant d'appareil anonyme du
         parrain. Aucun de ces deux
@@ -366,6 +390,61 @@
         contes (§3.3).
       </p>
 
+      <h3>3.10. Activité de l'installation et progression des premiers pas</h3>
+      <p>
+        Pour comprendre si les personnes qui installent l'application
+        parviennent à la prendre en main et continuent à l'utiliser, le serveur
+        conserve un petit enregistrement par installation, associé à
+        l'identifiant d'appareil anonyme. Il contient le moment où
+        l'application a contacté notre serveur pour la première fois, le moment du contact le plus récent (mis à jour au plus une fois par jour environ), la version de l'application à ces deux moments, ainsi que la liste des jours où
+        l'application a contacté notre serveur.
+      </p>
+      <p>
+        Les versions actuelles de l'application envoient également, avec leurs
+        requêtes, des <strong>marqueurs de progression des premiers
+        pas</strong>, que cet enregistrement conserve aussi. Un marqueur est un
+        numéro indiquant que l'installation a atteint l'une des étapes de la
+        prise en main : par exemple, que l'écran d'accueil a été affiché (et
+        s'il a pu présélectionner votre pays d'après le paramètre de région de
+        votre appareil), que le mode enseignant ou le mode parent a été choisi,
+        qu'une classe ou un enfant a été enregistré pour la première fois, que
+        l'étape du profil d'élève a été ouverte, terminée ou passée, qu'un
+        écran de plan de journée a été ouvert, que le bouton de génération a
+        été touché, qu'un plan a été enregistré, que l'introduction a été
+        terminée, ou que la fenêtre d'impression ou de partage a été ouverte
+        pour un plan. L'un des marqueurs indique seulement que l'installation
+        est antérieure à cette fonctionnalité. Les marqueurs ne comportent aucun contenu, aucun nom, ni rien de ce que vous saisissez.
+      </p>
+      <p>
+        Nous utilisons cet enregistrement uniquement pour mesurer comment les installations prennent l'application en main et y reviennent — principalement sous forme de totaux sur l'ensemble des installations et, pour analyser un problème, en consultant l'enregistrement d'une installation donnée avec ses compteurs d'utilisation (§3.5) et l'état de son abonnement (§3.4). Il n'est pas utilisé à des fins
+        publicitaires et n'est pas transmis à des partenaires publicitaires.
+      </p>
+
+      <h3>3.11. Rappels</h3>
+      <p>
+        L'application peut envoyer des rappels occasionnels — par exemple, le
+        dimanche soir, une invitation à préparer la semaine à venir. Ils
+        restent désactivés tant que vous ne les activez pas : l'application
+        vous les propose après que vous avez généré un plan, et ne demande à
+        Google un jeton de notification que si vous acceptez et qu'Android
+        autorise les notifications. L'application envoie alors à notre serveur
+        ce <strong>jeton</strong> — un identifiant émis par Google Firebase
+        Cloud Messaging qui permet à un message d'atteindre cette installation
+        —, accompagné de l'identifiant d'appareil anonyme, de la langue de
+        l'interface de l'application, du décalage de votre fuseau horaire par
+        rapport à l'UTC (pour que le rappel arrive à la bonne heure locale) et
+        de la version de l'application. Le serveur enregistre aussi le moment où cette inscription a commencé et celui où l'application l'a renouvelée pour la dernière fois (environ une fois par jour pendant que vous utilisez l'application), ainsi que le moment du dernier rappel envoyé à l'installation, afin que le même rappel ne
+        soit pas envoyé deux fois.
+      </p>
+      <p>
+        Les rappels sont acheminés par Google Firebase Cloud Messaging, qui
+        reçoit le jeton et le texte du rappel. Ce texte est le même pour toutes
+        les personnes qui utilisent l'application dans votre langue et ne
+        contient jamais votre nom, le nom d'un enfant ni quoi que ce soit issu
+        de vos plans. Vous pouvez désactiver les rappels à tout moment dans les
+        paramètres de notification d'Android pour l'application.
+      </p>
+
       <h2 id="processors">4. Prestataires de services et autres destinataires</h2>
 <p>L'application fait appel aux services externes suivants :</p>
       <table>
@@ -398,8 +477,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Publicité dans l'offre gratuite</td>
-            <td>Identifiant publicitaire, interactions avec les publicités
-            (§6.1)</td>
+            <td>Identifiants de l'appareil, interactions avec l'application et les publicités, données de performance (§6.1)</td>
             <td>Selon la politique de Google</td>
           </tr>
           <tr>
@@ -420,6 +498,12 @@
             <td>Google Play Integrity</td>
             <td>Protection contre les abus</td>
             <td>Signaux d'intégrité de l'appareil et de l'installation</td>
+            <td>Selon la politique de Google</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Envoi des rappels, si vous les activez</td>
+            <td>Le jeton de notification et le texte du rappel (§3.11)</td>
             <td>Selon la politique de Google</td>
           </tr>
           <tr>
@@ -450,7 +534,9 @@
         les traiter en dehors de l'EEE dans le cadre de ses conditions de
         traitement des données ; et les événements d'achat décrits au §6.2
         sont transmis à Meta Platforms Ireland, qui peut les traiter aux
-        États-Unis dans le cadre de ses propres garanties de transfert. Voir
+        États-Unis dans le cadre de ses propres garanties de transfert. Les rappels (§3.11) sont acheminés par Google
+        Firebase Cloud Messaging, qui peut lui aussi traiter le jeton et le
+        texte du rappel en dehors de l'EEE. Voir
         aussi :
         <a href="https://policies.google.com/privacy">Politique de
         confidentialité de Google</a>.
@@ -493,6 +579,20 @@
           <tr>
             <td>Compteurs d'utilisation et soldes de jetons</td>
             <td>Aussi longtemps que l'application est exploitée</td>
+          </tr>
+          <tr>
+            <td>Enregistrement de l'activité de l'installation et de la progression des premiers pas (§3.10)</td>
+            <td>Aussi longtemps que l'application est exploitée</td>
+          </tr>
+          <tr>
+            <td>Jeton de notification et historique des rappels (§3.11)</td>
+            <td>
+              Aussi longtemps que l'application est exploitée, sauf suppression anticipée — automatique lorsque Google signale, lors de
+              l'envoi d'un rappel, que le jeton n'est plus valide, ou sur
+              demande. Désactiver les notifications dans Android empêche
+              l'affichage des rappels, mais ne supprime pas à lui seul cet
+              enregistrement
+            </td>
           </tr>
           <tr>
             <td>Registres de parrainage</td>
@@ -555,9 +655,7 @@
       <h3>6.1. Publicités (Google AdMob)</h3>
       <p>
         L'offre gratuite affiche des publicités diffusées par Google AdMob.
-        AdMob peut collecter l'identifiant publicitaire de votre appareil, des
-        données d'interaction avec les publicités et une localisation
-        approximative (au niveau du pays). Les abonnés ne voient pas de
+        AdMob peut collecter l'identifiant publicitaire de votre appareil et d'autres identifiants de l'appareil, la façon dont l'application et ses publicités sont utilisées (par exemple les lancements de l'application, les appuis et les vues de vidéos), des informations sur les performances de l'application et une localisation approximative (au niveau du pays). Les abonnés ne voient pas de
         publicités. Plus de détails :
         <a href="https://policies.google.com/technologies/ads">Règles de
         Google en matière de publicité</a>.
@@ -616,18 +714,18 @@
 
       <h2 id="children">7. Données des enfants</h2>
 <p>
-        L'application est un outil professionnel destiné aux enseignants
-        adultes et ne s'adresse pas aux enfants ; nous ne collectons pas
+        L'application est un outil destiné aux adultes — enseignants et
+        parents — et ne s'adresse pas aux enfants ; nous ne collectons pas
         sciemment de données personnelles d'enfants. Les informations sur les
         élèves saisies par un enseignant constituent son propre dossier
-        professionnel : elles sont stockées uniquement sur l'appareil de
-        l'enseignant et, comme décrit aux §2 et §3, elles ne sont jamais
-        transmises où que ce soit sous une forme permettant d'identifier un
-        enfant. Si vous écrivez vous-même les paroles d'une chanson, elles
-        sont envoyées telles que vous les avez écrites (§3.9) — évitez d'y
-        inclure des données personnelles d'enfants. Les achats sont liés au
-        compte Google Play de l'enseignant
-        adulte.
+        professionnel, et les informations qu'un parent saisit en mode parent
+        concernent ses propres enfants. Dans les deux cas, elles sont stockées
+        uniquement sur l'appareil de cet adulte et, comme décrit aux §2 et §3,
+        elles ne sont jamais transmises où que ce soit sous une forme
+        permettant d'identifier un enfant. Si vous écrivez vous-même les
+        paroles d'une chanson, elles sont envoyées telles que vous les avez
+        écrites (§3.9) — évitez d'y inclure des données personnelles d'enfants.
+        Les achats sont liés au propre compte Google Play de l'adulte.
       </p>
 
       <h2 id="rights">8. Vos droits (RGPD)</h2>

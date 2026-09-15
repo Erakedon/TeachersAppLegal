@@ -128,7 +128,7 @@
         <strong>Razvojni programer i voditelj obrade podataka:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Posljednje ažuriranje:</strong> 6. rujna 2026.
+        <strong>Posljednje ažuriranje:</strong> 15. rujna 2026.
       </p>
 
       <div class="prevails-note">Ovaj je dokument prijevod koji se pruža radi praktičnosti. U slučaju bilo kakvog odstupanja između ovog prijevoda i engleske verzije mjerodavna je <a href="privacy-policy.html">engleska verzija</a>.</div>
@@ -138,9 +138,11 @@
         Ova Pravila o privatnosti objašnjavaju kojim podacima <em>Učiteljska aplikacija</em>
         rukuje, što nikada ne napušta vaš uređaj, što se šalje vanjskim
         uslugama i zašto te koliko se dugo išta čuva. Aplikacija je pomoćnik
-        za planiranje i pripovijedanje namijenjen učiteljima u ranom i
-        predškolskom odgoju i obrazovanju te je predviđena za odrasle
-        profesionalne korisnike.
+        za planiranje i pripovijedanje namijenjen odraslima koji se brinu o
+        maloj djeci: učiteljima u ranom i predškolskom odgoju i obrazovanju
+        koji planiraju rad sa svojim skupinama te roditeljima koji u načinu za
+        roditelje (prikazanom kao <em>Roditeljska aplikacija</em>) planiraju
+        aktivnosti za vlastitu djecu kod kuće. Ova se Pravila odnose na obje skupine korisnika.
       </p>
       <p>
         Aplikacija <strong>nema korisničkih računa</strong>. Ne prikupljamo
@@ -152,6 +154,13 @@
         bilo kojoj usluzi. Tekst pjesme koji napišete ili uredite u
         aplikaciji namjerna je iznimka: šalje se točno
         onako kako ste ga napisali (§3.9).
+      </p>
+      <p>
+        Kako bismo vidjeli pomaže li aplikacija doista korisnicima da počnu s
+        radom, naš poslužitelj vodi malen zapis o tome kako se koristi svaka
+        instalacija — kojim je danima korištena i dokle je stigla u prvim
+        koracima — povezan samo s nasumičnim identifikatorom instalacije
+        (§3.10).
       </p>
       <p>
         To što ne prikupljamo vaše ime ne znači da ste nevidljivi uslugama
@@ -169,14 +178,16 @@
         Sljedeći podaci pohranjuju se <strong>samo na vašem uređaju</strong>,
         u lokalnoj bazi podataka aplikacije i njezinoj privatnoj pohrani.
         Nikada se ne prenose automatski. Jedini načini na koje bilo što od
-        toga može napustiti uređaj jesu radnje koje sami poduzmete: izvoz ili
+        toga može napustiti uređaj jesu radnje koje sami poduzmete: generiranje sadržaja, pri kojem se šalju anonimizirani opisi objašnjeni u §3.1, izvoz ili
         dijeljenje datoteke, slanje prijave sadržaja (§3.8) ili stvaranje
         pjesme iz teksta koji ste sami napisali (§3.9).
       </p>
       <ul>
         <li>
-          Profili djece — imena i vaši opisi obrazovnih potreba svakog
-          djeteta
+          Profili djece za koju planirate — u načinu za učitelje imena djece i
+          vaši opisi obrazovnih potreba svakog djeteta; u načinu za roditelje
+          imena vaše djece, godina rođenja (neobavezno), što vole i što ne vole
+          te sve što zabilježite o njihovim potrebama
         </li>
         <li>Razredi i skupine</li>
         <li>
@@ -214,11 +225,11 @@
         komunicira izravno s pružateljima AI usluga. Svaki zahtjev prema
         proxy poslužitelju sadrži: <strong>anonimni identifikator
         uređaja</strong> (nasumični UUID stvoren pri instalaciji —
-        identificira instalaciju, a ne vas), verziju aplikacije te, za neke
-        zahtjeve, Google Play Integrity token koji služi za sprječavanje
-        zlouporabe. Zapisnici proxy poslužitelja bilježe samo tehničke
-        metapodatke (vrstu zahtjeva, ishod, vrijeme, anonimizirani
-        identifikator uređaja) — <strong>nikada sadržaj vaših
+        identificira instalaciju, a ne vas), verziju aplikacije, za neke
+        zahtjeve Google Play Integrity token koji služi za sprječavanje
+        zlouporabe te — u aktualnim verzijama aplikacije — oznake napretka u
+        prvim koracima opisane u §3.10. Zapisnici proxy poslužitelja bilježe samo tehničke metapodatke (primjerice vrstu zahtjeva, ishod, vrijeme, anonimni identifikator uređaja te, za zahtjeve za dnevne planove, zemlju čiji je
+        obrazovni sustav odabran) — <strong>nikada sadržaj vaših
         zahtjeva</strong>.
       </p>
 
@@ -236,6 +247,16 @@
         generiranja vašeg sadržaja i <strong>ne pohranjuju se na našem
         poslužitelju</strong>. Generirane priče pišu se isključivo s
         izmišljenim imenima likova.
+      </p>
+
+      <p>
+        U <strong>načinu za roditelje</strong> aplikacija ide i dalje: sama nikada ne stavlja ime djeteta u zahtjev. Svako dijete koje
+        odaberete opisuje se samo približnom dobi izračunanom iz godine rođenja
+        koju ste unijeli te onim što ste zabilježili o tome što voli, što ne
+        voli i koje su mu potrebe, a imena vaše djece uklanjaju se na uređaju
+        iz svega ostalog što upišete prije slanja — osim tekstova i naslova pjesama koje sami napišete ili uredite, koji se šalju točno onako kako ste ih napisali (§3.9).
+        Kao i u načinu za učitelje, ti se opisi ne pohranjuju na našem
+        poslužitelju.
       </p>
 
       <h3>3.2. Naracija priča (pretvorba teksta u govor)</h3>
@@ -284,8 +305,9 @@
         Kako bi ograničenja besplatne verzije i sustavi tokena pošteno
         funkcionirali i nakon ponovnih instalacija, poslužitelj vodi brojače
         po uređaju vezane uz anonimni identifikator uređaja: koliko je
-        besplatnih generiranja iskorišteno te trenutačna stanja tokena za
-        priče i audio.
+        besplatnih generiranja iskorišteno, koliko je nagrada za oglase s
+        nagradom dodijeljeno, trenutačna stanja tokena za priče i audio te kada
+        je svaki od tih zapisa stvoren.
       </p>
 
       <h3>3.6. Oglasi s nagradom</h3>
@@ -301,8 +323,7 @@
       <p>
         Ako aplikaciju instalirate putem nečije poveznice za preporuku,
         Google Playov podatak o izvoru instalacije (engl. install referrer)
-        prenosi kod preporuke te osobe; aplikacija iz njega čita <strong>samo
-        taj kod</strong>. Pri dodjeli preporuke anonimni identifikator
+        prenosi kod preporuke te osobe; aplikacija iz njega čita <strong>samo taj kod</strong> — te, za instalacije sa stranice <em>Roditeljske aplikacije</em> u trgovini, oznaku koja unaprijed odabire način za roditelje i ostaje na vašem uređaju. Pri dodjeli preporuke anonimni identifikator
         uređaja nove instalacije povezuje se s anonimnim identifikatorom
         uređaja pozivatelja na našem poslužitelju. Nijedan se identifikator
         ne može povezati s osobom — ne prikupljaju se imena, kontakti,
@@ -349,6 +370,51 @@
         i ilustracije priča (§3.3).
       </p>
 
+      <h3>3.10. Aktivnost instalacije i napredak u prvim koracima</h3>
+      <p>
+        Kako bismo razumjeli uspijevaju li osobe koje instaliraju aplikaciju
+        početi je koristiti i vraćaju li joj se, poslužitelj za svaku
+        instalaciju čuva jedan malen zapis povezan s anonimnim identifikatorom
+        uređaja. On sadrži trenutak kada se aplikacija prvi put obratila našem
+        poslužitelju, trenutak posljednjeg obraćanja (ažurira se najviše otprilike jednom dnevno), verziju aplikacije u ta dva trenutka te popis dana u kojima se aplikacija
+        obraćala našem poslužitelju.
+      </p>
+      <p>
+        Aktualne verzije aplikacije uz svoje zahtjeve šalju i <strong>oznake
+        napretka u prvim koracima</strong>, koje se također čuvaju u tom
+        zapisu. Oznaka je broj koji znači da je instalacija došla do jednog od
+        koraka početka rada: na primjer da je prikazan zaslon dobrodošlice (i je li aplikacija na njemu mogla unaprijed odabrati vašu zemlju prema postavci regije vašeg uređaja), da je odabran način za učitelje ili za roditelje, da je prvi put spremljen razred ili dijete, da je korak s profilom
+        djeteta otvoren, dovršen ili preskočen, da je otvoren zaslon dnevnog
+        plana, da je dodirnut gumb za generiranje, da je plan spremljen, da je
+        uvod dovršen ili da je za plan otvoren dijalog za ispis ili dijeljenje.
+        Jedna od oznaka samo označava da je instalacija starija od ove značajke. Oznake ne sadrže nikakav sadržaj, imena ni bilo što što ste
+        upisali.
+      </p>
+      <p>
+        Taj zapis upotrebljavamo isključivo kako bismo mjerili kako instalacije počinju koristiti aplikaciju i vraćaju joj se — uglavnom zbirno za sve instalacije, a radi istraživanja nekog problema i pregledom zapisa pojedine instalacije zajedno s njezinim brojačima korištenja (§3.5) i statusom pretplate (§3.4). Ne upotrebljava se za oglašavanje i ne prosljeđuje se partnerima u oglašavanju.
+      </p>
+
+      <h3>3.11. Podsjetnici</h3>
+      <p>
+        Aplikacija može povremeno slati podsjetnike — na primjer nedjeljom
+        navečer poticaj da isplanirate sljedeći tjedan. Isključeni su dok ih
+        sami ne uključite: aplikacija ih nudi nakon što generirate plan i od
+        Googlea traži token za obavijesti samo ako pristanete i ako Android
+        dopušta obavijesti. Aplikacija zatim našem poslužitelju šalje taj
+        <strong>token</strong> — identifikator koji izdaje Google Firebase
+        Cloud Messaging i koji omogućuje da poruka stigne do te instalacije —
+        zajedno s anonimnim identifikatorom uređaja, jezikom sučelja
+        aplikacije, pomakom vaše vremenske zone u odnosu na UTC (kako bi
+        podsjetnik stigao u pravo lokalno vrijeme) i verzijom aplikacije.
+        Poslužitelj bilježi i kada je ta registracija započela i kada ju je aplikacija posljednji put obnovila (otprilike jednom dnevno dok koristite aplikaciju) te kada je toj instalaciji posljednji put poslan podsjetnik, kako se isti podsjetnik ne bi poslao dvaput.
+      </p>
+      <p>
+        Podsjetnici se dostavljaju putem usluge Google Firebase Cloud
+        Messaging, koja prima token i tekst podsjetnika. Tekst je isti za sve
+        koji aplikaciju koriste na vašem jeziku i nikada ne sadrži vaše ime,
+        ime djeteta ni bilo što iz vaših planova. Podsjetnike u bilo kojem trenutku možete isključiti u Androidovim postavkama obavijesti za aplikaciju.
+      </p>
+
       <h2 id="processors">4. Pružatelji usluga i drugi primatelji</h2>
 <p>Aplikacija se oslanja na sljedeće vanjske usluge:</p>
       <table>
@@ -380,7 +446,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Oglašavanje u besplatnoj verziji</td>
-            <td>ID za oglašavanje, interakcije s oglasima (§6.1)</td>
+            <td>Identifikatori uređaja, interakcije s aplikacijom i oglasima, podaci o performansama (§6.1)</td>
             <td>Prema Googleovim pravilima</td>
           </tr>
           <tr>
@@ -402,6 +468,12 @@
             <td>Google Play Integrity</td>
             <td>Zaštita od zlouporabe</td>
             <td>Signali integriteta uređaja/instalacije</td>
+            <td>Prema Googleovim pravilima</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Dostava podsjetnika, ako ih uključite</td>
+            <td>Token za obavijesti i tekst podsjetnika (§3.11)</td>
             <td>Prema Googleovim pravilima</td>
           </tr>
           <tr>
@@ -431,7 +503,9 @@
         može obrađivati izvan EGP-a u skladu sa svojim uvjetima obrade
         podataka; a događaji o kupnji opisani u §6.2 idu tvrtki Meta
         Platforms Ireland, koja ih može obrađivati u Sjedinjenim Američkim
-        Državama na temelju vlastitih zaštitnih mjera za prijenos.
+        Državama na temelju vlastitih zaštitnih mjera za prijenos. Podsjetnici (§3.11) dostavljaju se putem usluge Google
+        Firebase Cloud Messaging, koja token i tekst podsjetnika također može
+        obrađivati izvan EGP-a.
         Vidjeti također:
         <a href="https://policies.google.com/privacy">Googleova pravila o
         privatnosti</a>.
@@ -473,6 +547,18 @@
           <tr>
             <td>Brojači korištenja i stanja tokena</td>
             <td>Dokle god se aplikacija pruža</td>
+          </tr>
+          <tr>
+            <td>Zapis o aktivnosti instalacije i napretku u prvim koracima (§3.10)</td>
+            <td>Dokle god se aplikacija pruža</td>
+          </tr>
+          <tr>
+            <td>Token za obavijesti i povijest podsjetnika (§3.11)</td>
+            <td>
+              Dokle god se aplikacija pruža, osim ako se taj zapis ranije ne ukloni — automatski, kada Google pri slanju podsjetnika javi da token više nije valjan, ili na zahtjev. Isključivanje obavijesti u Androidu
+              sprječava prikazivanje podsjetnika, ali samo po sebi ne briše taj
+              zapis
+            </td>
           </tr>
           <tr>
             <td>Zapisi o preporukama</td>
@@ -532,8 +618,7 @@
       <h3>6.1. Oglasi (Google AdMob)</h3>
       <p>
         Besplatna verzija prikazuje oglase koje poslužuje Google AdMob.
-        AdMob može prikupljati ID za oglašavanje vašeg uređaja, podatke o
-        interakcijama s oglasima i približnu lokaciju (na razini države).
+        AdMob može prikupljati ID za oglašavanje vašeg uređaja i druge identifikatore uređaja, podatke o tome kako se koriste aplikacija i njezini oglasi (primjerice pokretanja aplikacije, dodiri i pregledi videozapisa), podatke o performansama aplikacije i približnu lokaciju (na razini države).
         Pretplatnici ne vide oglase. Pojedinosti:
         <a href="https://policies.google.com/technologies/ads">Googleova
         pravila oglašavanja</a>.
@@ -587,15 +672,13 @@
 
       <h2 id="children">7. Podaci djece</h2>
 <p>
-        Aplikacija je profesionalni alat za odrasle učitelje i nije
-        namijenjena djeci; ne prikupljamo svjesno osobne podatke djece.
-        Podaci o djeci koje učitelj unosi njegova su vlastita profesionalna
-        evidencija: pohranjeni su samo na učiteljevu uređaju i, kako je
-        opisano u §2 i §3, nikada se nikamo ne prenose u obliku koji
-        identificira dijete. Ako tekst pjesme napišete sami, šalje se onako
-        kako ste ga napisali (§3.9) — izbjegavajte u njemu osobne podatke
-        djece. Kupnje su vezane uz Google Play račun odraslog
-        učitelja.
+        Aplikacija je alat za odrasle — učitelje i roditelje — i nije
+        namijenjena djeci; ne prikupljamo svjesno osobne podatke od djece. Podaci o djeci koje unosi učitelj vlastita su profesionalna evidencija tog učitelja, a podaci koje roditelj unosi u načinu za roditelje odnose se na vlastitu djecu tog roditelja. U oba slučaja pohranjeni su samo na
+        uređaju te odrasle osobe i, kako je opisano u §2 i §3, nikada se nikamo
+        ne prenose u obliku koji identificira dijete. Ako tekst pjesme napišete
+        sami, šalje se onako kako ste ga napisali (§3.9) — izbjegavajte u njemu
+        osobne podatke djece. Kupnje su vezane uz vlastiti Google Play račun
+        odrasle osobe.
       </p>
 
       <h2 id="rights">8. Vaša prava (GDPR)</h2>

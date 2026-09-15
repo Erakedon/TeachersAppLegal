@@ -128,7 +128,7 @@
         <strong>Kehittäjä ja rekisterinpitäjä:</strong> Maciej Bernacki<br />
         <strong>Yhteystiedot:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Viimeksi päivitetty:</strong> 6. syyskuuta 2026
+        <strong>Viimeksi päivitetty:</strong> 15. syyskuuta 2026
       </p>
 
       <div class="prevails-note">Tämä asiakirja on käännös, joka on laadittu lukemisen helpottamiseksi. Jos tämän käännöksen ja <a href="privacy-policy.html">englanninkielisen version</a> välillä on ristiriita, englanninkielinen versio on ratkaiseva.</div>
@@ -138,9 +138,13 @@
         Tässä tietosuojaselosteessa kerrotaan, mitä tietoja
         <em>Opettajasovellus</em> käsittelee, mikä ei koskaan poistu
         laitteeltasi, mitä lähetetään ulkoisiin palveluihin ja miksi, ja
-        kuinka kauan mitäkin säilytetään. Sovellus on varhaiskasvatuksen
-        opettajille tarkoitettu suunnittelun ja sadunkerronnan apuväline, ja
-        se on suunnattu aikuisille ammattikäyttäjille.
+        kuinka kauan mitäkin säilytetään. Sovellus on suunnittelun ja
+        sadunkerronnan apuväline aikuisille, jotka huolehtivat pienistä
+        lapsista: varhaiskasvatuksen opettajille, jotka suunnittelevat
+        toimintaa ryhmilleen, sekä vanhemmille, jotka käyttävät sovelluksen
+        vanhempaintilaa (joka näkyy nimellä <em>Vanhempainsovellus</em>)
+        suunnitellakseen toimintaa omille lapsilleen kotona. Tämä seloste
+        koskee molempia.
       </p>
       <p>
         Sovelluksessa <strong>ei ole käyttäjätilejä</strong>. Emme kerää
@@ -153,6 +157,9 @@
         Sovelluksessa itse kirjoittamasi tai muokkaamasi laulunsanat ovat
         tarkoituksellinen poikkeus: ne lähetetään sellaisina kuin kirjoitit
         ne (§3.9).
+      </p>
+      <p>
+        Jotta näkisimme, auttaako sovellus todella ihmisiä pääsemään alkuun, palvelimemme tallentaa suppeat tiedot siitä, miten kutakin asennusta käytetään — minä päivinä sitä on käytetty ja kuinka pitkälle ensimmäisissä vaiheissa on edetty. Tiedot on liitetty vain asennuksen satunnaiseen tunnisteeseen (§3.10).
       </p>
       <p>
         Se, ettemme kerää nimeäsi, ei tarkoita, että olisit näkymätön
@@ -170,14 +177,17 @@
         Seuraavat tiedot tallennetaan <strong>vain laitteellesi</strong>,
         sovelluksen paikalliseen tietokantaan ja yksityiseen tallennustilaan.
         Niitä ei koskaan lähetetä automaattisesti. Ainoat tavat, joilla mikään
-        niistä voi poistua laitteelta, ovat omat toimesi: tiedoston vienti tai
+        niistä voi poistua laitteelta, ovat omat toimesi: sisällön generointi, jossa lähetetään §3.1:ssä selitetyt anonymisoidut kuvaukset, tiedoston vienti tai
         jakaminen, sisältöilmoituksen lähettäminen (§3.8) taikka laulun
         luominen itse kirjoittamistasi sanoista (§3.9).
       </p>
       <ul>
         <li>
-          Lapsiprofiilit — nimet ja omat kuvauksesi kunkin lapsen
-          oppimiseen liittyvistä tarpeista
+          Niiden lasten profiilit, joille suunnittelet — opettajatilassa lasten
+          nimet ja omat kuvauksesi kunkin lapsen oppimiseen liittyvistä
+          tarpeista; vanhempaintilassa lastesi nimet, syntymävuosi
+          (valinnainen), mistä he pitävät ja mistä eivät pidä sekä kaikki, mitä
+          kirjaat heidän tarpeistaan
         </li>
         <li>Luokat ja ryhmät</li>
         <li>
@@ -215,10 +225,12 @@
         välityspalvelimelle lähetettävä pyyntö sisältää
         <strong>anonyymin laitetunnisteen</strong> (satunnaisen UUID:n, joka
         luodaan asennuksen yhteydessä — se yksilöi asennuksen, ei sinua),
-        sovelluksen version ja joissakin pyynnöissä Google Play Integrity
-        -tunnisteen, jota käytetään väärinkäytösten estämiseen.
+        sovelluksen version, joissakin pyynnöissä Google Play Integrity
+        -tunnisteen, jota käytetään väärinkäytösten estämiseen, sekä —
+        sovelluksen nykyisissä versioissa — §3.10:ssä kuvatut ensimmäisten
+        vaiheiden edistymismerkinnät.
         Välityspalvelimen lokeihin tallentuu vain teknisiä metatietoja
-        (pyynnön tyyppi, lopputulos, ajankohta, anonymisoitu laitetunniste) —
+        (esimerkiksi pyynnön tyyppi, lopputulos, ajankohta, anonyymi laitetunniste sekä päiväsuunnitelmapyynnöissä se, minkä maan koulutusjärjestelmän olet valinnut) —
         <strong>ei koskaan pyyntöjesi sisältöä</strong>.
       </p>
 
@@ -236,6 +248,13 @@
         käsitellään sisältösi luomiseksi, <strong>eikä niitä tallenneta
         palvelimellemme</strong>. Luoduissa saduissa käytetään vain
         kuvitteellisia hahmojen nimiä.
+      </p>
+
+      <p>
+        <strong>Vanhempaintilassa</strong> sovellus menee vielä pidemmälle: se ei itse koskaan lisää lapsen omaa nimeä pyyntöön. Jokainen
+        valitsemasi lapsi kuvataan vain likimääräisellä iällä, joka lasketaan
+        antamastasi syntymävuodesta, sekä sillä, mitä olet kirjannut hänen tarpeistaan ja siitä, mistä hän pitää ja mistä ei pidä. Lastesi nimet poistetaan laitteella kaikesta muusta kirjoittamastasi ennen lähettämistä — lukuun ottamatta itse kirjoittamiasi tai muokkaamiasi laulunsanoja ja laulujen nimiä, jotka lähetetään sellaisina kuin kirjoitit ne (§3.9). Kuten
+        opettajatilassa, näitä kuvauksia ei tallenneta palvelimellemme.
       </p>
 
       <h3>3.2. Satujen äänikerronta (tekstistä puheeksi)</h3>
@@ -284,8 +303,9 @@
         Jotta ilmaisversion rajat ja token-talous toimisivat oikeudenmukaisesti
         myös uudelleenasennuksista huolimatta, palvelin pitää yllä laitekohtaisia
         laskureita, jotka on liitetty anonyymiin laitetunnisteeseen: kuinka
-        monta ilmaista generointia on käytetty sekä satu- ja äänitokenien
-        nykyiset saldot.
+        monta ilmaista generointia on käytetty, kuinka monesta palkitusta
+        mainoksesta on hyvitetty palkkio, satu- ja äänitokenien nykyiset
+        saldot sekä kunkin tällaisen tietueen luontiajankohta.
       </p>
 
       <h3>3.6. Palkitut mainokset</h3>
@@ -300,8 +320,7 @@
       <h3>3.7. Suositteluohjelma</h3>
       <p>
         Jos asennat sovelluksen jonkun suosittelulinkin kautta, Google Playn
-        asennuksen viittaustieto sisältää hänen suosittelukoodinsa; sovellus
-        lukee siitä <strong>vain tämän koodin</strong>. Suosittelun
+        asennuksen viittaustieto sisältää hänen suosittelukoodinsa; sovellus lukee siitä <strong>vain tämän koodin</strong> — sekä <em>Vanhempainsovelluksen</em> kauppasivun kautta tehdyissä asennuksissa merkinnän, joka esivalitsee vanhempaintilan ja pysyy laitteellasi. Suosittelun
         hyvittäminen yhdistää uuden asennuksen anonyymin laitetunnisteen
         kutsujan anonyymiin laitetunnisteeseen palvelimellamme. Kumpaakaan
         tunnistetta ei voi yhdistää henkilöön — nimiä, yhteystietoja, tilejä
@@ -350,6 +369,55 @@
         (§3.3).
       </p>
 
+      <h3>3.10. Asennuksen käyttö ja ensimmäisten vaiheiden edistyminen</h3>
+      <p>
+        Jotta ymmärtäisimme, pääsevätkö sovelluksen asentaneet alkuun ja jatkavatko
+        he sen käyttöä, palvelin säilyttää jokaisesta asennuksesta yhden
+        pienen tietueen, joka on liitetty anonyymiin laitetunnisteeseen.
+        Siihen tallentuu, milloin sovellus otti ensimmäisen kerran yhteyttä
+        palvelimeemme, milloin se viimeksi otti yhteyttä (päivitetään enintään noin kerran päivässä), sovelluksen versio näinä kahtena ajankohtana sekä luettelo
+        päivistä, joina sovellus otti yhteyttä palvelimeemme.
+      </p>
+      <p>
+        Sovelluksen nykyiset versiot lähettävät pyyntöjensä mukana lisäksi
+        <strong>ensimmäisten vaiheiden edistymismerkintöjä</strong>, jotka
+        tallentuvat myös tietueeseen. Merkintä on numero, joka tarkoittaa,
+        että asennus on edennyt yhteen käytön aloittamisen vaiheista:
+        esimerkiksi että tervetulonäkymä näytettiin (ja pystyikö se laitteesi alueasetuksen perusteella esivalitsemaan maasi), että
+        valittiin opettaja- tai vanhempaintila, että sovellukseen tallennettiin ensimmäistä kertaa luokka tai lapsi, että lapsen profiilin vaihe avattiin, suoritettiin
+        tai ohitettiin, että päiväsuunnitelmanäkymä avattiin, että
+        generointipainiketta napautettiin, että suunnitelma tallennettiin, että opastus käytiin loppuun tai että suunnitelman tulostus- tai
+        jakoikkuna avattiin. Yksi merkinnöistä kertoo vain, että asennus on
+        tätä ominaisuutta vanhempi. Merkinnöissä ei ole sisältöä, nimiä eikä mitään kirjoittamaasi.
+      </p>
+      <p>
+        Käytämme tietuetta ainoastaan mitataksemme, miten asennukset pääsevät alkuun ja palaavat sovellukseen — enimmäkseen kaikkien asennusten yhteismäärinä ja ongelman selvittämiseksi myös tarkastelemalla yksittäisen asennuksen tietuetta yhdessä sen käyttölaskureiden (§3.5) ja tilauksen tilan (§3.4) kanssa. Sitä ei
+        käytetä mainontaan eikä luovuteta mainoskumppaneille.
+      </p>
+
+      <h3>3.11. Muistutukset</h3>
+      <p>
+        Sovellus voi silloin tällöin lähettää muistutuksia — esimerkiksi
+        sunnuntai-iltana kehotuksen suunnitella tuleva viikko. Ne ovat pois
+        päältä, kunnes itse otat ne käyttöön: sovellus tarjoaa niitä, kun olet
+        generoinut suunnitelman, ja pyytää Googlelta ilmoitustunnistetta vain,
+        jos hyväksyt ja Android sallii ilmoitukset. Sen jälkeen sovellus
+        lähettää palvelimellemme tämän <strong>tunnisteen</strong> (tokenin) —
+        Google Firebase Cloud Messagingin myöntämän tunnisteen, jonka avulla
+        viesti voi tavoittaa tämän asennuksen — yhdessä anonyymin
+        laitetunnisteen, sovelluksen käyttöliittymän kielen, aikavyöhykkeesi
+        UTC-poikkeaman (jotta muistutus saapuu oikeaan paikalliseen aikaan) ja
+        sovelluksen version kanssa. Palvelin kirjaa myös, milloin tämä rekisteröinti alkoi ja milloin sovellus viimeksi uusi sen (noin kerran päivässä, kun käytät sovellusta), sekä milloin asennukselle on viimeksi lähetetty muistutus, jotta samaa muistutusta ei lähetetä
+        kahdesti.
+      </p>
+      <p>
+        Muistutukset toimitetaan Google Firebase Cloud Messagingin kautta,
+        joka vastaanottaa tunnisteen ja muistutuksen tekstin. Teksti on sama
+        kaikille, jotka käyttävät sovellusta samalla kielellä kuin sinä, eikä
+        se koskaan sisällä nimeäsi, lapsen nimeä tai mitään suunnitelmistasi.
+        Voit poistaa muistutukset käytöstä milloin tahansa Androidin ilmoitusasetuksista tämän sovelluksen kohdalta.
+      </p>
+
       <h2 id="processors">4. Palveluntarjoajat ja muut vastaanottajat</h2>
 <p>Sovellus käyttää seuraavia ulkoisia palveluita:</p>
       <table>
@@ -382,7 +450,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Mainonta ilmaisversiossa</td>
-            <td>Mainostunnus, mainosten kanssa tapahtuva vuorovaikutus (§6.1)</td>
+            <td>Laitetunnisteet, sovelluksen ja mainosten käyttö, suorituskykytiedot (§6.1)</td>
             <td>Googlen käytännön mukaisesti</td>
           </tr>
           <tr>
@@ -403,6 +471,12 @@
             <td>Google Play Integrity</td>
             <td>Väärinkäytösten esto</td>
             <td>Laitteen ja asennuksen eheyssignaalit</td>
+            <td>Googlen käytännön mukaisesti</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Muistutusten toimittaminen, jos otat ne käyttöön</td>
+            <td>Ilmoitustunniste ja muistutuksen teksti (§3.11)</td>
             <td>Googlen käytännön mukaisesti</td>
           </tr>
           <tr>
@@ -432,7 +506,9 @@
         tietojenkäsittelyehtojensa mukaisesti; ja §6.2:ssa kuvatut
         ostotapahtumat lähetetään Meta Platforms Irelandille, joka voi
         käsitellä niitä Yhdysvalloissa omien tiedonsiirtoa koskevien
-        suojatoimiensa nojalla. Katso myös:
+        suojatoimiensa nojalla. Muistutukset (§3.11) toimitetaan Google
+        Firebase Cloud Messagingin kautta, joka voi niin ikään käsitellä
+        tunnistetta ja muistutuksen tekstiä ETA:n ulkopuolella. Katso myös:
         <a href="https://policies.google.com/privacy">Googlen
         tietosuojakäytäntö</a>.
       </p>
@@ -474,6 +550,19 @@
           <tr>
             <td>Käyttölaskurit ja token-saldot</td>
             <td>Niin kauan kuin sovellusta ylläpidetään</td>
+          </tr>
+          <tr>
+            <td>Asennuksen käyttöä ja ensimmäisten vaiheiden edistymistä koskeva tietue (§3.10)</td>
+            <td>Niin kauan kuin sovellusta ylläpidetään</td>
+          </tr>
+          <tr>
+            <td>Ilmoitustunniste ja muistutushistoria (§3.11)</td>
+            <td>
+              Niin kauan kuin sovellusta ylläpidetään, ellei tietuetta poisteta aiemmin — automaattisesti, kun Google muistutusta lähetettäessä
+              ilmoittaa, ettei tunniste ole enää voimassa, tai pyynnöstä.
+              Ilmoitusten poistaminen käytöstä Androidissa estää muistutuksia
+              näkymästä, mutta ei itsessään poista tätä tietuetta
+            </td>
           </tr>
           <tr>
             <td>Suosittelutiedot</td>
@@ -533,10 +622,7 @@
 
       <h3>6.1. Mainokset (Google AdMob)</h3>
       <p>
-        Ilmaisversiossa näytetään Google AdMobin välittämiä mainoksia. AdMob
-        voi kerätä laitteesi mainostunnuksen, mainosten kanssa tapahtuvaa
-        vuorovaikutusta koskevat tiedot ja likimääräisen (maatasoisen)
-        sijainnin. Tilaajat eivät näe mainoksia. Lisätietoja:
+        Ilmaisversiossa näytetään Google AdMobin välittämiä mainoksia. AdMob voi kerätä laitteesi mainostunnuksen ja muita laitetunnisteita, tietoja siitä, miten sovellusta ja sen mainoksia käytetään (esimerkiksi sovelluksen käynnistykset, napautukset ja videoiden katselut), tietoja sovelluksen suorituskyvystä sekä likimääräisen (maatasoisen) sijainnin. Tilaajat eivät näe mainoksia. Lisätietoja:
         <a href="https://policies.google.com/technologies/ads">Googlen
         mainontakäytäntö</a>.
       </p>
@@ -593,15 +679,15 @@
 
       <h2 id="children">7. Lasten tiedot</h2>
 <p>
-        Sovellus on aikuisille opettajille tarkoitettu ammatillinen työväline,
-        eikä sitä ole suunnattu lapsille; emme kerää tietoisesti lasten
-        henkilötietoja. Opettajan syöttämät lapsia koskevat tiedot ovat
-        opettajan omaa ammatillista aineistoa: ne tallennetaan vain opettajan
-        laitteelle, ja kuten §2 ja §3 kuvaavat, niitä ei koskaan siirretä
-        minnekään sellaisessa muodossa, joka tunnistaisi lapsen. Jos
-        kirjoitat laulunsanat itse, ne lähetetään sellaisina kuin kirjoitit
-        ne (§3.9) — vältä lasten henkilötietoja niissä. Ostot on
-        sidottu aikuisen opettajan Google Play -tiliin.
+        Sovellus on aikuisille — opettajille ja vanhemmille — tarkoitettu
+        työväline, eikä sitä ole suunnattu lapsille; emme kerää tietoisesti
+        lasten henkilötietoja. Opettajan syöttämät lapsia koskevat tiedot ovat
+        opettajan omaa ammatillista aineistoa, ja vanhemman vanhempaintilassa
+        syöttämät tiedot koskevat hänen omia lapsiaan. Kummassakin tapauksessa
+        ne tallennetaan vain kyseisen aikuisen laitteelle, ja kuten §2 ja §3
+        kuvaavat, niitä ei koskaan siirretä minnekään sellaisessa muodossa, josta lapsen voisi tunnistaa. Jos kirjoitat laulunsanat itse, ne lähetetään
+        sellaisina kuin kirjoitit ne (§3.9) — vältä lasten henkilötietoja
+        niissä. Ostot on sidottu aikuisen omaan Google Play -tiliin.
       </p>
 
       <h2 id="rights">8. Oikeutesi (GDPR)</h2>

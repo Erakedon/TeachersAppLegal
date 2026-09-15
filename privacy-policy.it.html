@@ -128,7 +128,7 @@
         <strong>Sviluppatore e titolare del trattamento:</strong> Maciej Bernacki<br />
         <strong>Contatto:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Ultimo aggiornamento:</strong> 6 settembre 2026
+        <strong>Ultimo aggiornamento:</strong> 15 settembre 2026
       </p>
 
       <div class="prevails-note">Questo documento è una traduzione fornita per comodità. In caso di discrepanza tra questa traduzione e la <a href="privacy-policy.html">versione inglese</a>, prevale la versione inglese.</div>
@@ -139,8 +139,10 @@
         <em>L'app dell'insegnante</em>, che cosa non lascia mai il tuo
         dispositivo, che cosa viene inviato a servizi esterni e perché, e
         per quanto tempo i dati vengono conservati. L'app è un assistente di
-        pianificazione e di creazione di fiabe per gli insegnanti della
-        prima infanzia ed è destinata a utenti professionisti adulti.
+        pianificazione e di creazione di fiabe pensato per gli adulti che si prendono cura di bambini piccoli: insegnanti della prima infanzia che pianificano per
+        i propri gruppi e genitori che usano la sua modalità genitore
+        (presentata come <em>L'app dei genitori</em>) per pianificare attività
+        per i propri figli a casa. La presente Informativa riguarda entrambi.
       </p>
       <p>
         L'app <strong>non prevede account utente</strong>. Non raccogliamo
@@ -155,6 +157,11 @@
         scrivi o modifichi tu nell'app è un'eccezione deliberata: viene
         inviato esattamente come lo hai
         scritto (§3.9).
+      </p>
+      <p>
+        Per capire se l'app aiuta davvero le persone a iniziare, il nostro
+        server conserva un piccolo registro di come viene usata ciascuna installazione — in quali giorni è stata usata e fin dove è arrivata nei primi passi — collegato solo a un identificatore casuale
+        dell'installazione (§3.10).
       </p>
       <p>
         Il fatto che non raccogliamo il tuo nome non significa che tu sia
@@ -173,15 +180,17 @@
         I seguenti dati sono conservati <strong>solo sul tuo
         dispositivo</strong>, nel database locale dell'app e nella sua
         memoria privata. Non vengono mai caricati automaticamente. Gli unici
-        modi in cui possono lasciare il dispositivo sono le azioni che compi
-        tu stesso: esportare o condividere un file, inviare una
+        modi in cui possono lasciare il dispositivo sono le azioni che compi tu stesso: generare contenuti, che invia le descrizioni anonimizzate spiegate nella §3.1, esportare o condividere un file, inviare una
         segnalazione di contenuti (§3.8) oppure creare una canzone da un
         testo scritto da te (§3.9).
       </p>
       <ul>
         <li>
-          Profili dei bambini — i nomi e le tue descrizioni delle esigenze
-          educative di ogni bambino
+          Profili dei bambini per cui pianifichi — in modalità insegnante, i nomi
+          e le tue descrizioni delle esigenze educative di ogni bambino; in
+          modalità genitore, i nomi dei tuoi figli, l'anno di nascita
+          (facoltativo), ciò che gli piace e non gli piace e tutto ciò che annoti sulle
+          loro esigenze
         </li>
         <li>Classi e gruppi</li>
         <li>
@@ -220,10 +229,13 @@
         contiene: un <strong>identificatore anonimo del
         dispositivo</strong> (un UUID casuale creato al momento
         dell'installazione — identifica l'installazione, non te), la
-        versione dell'app e, per alcune richieste, un token Google Play
-        Integrity utilizzato per bloccare gli abusi. I log del proxy
-        registrano solo metadati tecnici (tipo di richiesta, esito, tempi,
-        un identificatore del dispositivo anonimizzato) —
+        versione dell'app, per alcune richieste un token Google Play
+        Integrity utilizzato per bloccare gli abusi e — nelle versioni attuali
+        dell'app — gli indicatori di avanzamento nei primi passi descritti
+        nella §3.10. I log del proxy
+        registrano solo metadati tecnici (ad esempio tipo di richiesta, esito, tempi, l'identificatore anonimo del dispositivo e, per le richieste di
+        piani della giornata, il paese di cui è stato scelto il sistema
+        educativo) —
         <strong>mai il contenuto delle tue richieste</strong>.
       </p>
 
@@ -242,6 +254,15 @@
         trattate per generare i tuoi contenuti e <strong>non vengono
         memorizzate sul nostro server</strong>. Le fiabe generate
         contengono esclusivamente nomi di personaggi di fantasia.
+      </p>
+
+      <p>
+        In <strong>modalità genitore</strong> l'app va oltre: non inserisce mai di sua iniziativa il nome di un bambino in una richiesta. Ogni bambino che
+        scegli è descritto solo da un'età approssimativa, calcolata dall'anno
+        di nascita che hai indicato, e da ciò che hai annotato su cosa gli
+        piace, cosa non gli piace e quali sono le sue esigenze; inoltre i nomi dei tuoi figli vengono rimossi sul dispositivo, prima dell'invio, da qualsiasi altro testo che scrivi — tranne i testi e i titoli delle canzoni che scrivi o modifichi tu, che vengono inviati esattamente come li hai scritti (§3.9). Come in
+        modalità insegnante, queste descrizioni non vengono memorizzate sul
+        nostro server.
       </p>
 
       <h3>3.2. Narrazione delle fiabe (sintesi vocale)</h3>
@@ -294,8 +315,9 @@
         l'economia dei token anche in caso di reinstallazione, il server
         mantiene contatori per dispositivo associati all'identificatore
         anonimo del dispositivo: quante generazioni gratuite sono state
-        utilizzate e i saldi attuali dei token per le fiabe e dei token
-        audio.
+        utilizzate, quanti annunci con premio sono stati accreditati, i saldi
+        attuali dei token per le fiabe e dei token audio e quando è stato
+        creato ciascuno di questi record.
       </p>
 
       <h3>3.6. Annunci con premio</h3>
@@ -311,7 +333,7 @@
       <p>
         Se installi l'app tramite il link di invito di un'altra persona,
         l'install referrer di Google Play contiene il suo codice di
-        invito; l'app ne legge <strong>solo quel codice</strong>.
+        invito; l'app ne legge <strong>solo quel codice</strong> — e, per le installazioni dalla scheda di <em>L'app dei genitori</em> sullo store, un indicatore che preseleziona la modalità genitore e resta sul tuo dispositivo.
         L'accredito di un invito collega, sul nostro server,
         l'identificatore anonimo del dispositivo della nuova installazione
         all'identificatore anonimo del dispositivo di chi ha invitato.
@@ -364,6 +386,58 @@
         (§3.3).
       </p>
 
+      <h3>3.10. Attività dell'installazione e avanzamento nei primi passi</h3>
+      <p>
+        Per capire se chi installa l'app riesce a iniziare a usarla e continua
+        a farlo, il server conserva un piccolo registro per ogni installazione, associato all'identificatore anonimo del dispositivo.
+        Contiene il momento in cui l'app ha contattato per la prima volta il
+        nostro server, il momento del contatto più recente (aggiornato al massimo circa una volta al giorno), la versione dell'app in questi due momenti e l'elenco dei giorni in cui l'app
+        ha contattato il nostro server.
+      </p>
+      <p>
+        Le versioni attuali dell'app inviano inoltre, insieme alle richieste,
+        <strong>indicatori di avanzamento nei primi passi</strong>, che vengono conservati anch'essi nel registro. Un indicatore è un numero che
+        significa che l'installazione ha raggiunto uno dei passaggi iniziali:
+        per esempio che è stata mostrata la schermata di benvenuto (e se ha
+        potuto preselezionare il tuo paese in base all'impostazione della
+        regione del dispositivo), che è stata scelta la modalità insegnante o
+        genitore, che è stata salvata per la prima volta una classe o il profilo di un bambino, che il passaggio del profilo del bambino è stato aperto,
+        completato o saltato, che è stata aperta una schermata del piano della
+        giornata, che è stato toccato il pulsante per generare, che è stato
+        salvato un piano, che è stata completata l'introduzione, oppure che è
+        stata aperta la finestra di stampa o di condivisione di un piano. Uno
+        degli indicatori segnala soltanto che l'installazione è precedente a
+        questa funzione. Gli indicatori non contengono contenuti, nomi né nulla
+        di ciò che scrivi.
+      </p>
+      <p>
+        Usiamo questo registro solo per misurare come le installazioni iniziano a usare l'app e vi ritornano — soprattutto come totali su tutte le installazioni e, per indagare su un problema, esaminando il registro di una singola installazione insieme ai suoi contatori di utilizzo (§3.5) e allo stato dell'abbonamento (§3.4). Non viene usato per la pubblicità né trasmesso a partner pubblicitari.
+      </p>
+
+      <h3>3.11. Promemoria</h3>
+      <p>
+        L'app può inviare promemoria occasionali — per esempio, la domenica
+        sera, un invito a pianificare la settimana successiva. Restano
+        disattivati finché non li attivi tu: l'app te li propone dopo che hai
+        generato un piano e chiede a Google un token per le notifiche solo se
+        accetti e Android consente le notifiche. L'app invia quindi al nostro
+        server questo <strong>token</strong> — un identificatore emesso da
+        Google Firebase Cloud Messaging che permette a un messaggio di
+        raggiungere questa installazione — insieme all'identificatore anonimo
+        del dispositivo, alla lingua dell'interfaccia dell'app, allo
+        scostamento del tuo fuso orario rispetto all'UTC (perché il promemoria
+        arrivi all'ora locale giusta) e alla versione dell'app. Il server registra anche quando è iniziata questa iscrizione e quando l'app l'ha rinnovata l'ultima volta (circa una volta al giorno mentre usi l'app), oltre a quando è stato inviato l'ultimo promemoria all'installazione, così che lo stesso promemoria non venga inviato due
+        volte.
+      </p>
+      <p>
+        I promemoria vengono recapitati tramite Google Firebase Cloud
+        Messaging, che riceve il token e il testo del promemoria. Il testo è lo
+        stesso per tutte le persone che usano l'app nella tua lingua e non
+        contiene mai il tuo nome, il nome di un bambino né nulla dei tuoi
+        piani. Puoi disattivare i promemoria in qualsiasi momento nelle
+        impostazioni delle notifiche di Android per l'app.
+      </p>
+
       <h2 id="processors">4. Fornitori di servizi e altri destinatari</h2>
 <p>L'app si avvale dei seguenti servizi esterni:</p>
       <table>
@@ -395,7 +469,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Pubblicità nella versione gratuita</td>
-            <td>ID pubblicità, interazioni con gli annunci (§6.1)</td>
+            <td>Identificatori del dispositivo, interazioni con l'app e con gli annunci, dati sulle prestazioni (§6.1)</td>
             <td>Secondo le norme di Google</td>
           </tr>
           <tr>
@@ -416,6 +490,12 @@
             <td>Google Play Integrity</td>
             <td>Protezione dagli abusi</td>
             <td>Segnali di integrità del dispositivo/dell'installazione</td>
+            <td>Secondo le norme di Google</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Recapito dei promemoria, se li attivi</td>
+            <td>Il token per le notifiche e il testo del promemoria (§3.11)</td>
             <td>Secondo le norme di Google</td>
           </tr>
           <tr>
@@ -447,7 +527,9 @@
         termini di trattamento dei dati; e gli eventi di acquisto descritti
         nella §6.2 vengono inviati a Meta Platforms Ireland, che può
         trattarli negli Stati Uniti in base alle proprie garanzie di
-        trasferimento. Vedi anche:
+        trasferimento. I promemoria (§3.11) vengono recapitati tramite Google
+        Firebase Cloud Messaging, che può anch'esso trattare il token e il
+        testo del promemoria al di fuori del SEE. Vedi anche:
         <a href="https://policies.google.com/privacy">Informativa sulla
         privacy di Google</a>.
       </p>
@@ -489,6 +571,20 @@
           <tr>
             <td>Contatori di utilizzo e saldi di token</td>
             <td>Per tutto il tempo in cui l'app è operativa</td>
+          </tr>
+          <tr>
+            <td>Registro dell'attività dell'installazione e dell'avanzamento nei primi passi (§3.10)</td>
+            <td>Per tutto il tempo in cui l'app è operativa</td>
+          </tr>
+          <tr>
+            <td>Token per le notifiche e cronologia dei promemoria (§3.11)</td>
+            <td>
+              Per tutto il tempo in cui l'app è operativa, salvo rimozione
+              anticipata — automaticamente quando, durante l'invio di un
+              promemoria, Google segnala che il token non è più valido, oppure
+              su richiesta. Disattivare le notifiche in Android impedisce la
+              visualizzazione dei promemoria, ma di per sé non elimina questo registro
+            </td>
           </tr>
           <tr>
             <td>Registri degli inviti</td>
@@ -550,10 +646,7 @@
 
       <h3>6.1. Annunci (Google AdMob)</h3>
       <p>
-        La versione gratuita mostra annunci forniti da Google AdMob. AdMob
-        può raccogliere l'ID pubblicità del tuo dispositivo, dati sulle
-        interazioni con gli annunci e la posizione approssimativa (a
-        livello di paese). Gli abbonati non vedono annunci. Dettagli:
+        La versione gratuita mostra annunci forniti da Google AdMob. AdMob può raccogliere l'ID pubblicità del tuo dispositivo e altri identificatori del dispositivo, il modo in cui vengono usati l'app e i suoi annunci (ad esempio avvii dell'app, tocchi e visualizzazioni di video), informazioni sulle prestazioni dell'app e la posizione approssimativa (a livello di paese). Gli abbonati non vedono annunci. Dettagli:
         <a href="https://policies.google.com/technologies/ads">Norme
         pubblicitarie di Google</a>.
       </p>
@@ -610,16 +703,16 @@
 
       <h2 id="children">7. Dati dei bambini</h2>
 <p>
-        L'app è uno strumento professionale per insegnanti adulti e non è
-        rivolta ai bambini; non raccogliamo consapevolmente dati personali
-        di bambini. Le informazioni sui bambini che un insegnante inserisce
-        sono la documentazione professionale dell'insegnante stesso: sono
-        conservate solo sul dispositivo dell'insegnante e, come descritto
-        nelle §2 e §3, non vengono mai trasmesse in alcun luogo in una
-        forma che identifichi un bambino. Se scrivi tu il testo di una
-        canzone, viene inviato come lo hai scritto (§3.9) — evita di
-        inserirvi dati personali di bambini. Gli acquisti sono collegati
-        all'account Google Play dell'insegnante adulto.
+        L'app è uno strumento per adulti — insegnanti e genitori — e non è
+        rivolta ai bambini; non raccogliamo consapevolmente dati personali di
+        bambini. Le informazioni sui bambini che un insegnante inserisce sono la
+        documentazione professionale dell'insegnante stesso, e le informazioni
+        che un genitore inserisce in modalità genitore riguardano i suoi figli. In entrambi i casi sono conservate solo sul dispositivo di
+        quell'adulto e, come descritto nelle §2 e §3, non vengono mai trasmesse
+        in alcun luogo in una forma che identifichi un bambino. Se scrivi tu il
+        testo di una canzone, viene inviato come lo hai scritto (§3.9) — evita
+        di inserirvi dati personali di bambini. Gli acquisti sono collegati
+        all'account Google Play personale dell'adulto.
       </p>
 
       <h2 id="rights">8. I tuoi diritti (GDPR)</h2>

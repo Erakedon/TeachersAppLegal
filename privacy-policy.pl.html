@@ -128,7 +128,7 @@
         <strong>Deweloper i administrator danych:</strong> Maciej Bernacki<br />
         <strong>Kontakt:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Data aktualizacji:</strong> 6 września 2026
+        <strong>Data aktualizacji:</strong> 15 września 2026
       </p>
 
       <div class="prevails-note">Niniejszy dokument jest tłumaczeniem udostępnionym dla wygody użytkownika. W razie jakichkolwiek rozbieżności między tym tłumaczeniem a <a href="privacy-policy.html">wersją angielską</a> rozstrzygające znaczenie ma wersja angielska.</div>
@@ -139,9 +139,12 @@
         <em>Aplikacja Nauczyciela</em>, które z nich nigdy nie opuszczają
         Twojego urządzenia, które są wysyłane do usług zewnętrznych i w jakim
         celu, a także jak długo poszczególne dane są przechowywane. Aplikacja
-        jest asystentem planowania i tworzenia opowiadań dla nauczycieli
-        wczesnej edukacji i jest przeznaczona dla osób dorosłych
-        korzystających z niej zawodowo.
+        jest asystentem planowania i tworzenia opowiadań dla dorosłych, którzy
+        opiekują się małymi dziećmi: nauczycieli wczesnej edukacji planujących
+        zajęcia dla swoich grup oraz rodziców, którzy w trybie rodzica
+        (przedstawianym jako <em>Aplikacja Rodzica</em>) planują zajęcia dla
+        własnych dzieci w domu. Niniejsza Polityka dotyczy obu tych
+        zastosowań.
       </p>
       <p>
         Aplikacja <strong>nie ma kont użytkowników</strong>. Nie zbieramy
@@ -155,6 +158,12 @@
         piosenki, który samodzielnie napiszesz lub
         zmienisz w aplikacji: taki tekst jest wysyłany dokładnie w takiej
         postaci, w jakiej go zapiszesz (§3.9).
+      </p>
+      <p>
+        Aby sprawdzić, czy aplikacja rzeczywiście pomaga zacząć z niej
+        korzystać, nasz serwer prowadzi niewielki zapis tego, jak używana jest
+        każda instalacja — w które dni była używana i jak daleko przeszła przez pierwsze kroki — powiązany wyłącznie z losowym identyfikatorem
+        instalacji (§3.10).
       </p>
       <p>
         To, że nie zbieramy Twojego imienia i nazwiska, nie oznacza, że
@@ -173,15 +182,16 @@
         Następujące dane są przechowywane <strong>wyłącznie na Twoim
         urządzeniu</strong>, w lokalnej bazie danych aplikacji i w jej
         prywatnej pamięci. Nigdy nie są przesyłane automatycznie. Jedyne
-        sposoby, w jakie mogą opuścić urządzenie, to działania podejmowane
-        przez Ciebie samodzielnie: wyeksportowanie lub udostępnienie pliku,
+        sposoby, w jakie mogą opuścić urządzenie, to działania podejmowane przez Ciebie samodzielnie: generowanie treści, które wysyła zanonimizowane opisy wyjaśnione w §3.1, wyeksportowanie lub udostępnienie pliku,
         wysłanie zgłoszenia treści (§3.8) albo stworzenie piosenki z
         napisanego przez Ciebie tekstu (§3.9).
       </p>
       <ul>
         <li>
-          Profile dzieci — imiona oraz Twoje opisy potrzeb edukacyjnych
-          każdego dziecka
+          Profile dzieci, dla których planujesz — w trybie nauczyciela imiona
+          dzieci i Twoje opisy potrzeb edukacyjnych każdego z nich; w trybie
+          rodzica imiona Twoich dzieci, opcjonalny rok urodzenia, to, co lubią
+          i czego nie lubią, oraz wszystko, co zanotujesz o ich potrzebach
         </li>
         <li>Klasy i grupy</li>
         <li>
@@ -220,10 +230,11 @@
         zapytanie do serwera pośredniczącego zawiera:
         <strong>anonimowy identyfikator urządzenia</strong> (losowy UUID
         tworzony przy instalacji — identyfikuje on instalację, a nie Ciebie),
-        wersję aplikacji, a w przypadku niektórych zapytań token Google Play
-        Integrity służący do blokowania nadużyć. Logi serwera pośredniczącego
-        rejestrują wyłącznie metadane techniczne (rodzaj zapytania, wynik,
-        czas, zanonimizowany identyfikator urządzenia) —
+        wersję aplikacji, w przypadku niektórych zapytań token Google Play
+        Integrity służący do blokowania nadużyć, a — w aktualnych wersjach
+        aplikacji — także znaczniki postępu pierwszych kroków opisane w §3.10. Logi serwera pośredniczącego
+        rejestrują wyłącznie metadane techniczne (m.in. rodzaj zapytania, wynik, czas, anonimowy identyfikator urządzenia, a w przypadku zapytań o
+        plan dnia także kraj, którego system edukacji został wybrany) —
         <strong>nigdy treści Twoich zapytań</strong>.
       </p>
 
@@ -241,6 +252,16 @@
         imię. Opisy są przetwarzane w celu wygenerowania treści dla Ciebie i
         <strong>nie są przechowywane na naszym serwerze</strong>. Wygenerowane
         opowiadania zawierają wyłącznie fikcyjne imiona bohaterów.
+      </p>
+
+      <p>
+        W <strong>trybie rodzica</strong> aplikacja idzie dalej: sama nigdy nie umieszcza w zapytaniu imienia dziecka. Każde wybrane dziecko jest
+        opisywane wyłącznie przybliżonym wiekiem, obliczonym na podstawie
+        podanego roku urodzenia, oraz zanotowanymi informacjami o tym, co
+        lubi, czego nie lubi i jakie ma potrzeby, a imiona Twoich dzieci są
+        usuwane na urządzeniu ze wszystkiego innego, co wpiszesz, zanim
+        zostanie to wysłane — z wyjątkiem tekstów i tytułów piosenek, które samodzielnie napiszesz lub zmienisz — są one wysyłane w takiej postaci, w jakiej je zapiszesz (§3.9). Tak jak w trybie nauczyciela, opisy te nie są przechowywane na
+        naszym serwerze.
       </p>
 
       <h3>3.2. Narracja opowiadań (zamiana tekstu na mowę)</h3>
@@ -291,8 +312,9 @@
         Aby limity wersji darmowej i gospodarka tokenami działały uczciwie
         również po ponownej instalacji, serwer przechowuje liczniki przypisane
         do anonimowego identyfikatora urządzenia: liczbę wykorzystanych
-        darmowych generowań oraz aktualne stany tokenów opowiadań i tokenów
-        audio.
+        darmowych generowań, liczbę nagród przyznanych za obejrzane reklamy,
+        aktualne stany tokenów opowiadań i tokenów audio oraz datę utworzenia
+        każdego z tych rekordów.
       </p>
 
       <h3>3.6. Reklamy z nagrodą</h3>
@@ -308,8 +330,7 @@
       <p>
         Jeżeli zainstalujesz aplikację z czyjegoś linku polecającego,
         przekazywany przez Google Play identyfikator źródła instalacji zawiera
-        kod polecenia tej osoby; aplikacja odczytuje z niego
-        <strong>wyłącznie ten kod</strong>. Zaliczenie polecenia wiąże na
+        kod polecenia tej osoby; aplikacja odczytuje z niego <strong>wyłącznie ten kod</strong> — a w przypadku instalacji z karty <em>Aplikacji Rodzica</em> w sklepie Google Play także znacznik, który wstępnie wybiera tryb rodzica i pozostaje na Twoim urządzeniu. Zaliczenie polecenia wiąże na
         naszym serwerze anonimowy identyfikator urządzenia nowej instalacji z
         anonimowym identyfikatorem urządzenia osoby zapraszającej. Żadnego z
         tych identyfikatorów nie da się powiązać z konkretną osobą — nie
@@ -359,6 +380,55 @@
         przechowywane tak jak ilustracje do opowiadań (§3.3).
       </p>
 
+      <h3>3.10. Aktywność instalacji i postęp pierwszych kroków</h3>
+      <p>
+        Aby zrozumieć, czy osobom, które instalują aplikację, udaje się zacząć z niej korzystać i czy do niej wracają, serwer przechowuje jeden niewielki rekord dla każdej instalacji, przypisany do anonimowego identyfikatora
+        urządzenia. Zawiera on moment pierwszego kontaktu aplikacji z naszym
+        serwerem, moment ostatniego kontaktu (aktualizowany najwyżej mniej więcej raz dziennie), wersję aplikacji w tych dwóch momentach oraz listę dni, w których aplikacja
+        kontaktowała się z naszym serwerem.
+      </p>
+      <p>
+        Aktualne wersje aplikacji wysyłają ponadto wraz z zapytaniami
+        <strong>znaczniki postępu pierwszych kroków</strong>, które również trafiają do tego rekordu. Znacznik to liczba oznaczająca, że instalacja
+        dotarła do jednego z etapów rozpoczynania pracy z aplikacją: na
+        przykład że wyświetlono ekran powitalny (i czy udało się na nim wstępnie
+        wybrać Twój kraj na podstawie ustawienia regionu urządzenia), że
+        wybrano tryb nauczyciela lub rodzica, że po raz pierwszy zapisano klasę lub dziecko, że otwarto, ukończono lub pominięto krok dodawania
+        profilu dziecka, że otwarto ekran planu dnia, że dotknięto przycisku
+        generowania, że zapisano plan, że ukończono samouczek albo że
+        otwarto okno drukowania lub udostępniania planu. Jeden ze znaczników
+        oznacza jedynie, że instalacja jest starsza niż ta funkcja. Znaczniki
+        nie zawierają żadnych treści, imion ani niczego, co wpiszesz.
+      </p>
+      <p>
+        Korzystamy z tego rekordu wyłącznie po to, aby mierzyć, jak instalacje zaczynają korzystać z aplikacji i do niej wracają — przede wszystkim łącznie dla wszystkich instalacji, a przy wyjaśnianiu problemu także przeglądając rekord pojedynczej instalacji wraz z jej licznikami użycia (§3.5) i stanem subskrypcji (§3.4). Nie jest on wykorzystywany do celów reklamowych ani
+        przekazywany partnerom reklamowym.
+      </p>
+
+      <h3>3.11. Przypomnienia</h3>
+      <p>
+        Aplikacja może wysyłać okazjonalne przypomnienia — na przykład w
+        niedzielę wieczorem zachętę do zaplanowania nadchodzącego tygodnia.
+        Pozostają one wyłączone, dopóki ich nie włączysz: aplikacja proponuje
+        je po wygenerowaniu planu i prosi Google o token powiadomień tylko
+        wtedy, gdy się zgodzisz i Android zezwoli na powiadomienia. Następnie
+        aplikacja wysyła na nasz serwer ten <strong>token</strong> —
+        identyfikator wydawany przez Google Firebase Cloud Messaging, dzięki
+        któremu wiadomość może dotrzeć do tej instalacji — wraz z anonimowym
+        identyfikatorem urządzenia, językiem interfejsu aplikacji, różnicą
+        między Twoją strefą czasową a UTC (aby przypomnienie przyszło o
+        właściwej godzinie lokalnej) i wersją aplikacji. Serwer zapisuje też, kiedy ta rejestracja się rozpoczęła i kiedy aplikacja ostatnio ją odnowiła (mniej więcej raz dziennie, gdy korzystasz z aplikacji), a także kiedy ostatnio wysłano przypomnienie do tej instalacji, aby to samo
+        przypomnienie nie zostało wysłane dwa razy.
+      </p>
+      <p>
+        Przypomnienia są dostarczane za pośrednictwem Google Firebase Cloud
+        Messaging, które otrzymuje token i treść przypomnienia. Treść jest
+        taka sama dla wszystkich osób korzystających z aplikacji w Twoim języku
+        i nigdy nie zawiera Twojego imienia i nazwiska, imienia dziecka ani niczego z
+        Twoich planów. Przypomnienia możesz w każdej chwili wyłączyć w
+        ustawieniach powiadomień Androida dla tej aplikacji.
+      </p>
+
       <h2 id="processors">4. Dostawcy usług i inni odbiorcy</h2>
 <p>Aplikacja korzysta z następujących usług zewnętrznych:</p>
       <table>
@@ -391,7 +461,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Reklamy w wersji darmowej</td>
-            <td>Identyfikator reklamowy, interakcje z reklamami (§6.1)</td>
+            <td>Identyfikatory urządzenia, interakcje z aplikacją i reklamami, dane o wydajności (§6.1)</td>
             <td>Zgodnie z zasadami Google</td>
           </tr>
           <tr>
@@ -413,6 +483,12 @@
             <td>Google Play Integrity</td>
             <td>Ochrona przed nadużyciami</td>
             <td>Sygnały integralności urządzenia i instalacji</td>
+            <td>Zgodnie z zasadami Google</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Dostarczanie przypomnień, jeśli je włączysz</td>
+            <td>Token powiadomień i treść przypomnienia (§3.11)</td>
             <td>Zgodnie z zasadami Google</td>
           </tr>
           <tr>
@@ -443,7 +519,9 @@
         EOG na podstawie swoich warunków przetwarzania danych; zdarzenia
         zakupu opisane w §6.2 trafiają natomiast do Meta Platforms Ireland,
         która może przetwarzać je w Stanach Zjednoczonych na podstawie
-        własnych zabezpieczeń dotyczących przekazywania danych. Zobacz
+        własnych zabezpieczeń dotyczących przekazywania danych. Przypomnienia (§3.11) są
+        dostarczane za pośrednictwem Google Firebase Cloud Messaging, które
+        również może przetwarzać token i treść przypomnienia poza EOG. Zobacz
         również:
         <a href="https://policies.google.com/privacy">Polityka prywatności
         Google</a>.
@@ -486,6 +564,19 @@
           <tr>
             <td>Liczniki użycia i stany tokenów</td>
             <td>Przez cały okres funkcjonowania aplikacji</td>
+          </tr>
+          <tr>
+            <td>Rekord aktywności instalacji i postępu pierwszych kroków (§3.10)</td>
+            <td>Przez cały okres funkcjonowania aplikacji</td>
+          </tr>
+          <tr>
+            <td>Token powiadomień i historia przypomnień (§3.11)</td>
+            <td>
+              Przez cały okres funkcjonowania aplikacji, chyba że rekord zostanie usunięty wcześniej — automatycznie, gdy przy wysyłaniu
+              przypomnienia Google zgłosi, że token jest już nieważny, lub na
+              żądanie. Wyłączenie powiadomień w Androidzie sprawia, że
+              przypomnienia przestają się wyświetlać, ale samo w sobie nie usuwa tego rekordu
+            </td>
           </tr>
           <tr>
             <td>Rekordy poleceń</td>
@@ -547,9 +638,7 @@
       <h3>6.1. Reklamy (Google AdMob)</h3>
       <p>
         W wersji darmowej wyświetlane są reklamy dostarczane przez Google
-        AdMob. AdMob może zbierać identyfikator reklamowy Twojego urządzenia,
-        dane o interakcjach z reklamami oraz przybliżoną lokalizację (na
-        poziomie kraju). Subskrybenci nie widzą reklam. Szczegóły:
+        AdMob. AdMob może zbierać identyfikator reklamowy Twojego urządzenia i inne identyfikatory urządzenia, informacje o tym, jak używane są aplikacja i wyświetlane w niej reklamy (np. uruchomienia aplikacji, dotknięcia i obejrzenia filmów), informacje o wydajności aplikacji oraz przybliżoną lokalizację (na poziomie kraju). Subskrybenci nie widzą reklam. Szczegóły:
         <a href="https://policies.google.com/technologies/ads">Polityka
         reklamowa Google</a>.
       </p>
@@ -607,16 +696,17 @@
 
       <h2 id="children">7. Dane dzieci</h2>
 <p>
-        Aplikacja jest profesjonalnym narzędziem dla dorosłych nauczycieli i
+        Aplikacja jest narzędziem dla dorosłych — nauczycieli i rodziców — i
         nie jest kierowana do dzieci; nie zbieramy świadomie danych osobowych
         od dzieci. Informacje o dzieciach wprowadzane przez nauczyciela
-        stanowią jego własną dokumentację zawodową: są przechowywane wyłącznie
-        na urządzeniu nauczyciela i — jak opisano w §2 i §3 — nigdy nie są
-        nigdzie przesyłane w postaci umożliwiającej identyfikację dziecka.
-        Jeżeli samodzielnie piszesz tekst piosenki, jest on wysyłany w takiej
-        postaci, w jakiej go zapiszesz (§3.9) — prosimy nie umieszczać w nim
-        danych osobowych dzieci.
-        Zakupy są powiązane z kontem Google Play dorosłego nauczyciela.
+        stanowią jego własną dokumentację zawodową, a informacje wprowadzane
+        przez rodzica w trybie rodzica dotyczą jego własnych dzieci. W obu
+        przypadkach są przechowywane wyłącznie na urządzeniu tej osoby dorosłej
+        i — jak opisano w §2 i §3 — nigdy nie są nigdzie przesyłane w postaci
+        umożliwiającej identyfikację dziecka. Jeżeli samodzielnie piszesz tekst
+        piosenki, jest on wysyłany w takiej postaci, w jakiej go zapiszesz
+        (§3.9) — prosimy nie umieszczać w nim danych osobowych dzieci. Zakupy
+        są powiązane z własnym kontem Google Play osoby dorosłej.
       </p>
 
       <h2 id="rights">8. Twoje prawa (RODO)</h2>

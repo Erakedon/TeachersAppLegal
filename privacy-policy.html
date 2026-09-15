@@ -128,7 +128,7 @@
         <strong>Developer &amp; data controller:</strong> Maciej Bernacki<br />
         <strong>Contact:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Last updated:</strong> September 6, 2026
+        <strong>Last updated:</strong> September 15, 2026
       </p>
 
 
@@ -137,18 +137,26 @@
         This Privacy Policy explains what data <em>Teacher's App</em> handles,
         what never leaves your device, what is sent to external services and
         why, and how long anything is kept. The app is a planning and
-        storytelling assistant for early-childhood teachers and is intended
-        for adult professional users.
+        storytelling assistant for adults who look after young children:
+        early-childhood teachers planning for their groups, and parents who
+        use its parent mode (presented as <em>Parent App</em>) to plan for
+        their own children at home. This policy covers both.
       </p>
       <p>
         The app has <strong>no user accounts</strong>. We do not collect your
         name, e-mail address, or any profile of you. The app's guiding design
         rule is that <strong>children's personal data never leaves your
-        device</strong>: pupils' names, dates, notes, and any other
+        device</strong>: children's names, dates, notes, and any other
         identifying details are removed or replaced with neutral labels on
         the device itself before any request is sent to any service. Song
         lyrics you write or edit in the app are a deliberate exception: they
         are sent as written (§3.9).
+      </p>
+      <p>
+        To see whether the app actually helps people get started, our server
+        keeps a small record of how each installation is used — on which days
+        it was used and how far it got through the first steps — tied only to
+        a random identifier of the installation (§3.10).
       </p>
       <p>
         Not collecting your name does not mean you are invisible to
@@ -165,14 +173,17 @@
         The following data is stored <strong>only on your device</strong>, in
         the app's local database and private storage. It is never uploaded
         automatically. The only ways any of it can leave the device are the
-        actions you take yourself: exporting or sharing a file, submitting
-        a content report (§3.8), or creating a song from lyrics you wrote
-        yourself (§3.9).
+        actions you take yourself: generating content, which sends the
+        anonymised descriptions explained in §3.1, exporting or sharing a
+        file, submitting a content report (§3.8), or creating a song from
+        lyrics you wrote yourself (§3.9).
       </p>
       <ul>
         <li>
-          Pupil profiles — names and your descriptions of each child's
-          educational needs
+          Profiles of the children you plan for — for pupils, their names and
+          your descriptions of each child's educational needs; in parent
+          mode, your children's names, optional year of birth, likes,
+          dislikes and anything you note about their needs
         </li>
         <li>Classes and groups</li>
         <li>
@@ -208,10 +219,13 @@
         providers directly. Every request to the proxy carries: an
         <strong>anonymous device identifier</strong> (a random UUID created
         on installation — it identifies the installation, not you), the app
-        version, and for some requests a Google Play Integrity token used to
-        block abuse. The proxy's logs record technical metadata only (request
-        type, outcome, timing, an anonymized device identifier) —
-        <strong>never the content of your requests</strong>.
+        version, for some requests a Google Play Integrity token used to
+        block abuse, and — in current versions of the app — the first-run
+        progress markers described in §3.10. The proxy's logs record
+        technical metadata only — such as request type, outcome, timing, the
+        anonymous device identifier and, for day-plan requests, which
+        country's education system you selected — <strong>never the content
+        of your requests</strong>.
       </p>
 
       <h3>3.1. AI generation (day plans, stories, adaptations)</h3>
@@ -227,6 +241,16 @@
         contain a real name. The descriptions are processed to generate your
         content and are <strong>not stored on our server</strong>. Generated
         stories are written with fictional character names only.
+      </p>
+      <p>
+        In <strong>parent mode</strong> the app goes further: it never puts
+        a child's own name into a request itself. Each child you pick is
+        described only by an approximate age worked out from the year of
+        birth you entered and by the likes, dislikes and needs you noted, and
+        your children's names are removed on the device from anything else
+        you type before it is sent — except song lyrics and song titles you
+        write or edit yourself, which are sent as written (§3.9). As in
+        teacher mode, these descriptions are not stored on our server.
       </p>
 
       <h3>3.2. Story narration (text-to-speech)</h3>
@@ -274,7 +298,8 @@
         To operate free-tier limits and token economies fairly across
         reinstalls, the server keeps per-device counters keyed to the
         anonymous device identifier: how many free generations have been
-        used, and current story/audio token balances.
+        used, how many rewarded ads have been credited, current story/audio
+        token balances, and when each of these records was created.
       </p>
 
       <h3>3.6. Rewarded ads</h3>
@@ -289,7 +314,9 @@
       <p>
         If you install the app through someone's referral link, the Google
         Play install referrer carries their referral code; the app reads
-        <strong>only that code</strong> from it. Crediting a referral links
+        <strong>only that code</strong> from it — plus, for installs from the
+        <em>Parent App</em> store listing, a marker that pre-selects parent
+        mode, which stays on your device. Crediting a referral links
         the new installation's anonymous device identifier to the inviter's
         anonymous device identifier on our server. Neither identifier can be
         resolved to a person — no names, contacts, accounts, or Play profile
@@ -333,6 +360,63 @@
         like story illustrations (§3.3).
       </p>
 
+      <h3>3.10. Install activity and first-run progress</h3>
+      <p>
+        To understand whether people who install the app manage to get
+        started and keep using it, the server keeps one small record per
+        installation, keyed to the anonymous device identifier. It holds when
+        the app first contacted our server, when it most recently did
+        (updated at most about once a day), the app version at those two
+        points, and the list of days on which the app contacted our server.
+      </p>
+      <p>
+        Current versions of the app also send <strong>first-run progress
+        markers</strong> with their requests, and the record keeps them too.
+        A marker is a number meaning that the installation reached one step
+        of getting started: for example, that the welcome screen was shown
+        (and whether it could pre-select your country from your device's
+        region setting), that you chose teacher or parent mode, that a first
+        class or child was saved, that the pupil-profile step was opened,
+        completed or skipped, that a day-plan screen was opened, that Generate was tapped,
+        that a plan was saved, that the introduction was finished, or that
+        the print or share dialog was opened for a plan. One marker only
+        notes that the installation is older than this feature. Markers carry
+        no content, no names and nothing you typed.
+      </p>
+      <p>
+        We use this record only to measure how installations get started and
+        come back — mostly as totals across all installations and, to
+        investigate a problem, by looking at an individual installation's
+        record together with its usage counters (§3.5) and subscription
+        status (§3.4). It is not used for advertising and is not passed to
+        advertising partners.
+      </p>
+
+      <h3>3.11. Reminder notifications</h3>
+      <p>
+        The app can send occasional reminders — for example, a nudge on
+        Sunday evening to plan the week ahead. They stay off unless you turn
+        them on: the app offers them after you have generated a plan, and it
+        asks Google for a notification token only if you accept and Android
+        allows notifications. The app then sends our server that
+        <strong>token</strong> — an identifier issued by Google Firebase Cloud
+        Messaging that lets a message reach this installation — together
+        with the anonymous device identifier, the app's interface language,
+        your time zone's offset from UTC (so a reminder arrives at the right
+        local time) and the app version. The server also records when this
+        registration began and when the app last renewed it (about once a
+        day while you use the app), and when a reminder was last sent to the
+        installation, so the same reminder is not sent twice.
+      </p>
+      <p>
+        Reminders are delivered through Google Firebase Cloud Messaging,
+        which receives the token and the reminder's text. The text is the
+        same for everyone using the app in your language and never contains
+        your name, a child's name or anything from your plans. You can switch
+        reminders off at any time in Android's notification settings for the
+        app.
+      </p>
+
       <h2 id="processors">4. Service providers and other recipients</h2>
 <p>The app relies on the following external services:</p>
       <table>
@@ -364,7 +448,8 @@
           <tr>
             <td>Google AdMob</td>
             <td>Advertising in the free tier</td>
-            <td>Advertising ID, ad interactions (§6.1)</td>
+            <td>Device identifiers, app and ad interactions, performance data
+            (§6.1)</td>
             <td>Per Google's policy</td>
           </tr>
           <tr>
@@ -385,6 +470,12 @@
             <td>Google Play Integrity</td>
             <td>Abuse protection</td>
             <td>Device/installation integrity signals</td>
+            <td>Per Google's policy</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Delivering reminder notifications, if you turn them on</td>
+            <td>The notification token and the reminder's text (§3.11)</td>
             <td>Per Google's policy</td>
           </tr>
           <tr>
@@ -411,8 +502,11 @@
         proxy to Google's Gemini API, where Google may process them outside
         the EEA under its data-processing terms; and the purchase events
         described in §6.2 go to Meta Platforms Ireland, which may process
-        them in the United States under its own transfer safeguards. See
-        also: <a href="https://policies.google.com/privacy">Google Privacy
+        them in the United States under its own transfer safeguards.
+        Reminder notifications (§3.11) are delivered through Google Firebase
+        Cloud Messaging, which may likewise process the token and the
+        reminder's text outside the EEA. See also:
+        <a href="https://policies.google.com/privacy">Google Privacy
         Policy</a>.
       </p>
 
@@ -451,6 +545,20 @@
           <tr>
             <td>Usage counters and token balances</td>
             <td>For as long as the app is operated</td>
+          </tr>
+          <tr>
+            <td>Install activity and first-run progress record (§3.10)</td>
+            <td>For as long as the app is operated</td>
+          </tr>
+          <tr>
+            <td>Notification token and reminder history (§3.11)</td>
+            <td>
+              For as long as the app is operated, unless removed earlier —
+              automatically when Google reports the token is no longer valid
+              as a reminder is sent, or on request. Switching notifications
+              off in Android stops reminders from appearing but does not by
+              itself delete this record
+            </td>
           </tr>
           <tr>
             <td>Referral records</td>
@@ -507,7 +615,9 @@
       <h3>6.1. Ads (Google AdMob)</h3>
       <p>
         The free tier shows ads served by Google AdMob. AdMob may collect
-        your device's advertising ID, ad-interaction data, and approximate
+        your device's advertising ID and other device identifiers, how the
+        app and its ads are used (such as app launches, taps and video
+        views), information about the app's performance, and approximate
         (country-level) location. Subscribers do not see ads. Details:
         <a href="https://policies.google.com/technologies/ads">Google
         Advertising Policy</a>.
@@ -561,14 +671,16 @@
 
       <h2 id="children">7. Children's data</h2>
 <p>
-        The app is a professional tool for adult teachers and is not directed
-        at children; we do not knowingly collect personal data from children.
-        The pupil information a teacher enters is the teacher's own
-        professional record: it is stored only on the teacher's device, and
-        as described in §2 and §3, it is never transmitted anywhere in a form
-        that identifies a child. If you write song lyrics yourself, they are
-        sent as written (§3.9) — please avoid children's personal details
-        there. Purchases are tied to the adult teacher's Google Play account.
+        The app is a tool for adults — teachers and parents — and is not
+        directed at children; we do not knowingly collect personal data from
+        children. The information a teacher enters about pupils is the
+        teacher's own professional record, and the information a parent
+        enters in parent mode is about their own children. Either way it is
+        stored only on that adult's device, and as described in §2 and §3, it
+        is never transmitted anywhere in a form that identifies a child. If
+        you write song lyrics yourself, they are sent as written (§3.9) —
+        please avoid children's personal details there. Purchases are tied to
+        the adult's own Google Play account.
       </p>
 
       <h2 id="rights">8. Your rights (GDPR)</h2>

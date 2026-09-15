@@ -128,7 +128,7 @@
         <strong>Programador e responsável pelo tratamento:</strong> Maciej Bernacki<br />
         <strong>Contacto:</strong>
         <a href="mailto:bernacki.dev@gmail.com">bernacki.dev@gmail.com</a><br />
-        <strong>Última atualização:</strong> 6 de setembro de 2026
+        <strong>Última atualização:</strong> 15 de setembro de 2026
       </p>
 
       <div class="prevails-note">Este documento é uma tradução disponibilizada por conveniência. Em caso de divergência entre esta tradução e a <a href="privacy-policy.html">versão inglesa</a>, prevalece a versão inglesa.</div>
@@ -139,8 +139,11 @@
         Professor</em> trata, o que nunca sai do teu dispositivo, o que é
         enviado para serviços externos e porquê, e durante quanto tempo cada
         coisa é conservada. A aplicação é um assistente de planificação e de
-        criação de histórias para professores de educação pré-escolar e
-        destina-se a utilizadores profissionais adultos.
+        criação de histórias para adultos que cuidam de crianças pequenas:
+        professores de educação pré-escolar, que planeiam para os seus grupos,
+        e pais, que usam o modo pais (apresentado como <em>App dos Pais</em>)
+        para planear atividades para os próprios filhos em casa. Esta política
+        abrange ambos os casos.
       </p>
       <p>
         A aplicação <strong>não tem contas de utilizador</strong>. Não
@@ -154,6 +157,13 @@
         canção que escreves ou editas na aplicação é uma exceção
         deliberada: é enviada tal como a
         escreveste (§3.9).
+      </p>
+      <p>
+        Para perceber se a aplicação ajuda realmente as pessoas a começar, o
+        nosso servidor guarda um pequeno registo de como cada instalação é
+        utilizada — em que dias foi utilizada e até onde chegou nos primeiros
+        passos — associado apenas a um identificador aleatório da instalação
+        (§3.10).
       </p>
       <p>
         Não recolhermos o teu nome não significa que sejas invisível para os
@@ -171,15 +181,17 @@
         Os dados seguintes são guardados <strong>apenas no teu
         dispositivo</strong>, na base de dados local e no armazenamento
         privado da aplicação. Nunca são carregados automaticamente. As únicas
-        formas de qualquer um deles sair do dispositivo são ações da tua
-        iniciativa: exportar ou partilhar um ficheiro, enviar uma denúncia
+        formas de qualquer um deles sair do dispositivo são ações da tua iniciativa: gerar conteúdo, o que envia as descrições anonimizadas explicadas no §3.1, exportar ou partilhar um ficheiro, enviar uma denúncia
         de conteúdo (§3.8) ou criar uma canção a partir de uma letra
         escrita por ti (§3.9).
       </p>
       <ul>
         <li>
-          Perfis das crianças — nomes e as tuas descrições das necessidades
-          educativas de cada criança
+          Perfis das crianças para quem planeias — no modo professor, os nomes
+          e as tuas descrições das necessidades educativas de cada criança; no
+          modo pais, os nomes dos teus filhos, o ano de nascimento (opcional),
+          aquilo de que gostam e não gostam e tudo o que anotares sobre as
+          suas necessidades
         </li>
         <li>Turmas e grupos</li>
         <li>
@@ -217,11 +229,9 @@
         comunica diretamente com os fornecedores de IA. Cada pedido dirigido
         ao proxy inclui: um <strong>identificador anónimo do
         dispositivo</strong> (um UUID aleatório criado na instalação —
-        identifica a instalação, não a ti), a versão da aplicação e, em alguns
-        pedidos, um token do Google Play Integrity utilizado para bloquear
-        abusos. Os registos do proxy guardam apenas metadados técnicos (tipo
-        de pedido, resultado, tempos, um identificador de dispositivo
-        anonimizado) — <strong>nunca o conteúdo dos teus pedidos</strong>.
+        identifica a instalação, não a ti); a versão da aplicação; em alguns pedidos, um token do Google Play Integrity utilizado para bloquear abusos; e, nas versões atuais da aplicação, os marcadores de
+        progresso dos primeiros passos descritos no §3.10. Os registos do proxy guardam apenas metadados técnicos (por exemplo, tipo de pedido, resultado, tempos, o identificador anónimo do dispositivo e, nos pedidos de planos do dia, o país cujo sistema de
+        ensino foi selecionado) — <strong>nunca o conteúdo dos teus pedidos</strong>.
       </p>
 
       <h3>3.1. Geração por IA (planos do dia, histórias, adaptações)</h3>
@@ -239,6 +249,16 @@
         para gerar o teu conteúdo e <strong>não são guardadas no nosso
         servidor</strong>. As histórias geradas são escritas apenas com nomes
         de personagens fictícios.
+      </p>
+
+      <p>
+        No <strong>modo pais</strong>, a aplicação vai mais longe: nunca coloca, por si, o nome da própria criança num pedido. Cada criança que
+        escolheres é descrita apenas por uma idade aproximada, calculada a
+        partir do ano de nascimento que indicaste, e pelo que anotaste sobre
+        aquilo de que gosta, aquilo de que não gosta e as suas necessidades;
+        além disso, os nomes dos teus filhos são removidos no dispositivo de
+        tudo o resto que escreveres antes de ser enviado — exceto a letra e o título de canções que escreves ou editas tu mesmo, que são enviados tal como os escreveste (§3.9). Tal como no modo professor, estas descrições não são guardadas
+        no nosso servidor.
       </p>
 
       <h3>3.2. Narração de histórias (conversão de texto em fala)</h3>
@@ -290,8 +310,9 @@
         Para aplicar de forma justa os limites da versão gratuita e a economia
         de tokens, mesmo depois de reinstalações, o servidor mantém contadores
         por dispositivo associados ao identificador anónimo do dispositivo:
-        quantas gerações gratuitas foram utilizadas e os saldos atuais de
-        tokens de histórias e de áudio.
+        quantas gerações gratuitas foram utilizadas, quantos anúncios com
+        recompensa foram creditados, os saldos atuais de tokens de histórias e
+        de áudio e a data de criação de cada um destes registos.
       </p>
 
       <h3>3.6. Anúncios com recompensa</h3>
@@ -307,8 +328,7 @@
       <p>
         Se instalares a aplicação através do link de recomendação de alguém, o
         referenciador de instalação da Google Play transporta o código de
-        recomendação dessa pessoa; a aplicação lê dele <strong>apenas esse
-        código</strong>. Creditar uma recomendação associa, no nosso servidor,
+        recomendação dessa pessoa; a aplicação lê dele <strong>apenas esse código</strong> — e, nas instalações feitas a partir da página da <em>App dos Pais</em> na loja, um marcador que pré-seleciona o modo pais e que fica no teu dispositivo. Creditar uma recomendação associa, no nosso servidor,
         o identificador anónimo do dispositivo da nova instalação ao
         identificador anónimo do dispositivo de quem convidou. Nenhum dos
         identificadores pode ser associado a uma pessoa — não são recolhidos
@@ -358,6 +378,57 @@
         (§3.3).
       </p>
 
+      <h3>3.10. Atividade da instalação e progresso nos primeiros passos</h3>
+      <p>
+        Para perceber se as pessoas que instalam a aplicação conseguem começar
+        a usá-la e continuam a utilizá-la, o servidor mantém um pequeno registo
+        por instalação, associado ao identificador anónimo do dispositivo.
+        Esse registo contém o momento em que a aplicação contactou o nosso
+        servidor pela primeira vez, quando o fez mais recentemente (atualizado no máximo cerca de uma vez por dia), a versão da aplicação nesses dois momentos e a lista dos dias em
+        que a aplicação contactou o nosso servidor.
+      </p>
+      <p>
+        As versões atuais da aplicação enviam também, com os seus pedidos,
+        <strong>marcadores de progresso dos primeiros passos</strong>, que ficam igualmente guardados no registo. Um marcador é um número que indica que a
+        instalação chegou a uma das etapas do início de utilização: por
+        exemplo, que o ecrã de boas-vindas foi apresentado (e se conseguiu
+        pré-selecionar o teu país a partir da definição de região do
+        dispositivo), que foi escolhido o modo professor ou o modo pais, que
+        foi guardada uma primeira turma ou criança, que o passo do perfil da
+        criança foi aberto, concluído ou ignorado, que foi aberto um ecrã de
+        plano do dia, que se tocou no botão para gerar o plano, que foi guardado um
+        plano, que a introdução foi concluída, ou que a janela de impressão ou
+        de partilha foi aberta para um plano. Um dos marcadores indica apenas
+        que a instalação é anterior a esta funcionalidade. Os marcadores não
+        contêm conteúdo, nomes nem nada do que escreves.
+      </p>
+      <p>
+        Utilizamos este registo apenas para medir como as instalações começam a utilizar a aplicação e voltam a ela — sobretudo no conjunto de todas as instalações e, para investigar um problema, consultando o registo de uma instalação individual juntamente com os seus contadores de utilização (§3.5) e o estado da subscrição (§3.4). Não é utilizado para publicidade nem transmitido a parceiros publicitários.
+      </p>
+
+      <h3>3.11. Lembretes</h3>
+      <p>
+        A aplicação pode enviar lembretes ocasionais — por exemplo, ao domingo
+        à noite, um incentivo para planeares a semana seguinte. Ficam
+        desligados até decidires ativá-los: a aplicação sugere-os depois de teres gerado um plano e só pede à Google um token de notificações se
+        aceitares e se o Android permitir notificações. Em seguida, a
+        aplicação envia ao nosso servidor esse <strong>token</strong> — um
+        identificador emitido pelo Google Firebase Cloud Messaging que permite
+        que uma mensagem chegue a esta instalação — juntamente com o
+        identificador anónimo do dispositivo, o idioma da interface da
+        aplicação, a diferença entre o teu fuso horário e o UTC (para que o
+        lembrete chegue à hora local certa) e a versão da aplicação. O servidor regista também quando começou este registo e quando a aplicação o renovou pela última vez (cerca de uma vez por dia enquanto usas a aplicação), bem como quando foi enviado o último lembrete a esta instalação,
+        para que o mesmo lembrete não seja enviado duas vezes.
+      </p>
+      <p>
+        Os lembretes são entregues através do Google Firebase Cloud Messaging,
+        que recebe o token e o texto do lembrete. O texto é igual para todas as
+        pessoas que usam a aplicação no teu idioma e nunca contém o teu nome, o
+        nome de uma criança nem nada dos teus planos. Podes desligar os
+        lembretes a qualquer momento nas definições de notificações do Android
+        para a aplicação.
+      </p>
+
       <h2 id="processors">4. Prestadores de serviços e outros destinatários</h2>
 <p>A aplicação recorre aos seguintes serviços externos:</p>
       <table>
@@ -389,7 +460,7 @@
           <tr>
             <td>Google AdMob</td>
             <td>Publicidade na versão gratuita</td>
-            <td>Identificador de publicidade, interações com os anúncios (§6.1)</td>
+            <td>Identificadores do dispositivo, interações com a aplicação e com os anúncios, dados de desempenho (§6.1)</td>
             <td>Nos termos da política da Google</td>
           </tr>
           <tr>
@@ -410,6 +481,12 @@
             <td>Google Play Integrity</td>
             <td>Proteção contra abusos</td>
             <td>Sinais de integridade do dispositivo/instalação</td>
+            <td>Nos termos da política da Google</td>
+          </tr>
+          <tr>
+            <td>Google Firebase Cloud Messaging</td>
+            <td>Entrega de lembretes, se os ativares</td>
+            <td>O token de notificações e o texto do lembrete (§3.11)</td>
             <td>Nos termos da política da Google</td>
           </tr>
           <tr>
@@ -439,7 +516,9 @@
         das suas condições de tratamento de dados; e os eventos de compra
         descritos no §6.2 seguem para a Meta Platforms Ireland, que os pode
         tratar nos Estados Unidos ao abrigo das suas próprias garantias de
-        transferência. Ver também:
+        transferência. Os lembretes (§3.11) são entregues através do Google
+        Firebase Cloud Messaging, que pode igualmente tratar o token e o texto
+        do lembrete fora do EEE. Ver também:
         <a href="https://policies.google.com/privacy">Política de Privacidade
         da Google</a>.
       </p>
@@ -480,6 +559,20 @@
           <tr>
             <td>Contadores de utilização e saldos de tokens</td>
             <td>Enquanto a aplicação for operada</td>
+          </tr>
+          <tr>
+            <td>Registo de atividade da instalação e de progresso nos primeiros passos (§3.10)</td>
+            <td>Enquanto a aplicação for operada</td>
+          </tr>
+          <tr>
+            <td>Token de notificações e histórico de lembretes (§3.11)</td>
+            <td>
+              Enquanto a aplicação for operada, salvo remoção anterior —
+              automaticamente, quando, ao ser enviado um lembrete, a Google
+              indicar que o token já não é válido, ou mediante pedido.
+              Desligar as notificações no Android impede que os lembretes
+              apareçam, mas não elimina, por si só, este registo
+            </td>
           </tr>
           <tr>
             <td>Registos de recomendações</td>
@@ -538,10 +631,7 @@
 
       <h3>6.1. Anúncios (Google AdMob)</h3>
       <p>
-        A versão gratuita mostra anúncios apresentados pela Google AdMob. A
-        AdMob pode recolher o identificador de publicidade do teu dispositivo,
-        dados de interação com os anúncios e a localização aproximada (ao
-        nível do país). Quem tem subscrição não vê anúncios. Detalhes:
+        A versão gratuita mostra anúncios apresentados pela Google AdMob. A AdMob pode recolher o identificador de publicidade do teu dispositivo e outros identificadores do dispositivo, a forma como a aplicação e os seus anúncios são utilizados (por exemplo, aberturas da aplicação, toques e visualizações de vídeos), informações sobre o desempenho da aplicação e a localização aproximada (ao nível do país). Quem tem subscrição não vê anúncios. Detalhes:
         <a href="https://policies.google.com/technologies/ads">Política de
         Publicidade da Google</a>.
       </p>
@@ -597,16 +687,16 @@
 
       <h2 id="children">7. Dados das crianças</h2>
 <p>
-        A aplicação é uma ferramenta profissional para professores adultos e
-        não se dirige a crianças; não recolhemos conscientemente dados
-        pessoais de crianças. As informações sobre as crianças que o professor
-        introduz constituem o registo profissional do próprio professor: são
-        guardadas apenas no seu dispositivo e, tal como descrito no §2 e no §3,
-        nunca são transmitidas para lado nenhum de uma forma que identifique
-        uma criança. Se escreveres tu mesmo a letra de uma canção, ela é
-        enviada tal como a escreveste (§3.9) — evita incluir aí dados
-        pessoais de crianças. As compras estão associadas à conta Google Play do
-        professor adulto.
+        A aplicação é uma ferramenta para adultos — professores e pais — e não
+        se dirige a crianças; não recolhemos conscientemente dados pessoais de
+        crianças. As informações que o professor introduz sobre as crianças constituem o registo profissional do próprio professor, e as
+        informações que os pais introduzem no modo pais dizem respeito aos
+        seus próprios filhos. Em ambos os casos, são guardadas apenas no
+        dispositivo desse adulto e, tal como descrito no §2 e no §3, nunca são
+        transmitidas para lado nenhum de uma forma que identifique uma criança.
+        Se escreveres tu mesmo a letra de uma canção, ela é enviada tal como a
+        escreveste (§3.9) — evita incluir aí dados pessoais de crianças. As
+        compras estão associadas à própria conta Google Play do adulto.
       </p>
 
       <h2 id="rights">8. Os teus direitos (RGPD)</h2>
